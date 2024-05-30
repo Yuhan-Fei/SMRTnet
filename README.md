@@ -76,13 +76,13 @@ pip install smrtnet
 ## Repo Structure:
 After adding all our examples, the repo has the following structure:
 ```
-├── agents
+├── LM_Mol
 |  └── dcgan.py
 |  └── condensenet.py
 |  └── mnist.py
 |  └── dqn.py
 |
-├── configs
+├── LM_RNA
 |  └── dcgan_exp_0.py
 |  └── condensenet_exp_0.py
 |  └── mnist_exp_0.py
@@ -98,9 +98,15 @@ After adding all our examples, the repo has the following structure:
 |  └── mnist.py
 |  └── example.py
 |  └── voc2012.py
-├──
+├──dataset_cv_best
+|
+├── explain.py
+├── infer.py
+├── loader.py
+├── loop.py
 ├── main.py
-└── run.sh
+├── model.py
+└── utils.sh
 ```
 
 ## Datasets
