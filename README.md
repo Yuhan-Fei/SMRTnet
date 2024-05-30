@@ -43,20 +43,23 @@ Yuhan Fei and Jiasheng Zhang, xxx
  - pip
    
 
-
-### Build from Source
-
 ### `Clone repository`
 ```bash
+1)
 git clone https://github.com/Yuhan-Fei/SmrtNet.git
 cd SmrtNet
 pip install -r requirements.txt
 pip install -e .
+conda activate SmrtNet
+```
 
 or
 
+```bash
+2)
+git clone https://github.com/Yuhan-Fei/SmrtNet.git
+cd SmrtNet
 conda env create -f environment.yml
-
 conda activate SmrtNet
 ```
 
@@ -66,7 +69,11 @@ conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install smrtnet
 ```
-### Repo Structure:
+
+
+
+
+## Repo Structure:
 After adding all our examples, the repo has the following structure:
 ```
 ├── agents
