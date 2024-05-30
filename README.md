@@ -100,7 +100,7 @@ python main.py --do_infer
 For computing high attention regions using the trained models, we provide the script `har.sh`. You can run it using
 ```
 python main.py --do_explain
-
+```
 
 ### Example
 
