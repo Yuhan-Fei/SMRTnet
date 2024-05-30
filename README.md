@@ -26,7 +26,7 @@ Yuhan Fei and Jiasheng Zhang, xxx
   - Key functional group prediction
   - Fragment-based drug design
   - Transcriptome-wide target discovery
-
+- [Web server](#web-server)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
 
@@ -217,7 +217,8 @@ In addition to the DTI prediction, we also provide repurpose and virtual screeni
 ### Case Study 7: Key functional group prediction
 
 
-
+## Web Server
+We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to anaysis the interactions.
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
