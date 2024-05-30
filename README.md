@@ -4,33 +4,51 @@ RNA-targeting small molecules can bind RNA to regulate its function, providing a
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
+## Cite us
+If you found this package useful, please cite [our paper](xxx):
+```
+Yuhan Fei and Jiasheng Zhang, xxx
+```
 ## Table of contents
-- [Getting started](#Getting-started)
+- [Installation](#installation)
 - [Datasets](#datasets)
 - [Usage](#usage)
+- [Example](#example)
 - [Copyright and License](#copyright-and-license)
-- [Reference](#Reference)
+- [Disclaimer](#disclaimer)
 
-## Getting started
 
-### Requirements
- 
- - Python 3.6
+## Installation
+
+### `Requirements`
+ - Python 3.8
  - PyTorch 1.1.0, with NVIDIA CUDA Support
  - pip
+   
 
-### Installation
+
+### Build from Source
 Clone repository: 
-
 ```bash
 git clone https://github.com/Yuhan-Fei/SmrtNet.git
-```
-Install packages:
-```bash
 cd SmrtNet
 pip install -r requirements.txt
 pip install -e .
+
+or
+
+conda env create -f environment.yml
+
+conda activate SmrtNet
 ```
+
+### `conda`
+```bash
+conda create -n smrtnet python=3.8.10
+conda activate smrtnet
+pip install smrtnet
+```
+
 
 ## Datasets
 
@@ -38,16 +56,13 @@ pip install -e .
 
 Scripts and pipeline are in preparing, currently, we provide xxx samples data in *.txt format for training and testing SmrtNet.
 
+
 ```
 # Download data
 cd SmrtNet/data
-wget https://zhanglabnet.oss-cn-beijing.aliyuncs.com/prismnet/data/clip_data.tgz
-tar zxvf clip_data.tgz
 
-# Generate training and validation set for binary classification
-cd PrismNet
-tools/gdata_bin.sh
 ```
+
 
 ## Usage
 
@@ -100,7 +115,7 @@ For computing high attention regions using the trained models, we provide the sc
 python main.py --do_explain
 ```
 
-### Example
+## Example
 
 ### Case Study 1: N small molecules for 1 RNA target
 
@@ -123,11 +138,7 @@ python main.py --do_explain
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
 
-## Reference
-
-```
-@article {}
-
-```
 
 
+## Disclaimer
+The prediction of SmrtNet should be inspected manually by experts before proceeding to the wet-lab validation, and our work is still in active developement with limitations, please do not directly use the drugs.
