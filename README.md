@@ -75,13 +75,11 @@ To monitor the training process, add option `-tfboard` in `exp/prismnet/train.sh
 tensorboard --logdir exp/EXP_NAME/out/tfb
 ```
 
-
 ### Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
 ```
 python main.py --do_test
 ```
-
 
 
 ### Inference
@@ -95,8 +93,7 @@ For evaluation of the ensemble models,
 python main.py --do_infer
 ```
 
-
-### Compute High Attention Regions
+### Interpretability
 For computing high attention regions using the trained models, we provide the script `har.sh`. You can run it using
 ```
 python main.py --do_explain
