@@ -10,12 +10,14 @@ If you found this package useful, please cite [our paper](xxx):
 Yuhan Fei and Jiasheng Zhang, xxx
 ```
 ## Table of contents
-- [Getting started](#getting-started)
+- [Getting Started](#getting-started)
 - [Datasets](#datasets)
-  - Traing, validation, and test data
+  - Traing, validation, and test data for SmrtNet
+  - RNA sequence datasets for RNA language model (RNA-LM)
+  - SMILES datasets for chemical language model (MoLFormer)
   - Small molecule library for inference
-  - RNA target format
-  - Small molecule format
+  - RNA target format for inference
+  - Small molecule format for inference
 - [Usage](#usage)
   - train the model 
   - test the model
@@ -26,7 +28,8 @@ Yuhan Fei and Jiasheng Zhang, xxx
   - Key functional group prediction
   - Fragment-based drug design
   - Transcriptome-wide target discovery
-- [Web server](#web-server)
+- [Web Server](#web-server)
+- [Referenced Repos]:(#referenced-repos)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
 
@@ -203,6 +206,14 @@ python main.py --do_test \
 ## Web Server
 We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to predict and visualize the interactions between small molecule and RNA.
 <p align="center"><img src="figs/webserver.png" width=100% /></p>
+
+## Referenced Repos
+1. MoLFormer
+2. CNN
+3. ResNet
+4. GAT
+5. Transformer
+
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
