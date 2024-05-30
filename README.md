@@ -117,8 +117,50 @@ python main.py --do_explain
 
 ## Example
 
-### Case Study 1: N small molecules for 1 RNA target
+### Case Study 1: Train you own model:
 
+<details>
+   <summary>Click here for the code!</summary>
+ 
+```python
+cd ~/SmrtNet
+python main.py --do_train \
+               --in_dir ./dataset/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
+               --out_dir=./results/20240521_seqstr_benchmark \
+               --cuda 0 \
+               --batch_size 32 \
+               --epoch 100\
+               --patiences 20 \
+               --tfboard
+ ```
+</details>
+
+### Case Study 2: Test you data:
+
+<details>
+```python
+cd ~/SmrtNet
+python main.py --do_test \
+               --in_dir xxx \
+               --out_dir=./results/20240521_seqstr_benchmark \
+               --cuda 0 \
+               --batch_size 1
+ ```
+</details>
+
+
+### Case Study 3: N small molecules for 1 RNA target
+In addition to the DTI prediction, we also provide repurpose and virtual screening functions to rapidly generation predictions.
+
+<details>
+  <summary>Click here for the code!</summary>
+
+```python
+
+
+```
+
+</details>
 ### Case Study 2: 1 small molecule for N RNA targets
 
 ### Case Study 3: N small moleucles for N RNA targets
