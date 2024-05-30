@@ -77,9 +77,9 @@ Scripts and pipeline are in preparing, currently, we provide xxx samples data in
 ```
 
 
-Inference data format
+### Format of input RNA target
 
-The length of RNA should >31nt, and the sequence length should equal to the structure length. Data are split by tab
+The length of RNA should >31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.
 
 | RNA  | Sequence | Structure |
 |-----------------|-------------|-------------|
@@ -87,8 +87,8 @@ The length of RNA should >31nt, and the sequence length should equal to the stru
 | Pre-miR21 | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) |
 
 
-
-Input small molecule:
+### Format of input small molecule:
+The SMILES of small molecule should meet the requirement of RDkit. Data are split by tab and ignore the first header row.
 
 | CAS | SMILES |
 |-----------------|-------------|
@@ -201,7 +201,8 @@ python main.py --do_test \
 ### Case Study 5: transcript-wide analysis (RNA targets more than 31nt)
 
 ## Web Server
-We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to anaysis the interactions.
+We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to predict and visualize the interactions between small molecule and RNA.
+<p align="center"><img src="figs/webserver.png" width=100% /></p>
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
