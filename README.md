@@ -38,10 +38,15 @@ Yuhan Fei and Jiasheng Zhang, xxx
 
 
 ### `Requirements`
- - Python 3.8
- - PyTorch 1.1.0, with NVIDIA CUDA Support
- - pip
-   
+```bash
+ - Python 3.8.10
+ - PyTorch 1.10.1, with NVIDIA CUDA Support
+ - torchvision==0.11.2
+ - torchaudio==0.10.1
+ - pytorch-fast-transformers==0.3.0
+ - pytorch-lightning==1.1.5
+ - xxx...
+```
 
 ### `Clone repository`
 ```bash
