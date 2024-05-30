@@ -1,6 +1,6 @@
 # SmrtNet: Predicting small molecule and RNA target interactions using deep neural network
 
-RNA-targeting small molecules can bind RNA to regulate its function, providing a promising alternative approach for the treatment of human disease. However, the development of this field has been hindered by the lack of effective experimental probing and computational prediction approaches. Here, we present SmrtNet (Predicting small molecule and RNA target interactions using deep neural network), a deep learning-based framework designed to predict interactions between small molecules and RNA targets. SmrtNet extracts sequence and structural information from both small molecule and RNA target using large-scale language models and attention-based neural networks, and integrates mutual information among different encoders using a novel feature fusion strategy.
+RNA-targeting small molecules can bind RNA to regulate its function, providing a promising alternative approach for the treatment of human disease. However, the development of this field has been hindered by the lack of effective experimental probing and computational prediction approaches. Here, we present SmrtNet (Predicting small molecule and RNA target interactions using deep neural network), a deep learning-based framework designed to predict interactions between small molecules and RNA targets. SmrtNet extracts sequence and structural information from both small molecule and RNA using **large-scale language models** and **attention-based neural networks**, and integrates mutual information among different encoders using **a attention-based feature fusion strategy**.
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
@@ -10,15 +10,28 @@ If you found this package useful, please cite [our paper](xxx):
 Yuhan Fei and Jiasheng Zhang, xxx
 ```
 ## Table of contents
-- [Installation](#installation)
+- [Getting started](#getting-started)
 - [Datasets](#datasets)
+  - Traing, validation, and test data
+  - RNA target (Sequence + structure)
+  - Small molecule (SMILES)
+  - Small molecule library for inference
 - [Usage](#usage)
+  - train the model 
+  - test the model
+  - inference data
 - [Example](#example)
+  - High throughput drug screening
+  - Binding site prediction
+  - Key functional group prediction
+  - Fragment-based drug design
+  - Transcriptome-wide target discovery
+
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
 
+## Getting started
 
-## Installation
 
 ### `Requirements`
  - Python 3.8
@@ -28,7 +41,8 @@ Yuhan Fei and Jiasheng Zhang, xxx
 
 
 ### Build from Source
-Clone repository: 
+
+### `Clone repository`
 ```bash
 git clone https://github.com/Yuhan-Fei/SmrtNet.git
 cd SmrtNet
@@ -58,10 +72,32 @@ Scripts and pipeline are in preparing, currently, we provide xxx samples data in
 
 
 ```
-# Download data
-cd SmrtNet/data
-
+# Training data
+./SmrtNet/data
 ```
+
+
+Inference data format
+
+The length of RNA should >31nt, and the sequence length should equal to the structure length. Data are split by tab
+
+| RNA  | Sequence | Structure |
+|-----------------|-------------|-------------|
+| MYC | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) |
+| Pre-miR21 | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) |
+
+
+
+Input small molecule:
+
+| CAS | SMILES |
+|-----------------|-------------|
+| 20013-75-6 | CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C|
+| 90-33-5| CC1=CC(=O)OC2=C1C=CC(=C2)O|
+| 55084-08-7 | COC1=CC=CC(=C1C2=CC(=O)C3=C(C(=C(C(=C3O2)OC)OC)OC)O)O | 
+
+
+
 
 
 ## Usage
@@ -71,7 +107,7 @@ cd SmrtNet/data
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
 
-### Check
+### Check your input data format
 
 Check input format
 ```
@@ -80,15 +116,22 @@ python main.py --do_check
 
 ### Training 
 
-To train one single protein model from scratch, run
-```
-python main.py --do_train
-```
-where you replace `TIA1_Hela` with the name of the data file you want to use, you replace EXP_NAME with a specific name of this experiment. Hyper-parameters could be tuned in `exp/prismnet/train.sh`. For available training options, please take a look at `tools/train.py`.
+To train the model from scratch, run
+```python
+cd ~/SmrtNet
+python main.py --do_train \
+               --in_dir ./dataset/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
+               --out_dir=./results/20240521_seqstr_benchmark \
+               --cuda 0 \
+               --batch_size 32 \
+               --epoch 100\
+               --patiences 20 \
+ ```
+where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`.
 
-To monitor the training process, add option `-tfboard` in `exp/prismnet/train.sh`, and view page at http://localhost:6006 using tensorboard:
+To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard:
 ```
-tensorboard --logdir exp/EXP_NAME/out/tfb
+python main.py --do_train --tfboard
 ```
 
 ### Evaluation
@@ -172,7 +215,6 @@ In addition to the DTI prediction, we also provide repurpose and virtual screeni
 ### Case Study 6: Binding site prediction
 
 ### Case Study 7: Key functional group prediction
-
 
 
 
