@@ -9,3 +9,132 @@ RNA-targeting small molecules can bind RNA to regulate its function, providing a
 - [Usage](#usage)
 - [Copyright and License](#copyright-and-license)
 - [Reference](#Reference)
+
+## Getting started
+
+### Requirements
+ 
+ - Python 3.6
+ - PyTorch 1.1.0, with NVIDIA CUDA Support
+ - pip
+
+### Installation
+Clone repository: 
+
+```bash
+git clone https://github.com/Yuhan-Fei/SmrtNet.git
+```
+Install packages:
+```bash
+cd SmrtNet
+pip install -r requirements.txt
+pip install -e .
+```
+
+## Datasets
+
+### Prepare the datasets
+
+Scripts and pipeline are in preparing, currently, we provide xxx samples data in *.txt format for training and testing SmrtNet.
+
+```
+# Download data
+cd SmrtNet/data
+wget https://zhanglabnet.oss-cn-beijing.aliyuncs.com/prismnet/data/clip_data.tgz
+tar zxvf clip_data.tgz
+
+# Generate training and validation set for binary classification
+cd PrismNet
+tools/gdata_bin.sh
+```
+
+## Usage
+
+### Network Architecture
+
+![prismnet](https://github.com/kuixu/PrismNet/wiki/imgs/prismnet-arch.png)
+
+
+### Check
+
+Check input format
+```
+python main.py --do_check
+```
+
+### Training 
+
+To train one single protein model from scratch, run
+```
+python main.py --do_train
+```
+where you replace `TIA1_Hela` with the name of the data file you want to use, you replace EXP_NAME with a specific name of this experiment. Hyper-parameters could be tuned in `exp/prismnet/train.sh`. For available training options, please take a look at `tools/train.py`.
+
+To monitor the training process, add option `-tfboard` in `exp/prismnet/train.sh`, and view page at http://localhost:6006 using tensorboard:
+```
+tensorboard --logdir exp/EXP_NAME/out/tfb
+```
+
+
+### Evaluation
+For evaluation of the models, we provide the script `eval.sh`. You can run it using
+```
+python main.py --do_test
+```
+
+
+
+### Inference
+For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the trained models, we provide the script `infer.sh`. You can run it using
+```
+python main.py --do_ensemble
+```
+
+For evaluation of the ensemble models, 
+```
+python main.py --do_infer
+```
+
+
+### Compute High Attention Regions
+For computing high attention regions using the trained models, we provide the script `har.sh`. You can run it using
+```
+python main.py --do_explain
+
+
+### Interaction prediction (Example)
+
+#### Download half life data
+```
+cd PrismNet/data
+wget https://zhanglabnet.oss-cn-beijing.aliyuncs.com/prismnet/data/halflife_data.tgz
+tar zxvf halflife_data.tgz
+```
+
+#### Requirements
+```
+pip install xgboost==1.3.0rc1 matplotlib scipy scikit-learn termplotlib
+```
+
+#### Run Example
+
+```
+exp/logistic_reg/run.sh
+```
+
+### Dataset and Results Visualization
+
+We also provide a website [http://prismnet.zhanglab.net/](http://prismnet.zhanglab.net/) to visualize the icSHAPE date and the results.
+
+
+## Copyright and License
+This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
+
+## Reference
+
+```
+@article {}
+
+```
+
+
