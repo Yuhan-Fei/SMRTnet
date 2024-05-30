@@ -102,29 +102,24 @@ For computing high attention regions using the trained models, we provide the sc
 python main.py --do_explain
 
 
-### Interaction prediction (Example)
+### Example
 
-#### Download half life data
-```
-cd PrismNet/data
-wget https://zhanglabnet.oss-cn-beijing.aliyuncs.com/prismnet/data/halflife_data.tgz
-tar zxvf halflife_data.tgz
-```
+### Case Study 1: N small molecules for 1 RNA target
 
-#### Requirements
-```
-pip install xgboost==1.3.0rc1 matplotlib scipy scikit-learn termplotlib
-```
+### Case Study 2: 1 small molecule for N RNA targets
 
-#### Run Example
+### Case Study 3: N small moleucles for N RNA targets
 
-```
-exp/logistic_reg/run.sh
-```
+### Case Study 4: transcript-wide analysis (RNA targets more than 31nt)
 
-### Dataset and Results Visualization
+### Case Study 5: Use multiple GPU
 
-We also provide a website [http://prismnet.zhanglab.net/](http://prismnet.zhanglab.net/) to visualize the icSHAPE date and the results.
+### Case Study 6: Binding site prediction
+
+### Case Study 7: Key functional group prediction
+
+
+
 
 
 ## Copyright and License
