@@ -50,7 +50,6 @@ Yuhan Fei and Jiasheng Zhang, xxx
 
 ### `Clone repository`
 ```bash
-1)
 git clone https://github.com/Yuhan-Fei/SmrtNet.git
 cd SmrtNet
 pip install -r requirements.txt
@@ -61,7 +60,6 @@ conda activate SmrtNet
 or
 
 ```bash
-2)
 git clone https://github.com/Yuhan-Fei/SmrtNet.git
 cd SmrtNet
 conda env create -f environment.yml
