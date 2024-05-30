@@ -52,7 +52,7 @@ tools/gdata_bin.sh
 
 ### Network Architecture
 
-![prismnet](https://github.com/kuixu/PrismNet/wiki/imgs/prismnet-arch.png)
+<p align="center"><img src="figs/SmrtNet.png" alt="logo" width=100% /></p>
 
 
 ### Check
