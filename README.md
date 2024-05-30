@@ -13,19 +13,19 @@ Yuhan Fei and Jiasheng Zhang, xxx
 - [Getting started](#getting-started)
 - [Datasets](#datasets)
   - Traing, validation, and test data
-  - RNA target (Sequence + structure)
-  - Small molecule (SMILES)
   - Small molecule library for inference
+  - RNA target format
+  - Small molecule format
 - [Usage](#usage)
   - train the model 
   - test the model
   - inference data
 - [Example](#example)
-  - High throughput drug screening
-  - Binding site prediction
-  - Key functional group prediction
-  - Fragment-based drug design
-  - Transcriptome-wide target discovery
+  - Case 1: High throughput drug screening
+  - Case 2: Binding site prediction
+  - Case 3: Key functional group prediction
+  - Case 4: Fragment-based drug design
+  - Case 5: Transcriptome-wide target discovery
 - [Web server](#web-server)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
