@@ -19,9 +19,9 @@ Yuhan Fei and Jiasheng Zhang, xxx
   - RNA target format for inference
   - Small molecule format for inference
 - [Usage](#usage)
-  - train the model 
-  - test the model
-  - inference data
+  - How to train your own model 
+  - How to test the performance of model
+  - How to inference based on the pre-trained model
 - [Example](#example)
   - High throughput drug screening
   - Binding site prediction
