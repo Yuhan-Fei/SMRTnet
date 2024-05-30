@@ -94,6 +94,7 @@ After adding all our examples, the repo has the following structure:
 ├──
 ├── main.py
 └── run.sh
+```
 
 ## Datasets
 
