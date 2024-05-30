@@ -160,7 +160,7 @@ python main.py --do_explain
 
 ## Example
 
-### Case Study 1: Train you own model:
+### Case Study 1: N small molecules vs 1 RNA target:
 
 <details>
    <summary>Click here for the code!</summary>
@@ -178,7 +178,7 @@ python main.py --do_train \
  ```
 </details>
 
-### Case Study 2: Test you data:
+### Case Study 2: 1 small molecules vs N RNA target:
 
 <details>
 ```python
@@ -192,30 +192,13 @@ python main.py --do_test \
 </details>
 
 
-### Case Study 3: N small molecules for 1 RNA target
-In addition to the DTI prediction, we also provide repurpose and virtual screening functions to rapidly generation predictions.
+### Case Study 2: Use multiple GPU
 
-<details>
-  <summary>Click here for the code!</summary>
+### Case Study 3: Binding site prediction
 
-```python
+### Case Study 4: Key functional group prediction
 
-
-```
-
-</details>
-### Case Study 2: 1 small molecule for N RNA targets
-
-### Case Study 3: N small moleucles for N RNA targets
-
-### Case Study 4: transcript-wide analysis (RNA targets more than 31nt)
-
-### Case Study 5: Use multiple GPU
-
-### Case Study 6: Binding site prediction
-
-### Case Study 7: Key functional group prediction
-
+### Case Study 5: transcript-wide analysis (RNA targets more than 31nt)
 
 ## Web Server
 We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to anaysis the interactions.
