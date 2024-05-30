@@ -11,6 +11,7 @@ Yuhan Fei and Jiasheng Zhang, xxx
 ```
 ## Table of contents
 - [Getting Started](#getting-started)
+- [Repo Structure](#repo-structure)
 - [Datasets](#datasets)
   - Traing, validation, and test data for SmrtNet
   - RNA sequence datasets for RNA language model (RNA-LM)
@@ -29,7 +30,7 @@ Yuhan Fei and Jiasheng Zhang, xxx
   - Fragment-based drug design
   - Transcriptome-wide target discovery
 - [Web Server](#web-server)
-- [Referenced Repos]:(#referenced-repos)
+- [Referenced Repos](#referenced-repos)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
 
@@ -65,7 +66,34 @@ conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install smrtnet
 ```
-
+### Repo Structure:
+After adding all our examples, the repo has the following structure:
+```
+├── agents
+|  └── dcgan.py
+|  └── condensenet.py
+|  └── mnist.py
+|  └── dqn.py
+|
+├── configs
+|  └── dcgan_exp_0.py
+|  └── condensenet_exp_0.py
+|  └── mnist_exp_0.py
+|  └── dqn_exp_0.py
+|  └── example_exp_0.py
+|  └── erfnet_exp_0.py
+|
+├── data
+|
+├── datasets
+|  └── cifar10.py
+|  └── celebA.py
+|  └── mnist.py
+|  └── example.py
+|  └── voc2012.py
+├──
+├── main.py
+└── run.sh
 
 ## Datasets
 
