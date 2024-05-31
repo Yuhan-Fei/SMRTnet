@@ -259,7 +259,14 @@ python main.py --do_test \
 
 ### Case Study 4: Key functional group prediction
 
-### Case Study 5: transcript-wide analysis (RNA targets more than 31nt)
+### Case Study 6: Fragment-based design
+
+Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
+
+
+### Case Study 7: transcript-wide analysis (RNA targets more than 31nt)
+
+
 
 ## Web Server
 We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to predict and visualize the interactions between small molecule and RNA.
@@ -271,7 +278,7 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 3. ResNet
 4. GAT
 5. Transformer
-
+6. OPENBABEL
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
