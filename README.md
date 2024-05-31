@@ -80,28 +80,41 @@ pip install smrtnet
 After adding all our examples, the repo has the following structure:
 ```
 ├── LM_Mol
-|  └── dcgan.py
-|  └── condensenet.py
-|  └── mnist.py
-|  └── dqn.py
+|  └── Pretrained
+|      └── hparams.yaml
+|      └── checkpoints
+|          └── N-Step-Checkpoint_3_30000.ckpt
+|  └── attention_layer.py
+|  └── bert_vocab.txt
+|  └── rotary.py
+|  └── rotate_builder.py
+|  └── tokenizer.py
 |
 ├── LM_RNA
-|  └── dcgan_exp_0.py
-|  └── condensenet_exp_0.py
-|  └── mnist_exp_0.py
-|  └── dqn_exp_0.py
-|  └── example_exp_0.py
-|  └── erfnet_exp_0.py
+|   └── model_state_dict
+|      └── rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213
+|          └── epoch_0
+|              └── LMmodel.pt
+|   └── parameters.json
+|   └── pretrained
+|   └── activations.py
+|   └── bert.py
+|   └── doc.py
+|   └── modeling_utils.py
+|   └── transformers_output.py
 |
 ├── data
 |
 ├── datasets
-|  └── cifar10.py
-|  └── celebA.py
-|  └── mnist.py
-|  └── example.py
-|  └── voc2012.py
-├──dataset_cv_best
+|   └── 5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt
+|
+├── dataset_cv_best
+|
+├── img_log
+|   └── 5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt
+|
+├── results
+|   └── 20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 |
 ├── explain.py
 ├── infer.py
