@@ -240,29 +240,31 @@ python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --inf
 ### Case Study 2: benchmark evalutation:
 
 <details>
+   <summary>Click here for the code!</summary>
+ 
 ```python
+
 INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
 DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
 python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/benchmark
 
- ```
+```
 </details>
 
+### Case Study 3: Use multiple GPU
 
-### Case Study 2: Use multiple GPU
 <details>
+   <summary>Click here for the code!</summary>
+  
 ```python
-CV=1
-python main.py --do_infer --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth --infer_out_dir ${INPUTPATH}/data/results.txt --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
+
 
 CV=2
 nohup python main.py --do_infer --cuda 6 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
     --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
-
-
 
 CV=3
 nohup python main.py --do_infer --cuda 7 \
@@ -281,13 +283,17 @@ nohup python main.py --do_infer --cuda 9 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
     --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
- ```
+
+```
 </details>
 
-### Case Study 3: Binding site prediction
+### Case Study 4: Binding site prediction:
 
 <details>
+   <summary>Click here for the code!</summary>
+  
 ```python
+
 DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
 
@@ -299,12 +305,17 @@ python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infe
 
 jupyter-lab --no-browser --port 1111
 /data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
+
 ```
 </details>
 
 ### Case Study 4: Key functional group prediction
+
 <details>
+   <summary>Click here for the code!</summary>
+  
 ```python
+
 DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
 
@@ -318,19 +329,31 @@ jupyter-lab --no-browser --port 1111
 /data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
 ```
 </details>
+
+
 ### Case Study 5: Fragment-based design
+
 <details>
+   <summary>Click here for the code!</summary>
+  
 ```python
+
 cd /data2/feiyuhan/SmrtNet_v3.2_yh
 python main.py --do_delta --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ${INPUTPATH}/data/delta --infer_rna_dir ${INPUTPATH}/data/rna2.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
+
+
+Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
 ```
 </details>
 
-Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
-
-
 ### Case Study 6: transcript-wide analysis (RNA targets more than 31nt)
 
+<details>
+   <summary>Click here for the code!</summary>
+```python
+  python main.py --do_ensemble
+```
+</details>
 
 
 ## Web Server
@@ -344,6 +367,7 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 4. GAT
 5. Transformer
 6. OPENBABEL
+7. DSSR
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
