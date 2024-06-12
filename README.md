@@ -350,8 +350,11 @@ Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemi
 
 <details>
    <summary>Click here for the code!</summary>
+  
 ```python
+
   python main.py --do_ensemble
+
 ```
 </details>
 
