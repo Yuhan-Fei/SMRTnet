@@ -28,6 +28,7 @@ Please contact me if you are interested in my work and look for academic collabo
   - How to test the performance of model
   - How to inference based on our pre-trained model
   - How to perform model interpretibility
+- [Example](#example)
 - [Web Server](#web-server)
 - [Referenced Repos](#referenced-repos)
 - [Copyright and License](#copyright-and-license)
@@ -86,6 +87,10 @@ Please visit https://pytorch.org/get-started/previous-versions/ to install the c
 
 
 ### Disable CPU in fast-transformer
+
+<details>
+   <summary>Click here for the code!</summary>
+
 ```bash
 DIR=/home/yuhan/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/fast_transformers
 sed -i '9,10 s/^/#/' ${DIR}/causal_product/__init__.py
@@ -111,7 +116,8 @@ sed -i '72 s/^/#/' ${DIR}/local_product/__init__.py
 sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
-
+</details>
+  
 ## Repo Structure:
 After adding all our data, the repo has the following structure:
 
@@ -238,28 +244,35 @@ To train the model from scratch, run
 ```python
 python main.py --do_train
  ```
-where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`.
+where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard
 
-To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard:
-```
-python main.py --do_train --tfboard
-```
-You can run the script bellow to perform model training
-<details>
-   <summary>Click here for the code!</summary>
- 
+We provide the example scripts to train the model from scratch:
+
 ```python
-python main.py --do_train --cuda 2 --batch_size 16 --out_dir=./results/20240521_benchmark
-
+python main.py --do_train \
+               --do_dir=./datasets/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
+               --cuda 2 \
+               --batch_size 16 \
+               --out_dir=./results/20240521_benchmark
 ```
-
-</details>
 
 ### Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
 ```
 python main.py --do_test
 ```
+We provide the example scripts to test the model:
+
+```python
+python main.py --do_test \
+               --do_dir=./datasets/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
+               --cuda 2 \
+               --batch_size 16 \
+               --out_dir=./results/20240521_benchmark
+```
+
+
+
 
 
 ### Inference
@@ -274,14 +287,74 @@ python main.py --do_infer
 ```
 The difference between do_ensemble and do_infer is whether multiple GPUs are used at the same time.
 
+We provide the example scripts to perform inference of model:
+```python
+
+DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+
+cd /data2/feiyuhan/SmrtNet_v3.2_yh
+
+python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ${INPUTPATH}/data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
+
+ ```
+
+or 
+
+```python
+
+
+CV=2
+nohup python main.py --do_infer --cuda 6 \
+    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
+    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+
+CV=3
+nohup python main.py --do_infer --cuda 7 \
+    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
+    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+
+CV=4
+nohup python main.py --do_infer --cuda 8 \
+    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
+    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+
+CV=5
+nohup python main.py --do_infer --cuda 9 \
+    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
+    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+
+```
+
+
 
 ### Interpretability
 For computing high attention regions using the trained models, You can run it using the following scripts and visualize the results in jupyter-notebook
 ```
 python main.py --do_explain
 ```
+We provide the example scripts to perform interpretability of model:
 
+```python
 
+DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+
+cd /data2/feiyuhan/SmrtNet_v3.2_yh
+
+python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
+    --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
+    --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
+
+jupyter-lab --no-browser --port 1111
+/data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
+
+```
+<!--
 ## Example
 
 ### Case Study 1: Inference: N small molecules vs N RNA target:
@@ -420,7 +493,7 @@ python main.py --do_delta --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_
 Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
 ```
 </details>
-
+-->
 
 
 ## Web Server
