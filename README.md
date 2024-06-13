@@ -7,12 +7,16 @@ RNA-targeting small molecules can bind RNA to regulate its function, providing a
 ## Cite us
 If you found this package useful, please cite [our paper](xxx):
 ```
-Yuhan Fei and Jiasheng Zhang, SmrtNet: Predicting small molecule and RNA target interactions using deep neural network, xxx, 2024
+Yuhan Fei, SmrtNet: Predicting small molecule and RNA target interactions using deep neural network, xxx, 2024
 ```
+## Contact us
+Please contact me if you are interested in my work and look for academic collaboration. (yuhan_fei@outlook.com)
+
 ## Table of contents
 - [Getting Started](#getting-started)
 - [Repo Structure](#repo-structure)
 - [Datasets](#datasets)
+  - Dataset construction
   - Traing, validation, and test data of SmrtNet
   - RNA sequence datasets for RNA language model (RNA-LM)
   - SMILES datasets for chemical language model (MoLFormer)
@@ -36,29 +40,31 @@ Yuhan Fei and Jiasheng Zhang, SmrtNet: Predicting small molecule and RNA target 
 
 ## Getting started
 
-
-### `Requirements`
+### Requirements
 ```bash
  - Python 3.8.10
- - PyTorch 1.10.1, with NVIDIA CUDA Support
- - torchvision==0.11.2
- - torchaudio==0.10.1
- - pytorch-fast-transformers==0.3.0
- - pytorch-lightning==1.1.5
- - xxx...
+ - PyTorch 1.10.1+cu111 (Visit https://pytorch.org/get-started/previous-versions/ to install the correct version)
+ - torchvision 0.11.2+cu111
+ - torchaudio 0.10.1
+ - pytorch-fast-transformers 0.3.0
+ - pytorch-lightning 1.1.5
+ - transformers 4.40.2
+ - dgllife 0.3.2
+ - dgl-cuda10.2 0.9.1post1
+ - rdkit 2022.3.5
+ - scipy 1.10.1
+ - pandas 1.2.4
+ - scikit-learn 0.24.2
+ - numpy 1.20.3
+ - prettytable 3.10.0
+ - notebook 7.1.3
+ - tebsnrboardX 2.6.2.2
+ - prefetch-generator 1.0.3
+ - matplotlib 3.7.5
+ - seaborn 0.13.2
 ```
 
-### `Clone repository`
-```bash
-git clone https://github.com/Yuhan-Fei/SmrtNet.git
-cd SmrtNet
-pip install -r requirements.txt
-pip install -e .
-conda activate SmrtNet
-```
-
-or
-
+### Install via Conda
 ```bash
 git clone https://github.com/Yuhan-Fei/SmrtNet.git
 cd SmrtNet
@@ -66,7 +72,7 @@ conda env create -f environment.yml
 conda activate SmrtNet
 ```
 
-### `conda`
+### Install via Pip
 ```bash
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
@@ -74,7 +80,41 @@ pip install smrtnet
 ```
 
 
+### Install via Conda and Pip
+```bash
+pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
+pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 transformers pytorch-fast-transformers==0.3.0 pytorch-lightning==1.1.5 rdkit==2022.3.5 scipy==1.10.1 pandas==1.2.4 scikit-learn==0.24.2 
+pip install matplotlib seaborn xsmiles
+conda install dgllife -c conda-forge
+conda install dglteam::dgl-cuda10.2
+```
 
+### Disable CPU in fast-transformer
+```bash
+DIR=/home/yuhan/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/fast_transformers
+sed -i '9,10 s/^/#/' ${DIR}/causal_product/__init__.py
+sed -i '24 s/^/#/' ${DIR}/causal_product/__init__.py
+sed -i '28 s/^/#/' ${DIR}/causal_product/__init__.py
+sed -i '10,11 s/^/#/' ${DIR}/aggregate/__init__.py
+sed -i '10 s/^/#/' ${DIR}/clustering/hamming/__init__.py
+sed -i '10 s/^/#/' ${DIR}/hashing/__init__.py
+sed -i '10,14 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '28,34 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '54 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '58 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '100 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '104 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '153 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '157 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '227 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '231 s/^/#/' ${DIR}/sparse_product/__init__.py
+sed -i '8,11 s/^/#/' ${DIR}/local_product/__init__.py
+sed -i '30 s/^/#/' ${DIR}/local_product/__init__.py
+sed -i '34 s/^/#/' ${DIR}/local_product/__init__.py
+sed -i '72 s/^/#/' ${DIR}/local_product/__init__.py
+sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
+
+```
 
 ## Repo Structure:
 After adding all our examples, the repo has the following structure:
