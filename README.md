@@ -15,14 +15,13 @@ Please contact me if you are interested in my work and look for academic collabo
 ## Table of contents
 - [Getting Started](#getting-started)
 - [Repo Structure](#repo-structure)
+- [SmrtNet Architecture](#smrtNet-architecture)
 - [Datasets](#datasets)
-  - Dataset construction
-  - Traing, validation, and test data of SmrtNet
-  - RNA sequence datasets for RNA language model (RNA-LM)
-  - SMILES datasets for chemical language model (MoLFormer)
-  - Small molecule library for inference
+  - Datasets for training
   - RNA target format for inference
   - Small molecule format for inference
+  - RNA sequence datasets for RNA language model (RNA-LM)
+  - SMILES datasets for chemical language model (MoLFormer)
 - [Usage](#usage)
   - How to train your own model 
   - How to test the performance of model
@@ -43,7 +42,7 @@ Please contact me if you are interested in my work and look for academic collabo
 ### Requirements
 ```bash
  - Python 3.8.10
- - PyTorch 1.10.1+cu111 (Visit https://pytorch.org/get-started/previous-versions/ to install the correct version)
+ - PyTorch 1.10.1+cu111 
  - torchvision 0.11.2+cu111
  - torchaudio 0.10.1
  - pytorch-fast-transformers 0.3.0
@@ -79,8 +78,7 @@ conda activate smrtnet
 pip install smrtnet
 ```
 
-
-### Install via Conda and Pip
+### Install via Conda and Pip manually
 ```bash
 pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
 pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 transformers pytorch-fast-transformers==0.3.0 pytorch-lightning==1.1.5 rdkit==2022.3.5 scipy==1.10.1 pandas==1.2.4 scikit-learn==0.24.2 
@@ -88,6 +86,8 @@ pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
 ```
+Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch according to your CUDA version
+
 
 ### Disable CPU in fast-transformer
 ```bash
@@ -117,7 +117,11 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 ```
 
 ## Repo Structure:
-After adding all our examples, the repo has the following structure:
+After adding all our data, the repo has the following structure:
+
+<details>
+   <summary>Click here for the code!</summary>
+
 ```
 ├── LM_Mol
 |  └── Pretrained
@@ -151,7 +155,11 @@ After adding all our examples, the repo has the following structure:
 ├── dataset_cv_best
 |
 ├── img_log
-|   └── 5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt
+|   └── 1.png
+|   └── 2.png
+|   └── 3.png
+|   └── acgu.npz
+|   └── dot_bracket.npz
 |
 ├── results
 |   └── 20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
@@ -163,22 +171,32 @@ After adding all our examples, the repo has the following structure:
 ├── main.py
 ├── model.py
 └── utils.sh
-```
 
+```
+</details>
+
+## SmrtNet Architecture
+
+<p align="center"><img src="figs/architecture.png" width=100% /></p>
+
+  
 ## Datasets
 
-### Prepare the datasets
+### Datasets for training
 
-Scripts and pipeline are in preparing, currently, we provide xxx samples data in *.txt format for training and testing SmrtNet.
+Download and extract the dataset in datasets folder: 5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt
+
+The original SmrtNet dataset can be found at https://www.rcsb.org/ and process by custom scripts.
+
+The format of data for training is show as follow:
+
+| SMILES | Sequence | Structure | label |
+|-----------------|-------------|-------------|-------------|
+| CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) | 1 |
+| CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
 
 
-```
-# Training data
-./SmrtNet/data
-```
-
-
-### Format of input RNA target
+### Format of input RNA target for inference:
 
 The length of RNA should >31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.
 
@@ -188,7 +206,7 @@ The length of RNA should >31nt, and the sequence length should equal to the stru
 | Pre-miR21 | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) |
 
 
-### Format of input small molecule:
+### Format of input small molecule  for inference:
 The SMILES of small molecule should meet the requirement of RDkit. Data are split by tab and ignore the first header row.
 
 | CAS | SMILES |
@@ -197,15 +215,13 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 | 90-33-5| CC1=CC(=O)OC2=C1C=CC(=C2)O|
 | 55084-08-7 | COC1=CC=CC(=C1C2=CC(=O)C3=C(C(=C(C(=C3O2)OC)OC)OC)O)O | 
 
+### RNA sequence datasets for RNA language model (RNA-LM)
 
+### SMILES datasets for chemical language model (MoLFormer)
 
 
 
 ## Usage
-
-### Network Architecture
-
-<p align="center"><img src="figs/architecture.png" width=100% /></p>
 
 
 ### Check your input data format
