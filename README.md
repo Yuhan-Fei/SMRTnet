@@ -15,7 +15,7 @@ Please contact me if you are interested in my work and look for academic collabo
 ## Table of contents
 - [Getting Started](#getting-started)
 - [Repo Structure](#repo-structure)
-- [SmrtNet Architecture](#smrtNet-architecture)
+- [SmrtNet Architecture](#smrtnet-architecture)
 - [Datasets](#datasets)
   - Datasets for training
   - RNA target format for inference
@@ -23,15 +23,11 @@ Please contact me if you are interested in my work and look for academic collabo
   - RNA sequence datasets for RNA language model (RNA-LM)
   - SMILES datasets for chemical language model (MoLFormer)
 - [Usage](#usage)
+  - How to check your input format
   - How to train your own model 
   - How to test the performance of model
   - How to inference based on our pre-trained model
-- [Example](#example)
-  - High throughput drug screening
-  - Binding site prediction
-  - Key functional group prediction
-  - Fragment-based drug design
-  - Transcriptome-wide target discovery
+  - How to perform model interpretibility
 - [Web Server](#web-server)
 - [Referenced Repos](#referenced-repos)
 - [Copyright and License](#copyright-and-license)
@@ -217,8 +213,13 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 
 ### RNA sequence datasets for RNA language model (RNA-LM)
 
+xxx
+
 ### SMILES datasets for chemical language model (MoLFormer)
 
+Datasets are available at https://ibm.box.com/v/MoLFormer-data
+
+More details can be found in https://github.com/IBM/molformer
 
 
 ## Usage
@@ -235,13 +236,7 @@ python main.py --do_check
 
 To train the model from scratch, run
 ```python
-python main.py --do_train \
-               --in_dir ./dataset/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
-               --out_dir=./results/20240521_seqstr_benchmark \
-               --cuda 0 \
-               --batch_size 32 \
-               --epoch 100\
-               --patiences 20 \
+python main.py --do_train
  ```
 where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`.
 
@@ -249,6 +244,16 @@ To monitor the training process, add option `--tfboard` in `main.py`, and view p
 ```
 python main.py --do_train --tfboard
 ```
+You can run the script bellow to perform model training
+<details>
+   <summary>Click here for the code!</summary>
+ 
+```python
+python main.py --do_train --cuda 2 --batch_size 16 --out_dir=./results/20240521_benchmark
+
+```
+
+</details>
 
 ### Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
@@ -262,21 +267,24 @@ For inference data (the same format as the *.tsv file used in [Datasets](#datase
 ```
 python main.py --do_ensemble
 ```
+or 
 
-For evaluation of the ensemble models, 
 ```
 python main.py --do_infer
 ```
+The difference between do_ensemble and do_infer is whether multiple GPUs are used at the same time.
+
 
 ### Interpretability
-For computing high attention regions using the trained models, we provide the script `har.sh`. You can run it using
+For computing high attention regions using the trained models, You can run it using the following scripts and visualize the results in jupyter-notebook
 ```
 python main.py --do_explain
 ```
 
+
 ## Example
 
-### Case Study 1: N small molecules vs N RNA target:
+### Case Study 1: Inference: N small molecules vs N RNA target:
 
 <details>
    <summary>Click here for the code!</summary>
@@ -291,28 +299,9 @@ cd /data2/feiyuhan/SmrtNet_v3.2_yh
 python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ${INPUTPATH}/data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
 
  ```
-</details>
 
-### Case Study 2: benchmark evalutation:
+or 
 
-<details>
-   <summary>Click here for the code!</summary>
- 
-```python
-
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-
-python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/benchmark
-
-```
-</details>
-
-### Case Study 3: Use multiple GPU
-
-<details>
-   <summary>Click here for the code!</summary>
-  
 ```python
 
 
@@ -341,7 +330,37 @@ nohup python main.py --do_infer --cuda 9 \
     --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
 
 ```
+
 </details>
+
+
+### Case Study 2: Benchmarking: benchmark evalutation:
+
+<details>
+   <summary>Click here for the code!</summary>
+ 
+```python
+
+INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+
+python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/benchmark
+
+```
+</details>
+
+### Case Study 3: transcript-wide analysis (RNA targets more than 31nt)
+
+<details>
+   <summary>Click here for the code!</summary>
+  
+```python
+
+  python main.py --do_ensemble
+
+```
+</details>
+
 
 ### Case Study 4: Binding site prediction:
 
@@ -365,7 +384,7 @@ jupyter-lab --no-browser --port 1111
 ```
 </details>
 
-### Case Study 4: Key functional group prediction
+### Case Study 5: Key functional group prediction
 
 <details>
    <summary>Click here for the code!</summary>
@@ -387,7 +406,7 @@ jupyter-lab --no-browser --port 1111
 </details>
 
 
-### Case Study 5: Fragment-based design
+### Case Study 6: Fragment-based design
 
 <details>
    <summary>Click here for the code!</summary>
@@ -402,17 +421,6 @@ Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemi
 ```
 </details>
 
-### Case Study 6: transcript-wide analysis (RNA targets more than 31nt)
-
-<details>
-   <summary>Click here for the code!</summary>
-  
-```python
-
-  python main.py --do_ensemble
-
-```
-</details>
 
 
 ## Web Server
