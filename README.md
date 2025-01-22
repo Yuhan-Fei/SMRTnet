@@ -1,13 +1,13 @@
-# SmrtNet: Predicting small molecule and RNA target interactions using deep neural network
+# SMRTnet: Predicting small molecule and RNA target interactions using deep neural network
 
-RNA-targeting small molecules can bind RNA to regulate its function, providing a promising alternative approach for the treatment of human disease. However, the development of this field has been hindered by the lack of effective experimental probing and computational prediction approaches. Here, we present SmrtNet (Predicting small molecule and RNA target interactions using deep neural network), a deep learning-based framework designed to predict interactions between small molecules and RNA targets. SmrtNet extracts sequence and structural information from both small molecule and RNA using **large-scale language models** and **attention-based neural networks**, and integrates mutual information among different encoders using **a attention-based feature fusion strategy**.
+Small molecules can bind RNAs to regulate their functions, providing promising opportunities for treating human diseases. However, currently available tools for predicting small molecule and RNA interactions (SRIs) require prior knowledge of RNA binding sites and RNA tertiary structure, limiting their utility in drug discovery.  Here, we present SMRTnet, a deep learning method to predict SRIs based on RNA secondary structure. By integrating **large language models**, **convolutional neural networks**, **graph attention networks**, and **multimodal data fusion**, SMRTnet achieves high performance with multiple benchmarks, substantially outperforming currently leading tools.
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
 ## Cite us
 If you found this package useful, please cite [our paper](xxx):
 ```
-Yuhan Fei, SmrtNet: Predicting small molecule and RNA target interactions using deep neural network, xxx, 2024
+Yuhan Fei, xxx, xxx, xxx , SMRTnet: Predicting small molecule and RNA target interactions using deep neural network, xxx, 2024
 ```
 ## Contact us
 Please contact me if you are interested in my work and look for academic collaboration. (yuhan_fei@outlook.com)
