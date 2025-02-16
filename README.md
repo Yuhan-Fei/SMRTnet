@@ -11,7 +11,8 @@ Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yang
 ```
 ## Contact us
 Please contact us if you are interested in our work and look for academic collaboration:  
-yuhan_fei@outlook.com and zjs21@mails.tsinghua.edu.cn
+- Dr. Yuhan Fei, yuhan_fei@outlook.com  
+- Jiasheng Zhang, zjs21@mails.tsinghua.edu.cn
 
 ## Table of contents
 - [Getting Started](#getting-started)
