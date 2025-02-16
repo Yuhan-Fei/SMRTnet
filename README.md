@@ -10,7 +10,8 @@ If you found this package useful, please cite [our paper](xxx):
 Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang , SMRTnet: Predicting small molecule and RNA target interactions using deep neural network, Under review, 2025
 ```
 ## Contact us
-Please contact me if you are interested in my work and look for academic collaboration. (yuhan_fei@outlook.com and zjs21@mails.tsinghua.edu.cn)
+Please contact us if you are interested in our work and look for academic collaboration:
+yuhan_fei@outlook.com and zjs21@mails.tsinghua.edu.cn
 
 ## Table of contents
 - [Getting Started](#getting-started)
