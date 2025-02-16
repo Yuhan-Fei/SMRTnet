@@ -119,6 +119,10 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
+
+
+### Download our model from the link below:  
+https://zenodo.org/records/14715564
   
 ## Repo Structure:
 After adding all our data, the repo has the following structure:
@@ -225,9 +229,6 @@ Please download our RNA language model from link below:
 https://zenodo.org/records/14715564
 
 ### SMILES datasets for chemical language model (MoLFormer)
-
-Please download the chemical language model from link below:  
-https://zenodo.org/records/14715564
 
 Datasets are available at https://ibm.box.com/v/MoLFormer-data
 
