@@ -152,7 +152,7 @@ After adding all our data, the repo has the following structure:
 ├── data
 |
 ├── datasets
-|   └── 5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt
+|   └── SMRTnet-data.txt
 |
 ├── dataset_cv_best
 |
@@ -186,7 +186,7 @@ After adding all our data, the repo has the following structure:
 
 ### Datasets for training
 
-Download and extract the dataset in datasets folder: 5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt
+Download and extract the dataset in datasets folder: SMRTnet-data.txt
 
 The original SmrtNet dataset can be found at https://www.rcsb.org/ and process by custom scripts.
 
@@ -250,7 +250,7 @@ We provide the example scripts to train the model from scratch:
 
 ```python
 python main.py --do_train \
-               --do_dir=./datasets/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
+               --do_dir=./datasets/SMRTnet-data.txt \
                --cuda 2 \
                --batch_size 16 \
                --out_dir=./results/20240521_benchmark
@@ -265,7 +265,7 @@ We provide the example scripts to test the model:
 
 ```python
 python main.py --do_test \
-               --do_dir=./datasets/5.5.1.3_10A_norm_simple_unk_single_O4_ion_ext_new_III_2_42.txt \
+               --do_dir=./datasets/SMRTnet-data.txt \
                --cuda 2 \
                --batch_size 16 \
                --out_dir=./results/20240521_benchmark
