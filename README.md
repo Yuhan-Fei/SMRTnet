@@ -119,10 +119,6 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
-
-
-### Download our model from the link below:  
-https://zenodo.org/records/14715564
   
 ## Repo Structure:
 After adding all our data, the repo has the following structure:
@@ -187,6 +183,8 @@ After adding all our data, the repo has the following structure:
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
+### Download our model from zenodo
+https://zenodo.org/records/14715564
   
 ## Datasets
 
