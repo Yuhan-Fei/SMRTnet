@@ -183,7 +183,7 @@ After adding all our data, the repo has the following structure:
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
-### Download our model from zenodo
+### Download our pre-trained models from zenodo, including RNA language model, chemical language model, and SMRTnet
 https://zenodo.org/records/14715564
   
 ## Datasets
