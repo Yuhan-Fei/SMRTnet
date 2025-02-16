@@ -355,8 +355,8 @@ python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infe
     --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
     --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
 
-jupyter-lab --no-browser --port 1111
-/data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
+#jupyter-lab --no-browser --port 1111
+#/data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
 
 ```
 <!--
