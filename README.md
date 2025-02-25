@@ -282,7 +282,10 @@ python main.py --do_test \
 
 
 ### Inference
-For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy, You can run it using
+For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
+<p align="center"><img src="figs/scoring.png" width=100% /></p>  
+
+You can run the inference using:  
 ```
 python main.py --do_ensemble
 ```
