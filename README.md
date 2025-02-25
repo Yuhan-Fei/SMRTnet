@@ -239,6 +239,29 @@ More details can be found in https://github.com/IBM/molformer
 ## Usage
 
 
+### Check your input data format
+
+Check input format
+```
+python main.py --do_check
+```
+
+### Training 
+
+To train the model from scratch, run
+```python
+python main.py --do_train
+```
+where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard
+
+We provide the example scripts to train the model from scratch:
+
+```python
+python main.py --do_train \
+               --do_dir=./datasets/SMRTnet-data.txt \
+               --cuda 0 \
+               --batch_size 16 \
+               --out_dir=./results/benchmark
 ```
 
 ### Evaluation
@@ -255,9 +278,6 @@ python main.py --do_test \
                --batch_size 16 \
                --out_dir=./results/benchmark
 ```
-
-
-
 
 
 ### Inference
@@ -321,7 +341,6 @@ nohup python main.py --do_infer --cuda 4 \
     --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 ```
-
 
 
 ### Interpretability
