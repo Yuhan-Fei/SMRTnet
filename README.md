@@ -80,10 +80,11 @@ pip install smrtnet
 ### Install via Conda and Pip manually
 ```bash
 pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
-pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 transformers pytorch-fast-transformers==0.3.0 pytorch-lightning==1.1.5 rdkit==2022.3.5 scipy==1.10.1 pandas==1.2.4 scikit-learn==0.24.2 
+pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 transformers pytorch-lightning==1.1.5 rdkit==2022.3.5 scipy==1.10.1 pandas==1.2.4 scikit-learn==0.24.2 
 pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
+pip install pytorch-fast-transformers==0.3.0 ## if If the installation step fails, you can directly copy `./fast_transformers` to your environment directory.
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch according to your CUDA version
 
