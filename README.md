@@ -70,14 +70,12 @@ conda env create -f environment.yml
 conda activate SmrtNet
 ```
 
-<p hidden>
 ### Install via Pip
 ```bash
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install smrtnet
 ```
-</p>
 
 ### Install via Conda and Pip manually
 ```bash
