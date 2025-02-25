@@ -304,7 +304,9 @@ DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
-python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
+python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./data/ensemble \
+               --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+               --infer_drug_dir ${INPUTPATH}/data/IHT.txt
 
 ```
 <!--
@@ -315,14 +317,14 @@ CV=1
 nohup python main.py --do_infer --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
     --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 CV=2
 nohup python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
     --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 CV=3
