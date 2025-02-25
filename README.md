@@ -86,7 +86,7 @@ conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
 pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `./fast_transformers` to your environment directory.
 ```
-Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch according to your CUDA version
+Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
 
 ### Disable CPU in fast-transformer
