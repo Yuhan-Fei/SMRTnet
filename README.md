@@ -22,7 +22,7 @@ Please contact us if you are interested in our work and look for academic collab
   - Datasets for training
   - RNA target format for inference
   - Small molecule format for inference
-  - RNA sequence datasets for RNA language model (RNA-LM)
+  - RNA sequence datasets for RNA language model (RNASwan-seq)
   - SMILES datasets for chemical language model (MoLFormer)
 - [Usage](#usage)
   - How to check your input format
@@ -225,7 +225,7 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 | 90-33-5| CC1=CC(=O)OC2=C1C=CC(=C2)O|
 | 55084-08-7 | COC1=CC=CC(=C1C2=CC(=O)C3=C(C(=C(C(=C3O2)OC)OC)OC)O)O | 
 
-### RNA sequence datasets for RNA language model (RNA-LM)
+### RNA sequence datasets for RNA language model (RNASwan-seq)
 
 The dataset used for RNA language model was compiled from 7 sources: the European Nucleotide Archive, NCBI's nucleotide database, GenBank, Ensembl, RNAcentral, CSCD2, and GreeNC 2.0, encompassing a total of 470 million RNA sequences. We de-duplicated with 100% sequence similarity using MMSeqs2, resulting in about 214 million unique RNA sequences
 
