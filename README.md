@@ -223,11 +223,11 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 
 ### RNA sequence datasets for RNA language model (RNA-LM)
 
-Please download our RNA language model from link below:  
+Please download models used in SMRTnet from link below, and place these models into the SMRTnet folder:  
 https://zenodo.org/records/14715564
 
-<p align="center"><img src="figs/models.png" width=80% /></p>
-Please place these model files into the folder and proceed with training and inference.
+<p align="center"><img src="figs/zenodo.png" width=100% /></p>
+
 
 ### SMILES datasets for chemical language model (MoLFormer)
 
