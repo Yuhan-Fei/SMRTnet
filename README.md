@@ -175,7 +175,7 @@ After adding all our data, the repo has the following structure:
 ├── loop.py
 ├── main.py
 ├── model.py
-└── utils.sh
+└── utils.py
 
 ```
 </details>
