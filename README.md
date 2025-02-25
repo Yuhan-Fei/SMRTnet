@@ -509,13 +509,13 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 <p align="center"><img src="figs/webserver.png" width=100% /></p>
 
 ## Referenced Repos
-1. MoLFormer
-2. CNN
-3. ResNet
-4. GAT
-5. Transformer
-6. OPENBABEL
-7. DSSR
+1. [MoLFormer](https://github.com/IBM/molformer)
+2. CNN: [LeNet](https://doi.org/10.1109/5.726791) and [AlexNet](https://doi.org/10.1145/3065386)
+3. [ResNet](https://doi.org/10.48550/arXiv.1512.03385)
+4. [GAT](https://doi.org/10.48550/arXiv.1710.10903)
+5. [Transformer](https://doi.org/10.48550/arXiv.1706.03762)
+6. [OPENBABEL](https://github.com/openbabel/openbabel) and [its web](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
+7. [DSSR](http://home.x3dna.org/)
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
