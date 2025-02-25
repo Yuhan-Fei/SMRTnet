@@ -30,8 +30,8 @@ Please contact us if you are interested in our work and look for academic collab
   - How to test the performance of model
   - How to inference based on our pre-trained model
   - How to perform model interpretibility
-- [Example](#example)
-- [Web Server](#web-server)
+<!-- - [Example](#example)-->
+- [Web Server] (Coming soon...)(#web-server)
 - [Referenced Repos](#referenced-repos)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
