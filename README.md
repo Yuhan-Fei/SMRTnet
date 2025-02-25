@@ -302,7 +302,7 @@ cd ${WorkDir}
 python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
 
 ```
-
+<!--
 or 
 
 ```python
@@ -342,7 +342,7 @@ nohup python main.py --do_infer --cuda 4 \
     --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 ```
-
+-->
 
 ### Interpretability
 For computing high attention regions using the trained models, You can run it using the following scripts and visualize the results in jupyter-notebook
