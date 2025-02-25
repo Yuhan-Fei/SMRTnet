@@ -259,7 +259,7 @@ We provide the example scripts to train the model from scratch:
 
 ```python
 python main.py --do_train \
-               --do_dir=./datasets/SMRTnet-data.txt \
+               --data_dir=./datasets/SMRTnet-data.txt \
                --cuda 0 \
                --batch_size 16 \
                --out_dir=./results/benchmark
@@ -274,7 +274,7 @@ We provide the example scripts to test the model:
 
 ```python
 python main.py --do_test \
-               --do_dir=./datasets/SMRTnet-data.txt \
+               --data_dir=./datasets/SMRTnet-data.txt \
                --cuda 0 \
                --batch_size 16 \
                --out_dir=./results/benchmark
