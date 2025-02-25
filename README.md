@@ -297,7 +297,7 @@ The difference between do_ensemble and do_infer is whether multiple GPUs are use
 -->
 We provide the example scripts to perform inference of model:
 ```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
@@ -354,7 +354,7 @@ python main.py --do_explain
 We provide the example scripts to perform interpretability of model:
 
 ```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
@@ -372,7 +372,7 @@ python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infe
    <summary>Click here for the code!</summary>
 
 ```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
