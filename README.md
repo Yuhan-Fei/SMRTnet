@@ -184,7 +184,10 @@ After adding all our data, the repo has the following structure:
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
 ### Download our pre-trained models from zenodo
-https://zenodo.org/records/14715564 （including RNA language model, chemical language model, and SMRTnet）
+Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model), from link below, and place these models into the SMRTnet folder:  
+https://zenodo.org/records/14715564
+
+<p align="center"><img src="figs/zenodo.png" width=100% /></p>
   
 ## Datasets
 
@@ -223,10 +226,7 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 
 ### RNA sequence datasets for RNA language model (RNA-LM)
 
-Please download models used in SMRTnet from link below, and place these models into the SMRTnet folder:  
-https://zenodo.org/records/14715564
-
-<p align="center"><img src="figs/zenodo.png" width=100% /></p>
+Datasets are available at xxx
 
 
 ### SMILES datasets for chemical language model (MoLFormer)
