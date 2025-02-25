@@ -507,11 +507,11 @@ Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemi
 </details>
 -->
 
-<p hidden>
+
 ## Web Server
 We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to predict and visualize the interactions between small molecule and RNA.
 <p align="center"><img src="figs/webserver.png" width=100% /></p>
-</p>
+
 ## Referenced Repos
 1. [MoLFormer](https://github.com/IBM/molformer)
 2. CNN: [LeNet](https://doi.org/10.1109/5.726791) and [AlexNet](https://doi.org/10.1145/3065386)
