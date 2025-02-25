@@ -226,6 +226,8 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 Please download our RNA language model from link below:  
 https://zenodo.org/records/14715564
 
+<p align="center"><img src="figs/models.png" width=100% /></p>
+
 ### SMILES datasets for chemical language model (MoLFormer)
 
 Datasets are available at https://ibm.box.com/v/MoLFormer-data
