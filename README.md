@@ -227,6 +227,7 @@ Please download our RNA language model from link below:
 https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/models.png" width=80% /></p>
+Please place these model files into the folder and proceed with training and inference.
 
 ### SMILES datasets for chemical language model (MoLFormer)
 
