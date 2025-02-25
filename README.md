@@ -282,17 +282,19 @@ python main.py --do_test \
 
 
 ### Inference
-For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the trained models, we provide the script `infer.sh`. You can run it using
+For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy, You can run it using
 ```
 python main.py --do_ensemble
 ```
+<!--
+we provide the script `infer.sh`. 
 or 
 
 ```
 python main.py --do_infer
 ```
 The difference between do_ensemble and do_infer is whether multiple GPUs are used at the same time.
-
+-->
 We provide the example scripts to perform inference of model:
 ```python
 DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
