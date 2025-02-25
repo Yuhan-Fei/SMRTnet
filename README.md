@@ -208,7 +208,7 @@ The length of RNA should >31nt, and the sequence length should equal to the stru
 
 | RNA  | Sequence | Structure |
 |-----------------|-------------|-------------|
-| MYC | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) |
+| MYC | UGGGGGGCUUCGCCUCUGGCCCAGCCCUCCA | (((((((((..(((...)))..))))))))) |
 | Pre-miR21 | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) |
 
 
@@ -226,7 +226,7 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 Please download our RNA language model from link below:  
 https://zenodo.org/records/14715564
 
-<p align="center"><img src="figs/models.png" width=100% /></p>
+<p align="center"><img src="figs/models.png" width=80% /></p>
 
 ### SMILES datasets for chemical language model (MoLFormer)
 
