@@ -239,29 +239,6 @@ More details can be found in https://github.com/IBM/molformer
 ## Usage
 
 
-### Check your input data format
-
-Check input format
-```
-python main.py --do_check
-```
-
-### Training 
-
-To train the model from scratch, run
-```python
-python main.py --do_train
- ```
-where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard
-
-We provide the example scripts to train the model from scratch:
-
-```python
-python main.py --do_train \
-               --do_dir=./datasets/SMRTnet-data.txt \
-               --cuda 2 \
-               --batch_size 16 \
-               --out_dir=./results/20240521_benchmark
 ```
 
 ### Evaluation
@@ -274,9 +251,9 @@ We provide the example scripts to test the model:
 ```python
 python main.py --do_test \
                --do_dir=./datasets/SMRTnet-data.txt \
-               --cuda 2 \
+               --cuda 0 \
                --batch_size 16 \
-               --out_dir=./results/20240521_benchmark
+               --out_dir=./results/benchmark
 ```
 
 
@@ -297,44 +274,51 @@ The difference between do_ensemble and do_infer is whether multiple GPUs are use
 
 We provide the example scripts to perform inference of model:
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+cd ${WorkDir}
 
-cd /data2/feiyuhan/SmrtNet_v3.2_yh
+python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
 
-python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ${INPUTPATH}/data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
-
- ```
+```
 
 or 
 
 ```python
-
+CV=1
+nohup python main.py --do_infer --cuda 0 \
+    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 CV=2
-nohup python main.py --do_infer --cuda 6 \
+nohup python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 CV=3
-nohup python main.py --do_infer --cuda 7 \
+nohup python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 CV=4
-nohup python main.py --do_infer --cuda 8 \
+nohup python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 CV=5
-nohup python main.py --do_infer --cuda 9 \
+nohup python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
 ```
 
@@ -348,18 +332,16 @@ python main.py --do_explain
 We provide the example scripts to perform interpretability of model:
 
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+cd ${WorkDir}
 
-cd /data2/feiyuhan/SmrtNet_v3.2_yh
-
-python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
+python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
+    --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
     --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
 
 #jupyter-lab --no-browser --port 1111
-#/data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
+#./xsmiles.ipynb
 
 ```
 <!--
@@ -369,46 +351,53 @@ python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infe
 
 <details>
    <summary>Click here for the code!</summary>
- 
+
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+cd ${WorkDir}
 
-cd /data2/feiyuhan/SmrtNet_v3.2_yh
+python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
 
-python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ${INPUTPATH}/data/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
-
- ```
+```
 
 or 
 
 ```python
-
+CV=1
+nohup python main.py --do_infer --cuda 0 \
+    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
 
 CV=2
-nohup python main.py --do_infer --cuda 6 \
+nohup python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
 
 CV=3
-nohup python main.py --do_infer --cuda 7 \
+nohup python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
 
 CV=4
-nohup python main.py --do_infer --cuda 8 \
+nohup python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
 
 CV=5
-nohup python main.py --do_infer --cuda 9 \
+nohup python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results_case/screenDrug/screen_all_20240517/results_all_screen_${CV}_DL.txt --infer_rna_dir ${INPUTPATH}/drug_like/experiment_6_target/all.txt \
-    --infer_drug_dir ${INPUTPATH}/drug_like/drug_like_molecules/all_databaseI_drug_iso.txt &
+    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
+	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
+    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
 
 ```
 
@@ -419,13 +408,13 @@ nohup python main.py --do_infer --cuda 9 \
 
 <details>
    <summary>Click here for the code!</summary>
- 
+
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+cd ${WorkDir}
 
-python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/benchmark
+python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/benchmark
 
 ```
 </details>
@@ -434,7 +423,7 @@ python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt 
 
 <details>
    <summary>Click here for the code!</summary>
-  
+
 ```python
 
   python main.py --do_ensemble
@@ -447,20 +436,18 @@ python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt 
 
 <details>
    <summary>Click here for the code!</summary>
-  
+
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
+cd ${WorkDir}
 
-cd /data2/feiyuhan/SmrtNet_v3.2_yh
-
-python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
+python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
+    --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
     --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
 
 jupyter-lab --no-browser --port 1111
-/data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
+./xsmiles.ipynb
 
 ```
 </details>
@@ -469,20 +456,17 @@ jupyter-lab --no-browser --port 1111
 
 <details>
    <summary>Click here for the code!</summary>
-  
+
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-DIR=/data2/feiyuhan/SmrtNet_v3.2_yh/results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-INPUTPATH=/data2/feiyuhan/SmrtNet_v3.2_yh
-
-cd /data2/feiyuhan/SmrtNet_v3.2_yh
-
-python main.py --do_explain --cuda 2 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir /data2/feiyuhan/SmrtNet_v3.2_yh/results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
+cd ${WorkDir}
+python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
+    --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
     --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
 
 jupyter-lab --no-browser --port 1111
-/data2/feiyuhan/SmrtNet_v3.2_yh/xsmiles.ipynb
+./xsmiles.ipynb
 ```
 </details>
 
@@ -491,12 +475,12 @@ jupyter-lab --no-browser --port 1111
 
 <details>
    <summary>Click here for the code!</summary>
-  
+
 ```python
+DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-cd /data2/feiyuhan/SmrtNet_v3.2_yh
-python main.py --do_delta --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ${INPUTPATH}/data/delta --infer_rna_dir ${INPUTPATH}/data/rna2.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
-
+cd ${WorkDir}
+python main.py --do_delta --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/delta --infer_rna_dir ${INPUTPATH}/data/rna2.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
 
 Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
 ```
