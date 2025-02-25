@@ -362,11 +362,6 @@ python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infe
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
     --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
 
-<!--
-jupyter-lab --no-browser --port 1111
-./xsmiles.ipynb
--->
-
 ```
 <!--
 ## Example
