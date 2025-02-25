@@ -167,7 +167,7 @@ After adding all our data, the repo has the following structure:
 |   └── dot_bracket.npz
 |
 ├── results
-|   └── 20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
+|   └── SMRTNet_model
 |
 ├── explain.py
 ├── infer.py
