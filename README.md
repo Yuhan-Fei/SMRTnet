@@ -1,4 +1,4 @@
-## SMRTnet: Predicting small molecule and RNA target interactions using deep neural network
+![image](https://github.com/user-attachments/assets/30287817-0c51-4012-9409-b5ff280efd9f)## SMRTnet: Predicting small molecule and RNA target interactions using deep neural network
 
 Small molecules can bind RNAs to regulate their fate and functions, providing promising opportunities for treating human diseases. However, current tools for predicting small molecule-RNA interactions (SRIs) require prior knowledge of RNA tertiary structures, limiting their utility in drug discovery. Here, we present SMRTnet, a deep learning method to predict SRIs based on RNA secondary structure. By integrating **large language models**, **convolutional neural networks**, **graph attention networks**, and **multimodal data fusion**, SMRTnet achieves high performance across multiple experimental benchmarks, substantially outperforming existing state-of-the-art tools.
 
@@ -526,7 +526,7 @@ Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemi
 We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to predict and visualize the interactions between small molecule and RNA.
 <p align="center"><img src="figs/webserver.png" width=100% /></p>
 -->
-
+<!--
 ## Referenced Repos
 1. [MoLFormer](https://github.com/IBM/molformer)
 2. CNN: [LeNet](https://doi.org/10.1109/5.726791) and [AlexNet](https://doi.org/10.1145/3065386)
@@ -535,6 +535,16 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 5. [Transformer](https://doi.org/10.48550/arXiv.1706.03762)
 6. [OPENBABEL](https://github.com/openbabel/openbabel) and [its web](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
 7. [DSSR](http://home.x3dna.org/)
+-->
+## Referenced Repos
+1. MoLFormer:[https://github.com/IBM/molformer](https://github.com/IBM/molformer)
+2. Convolutional neural networks:[LeNet](https://doi.org/10.1109/5.726791) and [AlexNet](https://doi.org/10.1145/3065386)
+3. Residual neutral networks:[https://doi.org/10.48550/arXiv.1512.03385](https://doi.org/10.48550/arXiv.1512.03385)
+4. Graph Attention networks:[https://github.com/awslabs/dgl-lifesci](https://github.com/awslabs/dgl-lifesci)
+5. Transformer:[https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762)
+6. OPENBABEL:[https://github.com/openbabel/openbabel](https://github.com/openbabel/openbabel) and [web server](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
+7. atomium:[https://github.com/samirelanduk/atomium](https://github.com/samirelanduk/atomium)
+8. DSSR:[http://home.x3dna.org/](http://home.x3dna.org/)
 
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
