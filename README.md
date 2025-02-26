@@ -122,7 +122,7 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
-
+<!--
 ### Install via Conda (Coming soon...)
 ```bash
 git clone https://github.com/Yuhan-Fei/SMRTnet.git
@@ -130,6 +130,7 @@ cd SMRTnet
 conda env create -f environment.yml
 conda activate SMRTnet
 ```
+-->
 
 ### Install via Pip (Coming soon...)
 ```bash
