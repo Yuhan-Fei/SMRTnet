@@ -37,7 +37,7 @@ def main():
     parser.add_argument('--infer_rna_dir', type=str, default="./data/MYC_IRES.txt", help='infer rna directory')
     parser.add_argument('--infer_drug_dir', type=str, default="./data/IHT.txt", help='infer drug directory')
     parser.add_argument('--infer_config_dir', type=str, default="./results/SMRTnet_model/config.pkl", help='infer config directory')
-    parser.add_argument('--infer_model_dir', type=str, default="./results/SMRTnet_model/SMRTnet_cvx.pth", help='infer model directory')
+    parser.add_argument('--infer_model_dir', type=str, default="./results/SMRTnet_model/SMRTnet_cv1.pth", help='infer model directory')
     parser.add_argument('--infer_out_dir', type=str, default="./results/results.txt", help='infer output directory')
     parser.add_argument("--do_explain", action='store_true',  help="Whether to run infer on the dev set.")
     parser.add_argument("--do_ensemble", action='store_true',  help="Whether to run infer based on 5 models")
