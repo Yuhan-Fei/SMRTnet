@@ -574,7 +574,7 @@ def main():
 
         for i in range(1,6):
             print('Predicting interactions based on ('+str(i)+'/5) '+ 'model...')
-            model_path=str(args.infer_model_dir)+"/model_CV_"+str(i)+"_best.pth"
+            model_path=str(args.infer_model_dir)+"/SMRTnet_cv"+str(i)+".pth"
             model = load_model(args.infer_config_dir, model_path, args)
             params_test = {'batch_size': args.batch_size, 'shuffle': False, 'num_workers': 0, 'drop_last': False,
                         'sampler': SequentialSampler(data_process_loader(test_df.index.values, test_df.Label.values, test_df, args))}
