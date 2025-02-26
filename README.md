@@ -62,20 +62,6 @@ Please contact us if you are interested in our work and look for academic collab
  - seaborn 0.13.2
 ```
 
-### Install via Conda
-```bash
-git clone https://github.com/Yuhan-Fei/SmrtNet.git
-cd SmrtNet
-conda env create -f environment.yml
-conda activate SmrtNet
-```
-
-### Install via Pip
-```bash
-conda create -n smrtnet python=3.8.10
-conda activate smrtnet
-pip install smrtnet
-```
 
 ### Install via Conda and Pip manually
 ```bash
@@ -102,6 +88,20 @@ cp ./env_supplementary/modeling_esm.py ~/anaconda3/envs/smrtnet2/lib/python3.8/s
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
+### Install via Conda (Coming soon...)
+```bash
+git clone https://github.com/Yuhan-Fei/SmrtNet.git
+cd SmrtNet
+conda env create -f environment.yml
+conda activate SmrtNet
+```
+
+### Install via Pip (Coming soon...)
+```bash
+conda create -n smrtnet python=3.8.10
+conda activate smrtnet
+pip install smrtnet
+```
 
 ### Disable CPU in fast-transformer
 
