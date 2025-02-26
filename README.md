@@ -222,7 +222,8 @@ The format of data for training is show as follow:
 
 ### Format of input RNA target for inference:
 
-The length of RNA should >31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.
+The length of RNA should >=31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
+
 
 | RNA  | Sequence | Structure |
 |-----------------|-------------|-------------|
