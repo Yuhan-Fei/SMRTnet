@@ -276,7 +276,7 @@ def add_atom_index(mol):
 
 
 ######################################################################################
-##  RNA sequence & drug smile interpretability
+##  RNA sequence interpretability
 ######################################################################################
 
 def interpretability_P(testData, model, device, test_loader, resultsF, index=0, smooth_steps=3):
@@ -335,74 +335,6 @@ def interpretability_P(testData, model, device, test_loader, resultsF, index=0, 
     cb.ax.tick_params(labelsize=10)  # 设置colorbar刻度字体大小。
     
     plt.savefig(resultsF + "/1_RNA_pre_"+str(index)+".pdf")
-
-def interpretability_D(testData, model, device, test_loader, resultsF, index=0, smooth_steps=3):
-    '''
-    '''
-    sal_d = compute_saliency(model, device, test_loader, 'v_D').split(",")
-    sal_de = compute_saliency(model, device, test_loader, 'v_De').split(",")[1:-1]
-
-    n = len(sal_d)
-    
-    vocab_reverse = {}
-    with open('./LM_Mol/bert_vocab.txt') as read_object:
-        for i,line in enumerate(read_object):
-            vocab_reverse[i] = line.strip()
-    interpret_de = test_loader[0][1]
-    de_idx = interpret_de['input_ids'][0]
-    de_smiles = [vocab_reverse[x].upper() for x in de_idx][1:-1]
-    de_idx_list = []
-    
-    smiles = testData['SMILES'][index]
-    mol = Chem.MolFromSmiles(smiles)
-    i, j = 0, 0  
-    while i < mol.GetNumAtoms():
-        if mol.GetAtomWithIdx(i).GetSymbol().upper() not in de_smiles[j]:
-            j+=1
-        elif mol.GetAtomWithIdx(i).GetSymbol().upper() in de_smiles[j]:
-            de_idx_list.append(j)
-            i+=1
-            j+=1
-    sal_de = [sal_de[x] for x in de_idx_list]
-    de_smiles = [de_smiles[x] for x in de_idx_list]
-
-    with open(resultsF + '/0_salency_D_'+str(index)+'.txt', 'w') as f:
-        f.write(','.join(sal_d) + '\n')
-        f.write(','.join(sal_de) + '\n')
-    attn = pd.read_table(resultsF + '/0_salency_D_'+str(index)+'.txt',sep=',',header=None)
-
-    if smooth_steps >= 3:
-        attn = savgol_filter(attn, smooth_steps, 1, axis=1, mode='nearest')
-    else:
-        attn = attn.values
-
-    attn_smiles = (attn[0,:]-attn[0,:].min())/(attn[0,:].max()-attn[0,:].min())
-    attn_struct = (attn[1,:]-attn[1,:].min())/(attn[1,:].max()-attn[1,:].min())
-    attn = np.average(np.concatenate((attn_smiles.reshape(-1,attn.shape[1]),attn_struct.reshape(-1,attn.shape[1]))),axis=0)
-    attn = (attn-attn.min())/(attn.max()-attn.min())
-
-    atom_list = list(range(n))
-    atom_cols = {}
-    colors = [(25,178,255),(82,208,255),(117,226,255),(163,241,255),(209,251,255),\
-              (255,234,211),(255,206,168),(255,173,124),(255,141,92),(255,88,38)]
-    for i,v in enumerate(colors):
-        colors[i] = (colors[i][0]/255,colors[i][1]/255,colors[i][2]/255)
-    for i in range(n):
-        if int(attn.tolist()[i]*10//1)==10:
-            atom_cols[i] = colors[9]
-        else:
-            atom_cols[i] = colors[int(attn.tolist()[i]*10//1)]
-    d = rdMolDraw2D.MolDraw2DCairo(500, 500)
-    rdMolDraw2D.PrepareAndDrawMolecule(d, mol, highlightAtoms=atom_list,
-                                       highlightAtomColors=atom_cols)
-    d.FinishDrawing()
-    d.WriteDrawingText(resultsF + "/1_ligand_pre_"+str(index)+".png")
-    
-    #print(attn.tolist())
-    fig = SimilarityMaps.GetSimilarityMapFromWeights(mol, attn.tolist(), colorMap='bwr', contourLines=10, facecolor='white')
-    
-    #fig.set_facecolor('white')
-    fig.savefig(resultsF + "/1_ligand_pre_"+str(index)+".pdf",bbox_inches='tight')
 
 ######################################################################################
 ##  SmrtNet silency map heatmap and motif plot
@@ -704,114 +636,5 @@ def merge_plot(inputPath,resultsF, index, smooth_steps=3):
     plt.savefig(resultsF + "/1_RNA_pre_"+str(index)+".pdf")    
     plt.close()
 
-    smiles = testData['SMILES'][index]
-    vocab_reverse = {}
-    with open('./LM_Mol/bert_vocab.txt') as read_object:
-        for i,line in enumerate(read_object):
-            vocab_reverse[i] = line.strip()
-    
-    tokenizer = MolTranBertTokenizer('./LM_Mol/bert_vocab.txt')
-    interpret_de = tokenizer.batch_encode_plus([''.join(smile) for smile in [smiles]], padding=True, add_special_tokens=True)
-    de_idx = interpret_de['input_ids'][0]
-    de_smiles = [vocab_reverse[x].upper() for x in de_idx][1:-1]
-    de_idx_list = []
-    
-    mol = Chem.MolFromSmiles(smiles)
-    i, j = 0, 0  
-    while i < mol.GetNumAtoms():
-        if mol.GetAtomWithIdx(i).GetSymbol().upper() not in de_smiles[j]:
-            j+=1
-        elif mol.GetAtomWithIdx(i).GetSymbol().upper() in de_smiles[j]:
-            de_idx_list.append(j)
-            i+=1
-            j+=1
-    de_smiles = [de_smiles[x] for x in de_idx_list]
-
-    for i in range(5):
-        try:
-
-            n = pd.read_table(resultsF + '/CV_' + str(i+1) + '/0_salency_D_'+str(index)+'.txt',sep=',',header=None).shape[1]
-            break
-        except:
-            pass
-    attn = np.zeros((5,2,n))
-    for i in range(5):
-        if pd.read_table(resultsF + '/CV_' + str(i+1) + '/results_sort.txt',sep='\t').loc[0,'prob']<shreshold:
-            continue
-        try:
-            df_tmp_d = pd.read_table(resultsF + '/CV_' + str(i+1) + '/0_salency_D_'+str(index)+'.txt',sep=',',header=None)
-            df_tmp_d = df_tmp_d.values
-            df_tmp_d = (df_tmp_d-df_tmp_d.min(axis=1)[:,np.newaxis])/(df_tmp_d.max(axis=1)[:,np.newaxis]-df_tmp_d.min(axis=1)[:,np.newaxis])
-        except:
-            df_tmp_d = np.zeros((2,n))
-        attn[i,:,:] = df_tmp_d.reshape(1,2,n)
-    attn = attn.sum(axis=0)/3
-    #attn = np.median(attn,axis=0)
-
-
-
-    if smooth_steps >= 3:
-        attn = savgol_filter(attn, smooth_steps, 1, axis=1, mode='nearest')
-    else:
-        pass
-
-    attn_smiles = (attn[0,:]-attn[0,:].min())/(attn[0,:].max()-attn[0,:].min())
-    attn_struct = (attn[1,:]-attn[1,:].min())/(attn[1,:].max()-attn[1,:].min())
-    attn = np.average(np.concatenate((attn_smiles.reshape(-1,attn.shape[1]),attn_struct.reshape(-1,attn.shape[1]))),axis=0)
-    attn = (attn-attn.min())/(attn.max()-attn.min())
-    #attn = attn*2 - 1
-
-    atom_list = list(range(n))
-    atom_cols = {}
-    colors = [(25,178,255),(82,208,255),(117,226,255),(163,241,255),(209,251,255),\
-              (255,234,211),(255,206,168),(255,173,124),(255,141,92),(255,88,38)]
-    for i,v in enumerate(colors):
-        colors[i] = (colors[i][0]/255,colors[i][1]/255,colors[i][2]/255)
-    for i in range(n):
-        if int(attn.tolist()[i]*10//1)==10:
-            atom_cols[i] = colors[9]
-        else:
-            atom_cols[i] = colors[int(attn.tolist()[i]*10//1)]
-    d = rdMolDraw2D.MolDraw2DCairo(500, 500)
-    rdMolDraw2D.PrepareAndDrawMolecule(d, mol, highlightAtoms=atom_list,
-                                       highlightAtomColors=atom_cols)
-    d.FinishDrawing()
-    d.WriteDrawingText(resultsF + "/1_ligand_pre_"+str(index)+".png")
-    try:
-        fig = SimilarityMaps.GetSimilarityMapFromWeights(mol,attn.tolist(), colorMap='bwr', contourLines=0)
-        fig.savefig(resultsF + "/1_ligand_pre_"+str(index)+".pdf",bbox_inches='tight')
-    except:
-        pass
-
-    plt.figure(figsize=(30, 25))
-    small_molecule = {
-            'string': smiles,
-            'methods': [{'name': 'atoms', 'scores': attn.tolist()}],
-            'attributes':{'Pred.':shreshold}
-    }
-    view_config = {
-        'hideBarChart': False,
-        'hideAttributesTable': True, 
-        'drawerType': 'RDKitDrawer', # Possible values RDKitDrawer (colored) or RDKitDrawer_black (black).    
-    }
-    gradient_config = {    
-        'palette': 'PiYG_5', # default: PiYG_5. 
-        'thresholds': [], #default []
-        'colorDomain': [-1, 0, 1],  #default: [-1,0,1]
-        
-        'radius': {'min': 15, 'max': 40},  #default: {'min': 15, 'max': 40}
-        'opacity': {'min': 0.6, 'max': 1}, #default: {'min': 0.6, 'max': 1} 
-        'blur': 0.7, #default: 0.7
-    }
-
-    #w = xsmiles.XSmilesWidget(molecules=json.dumps([small_molecule]), gradient_config=json.dumps(gradient_config))
-    w = xsmiles.XSmilesWidget(molecules=json.dumps([small_molecule]))
-
-    #fig.set_facecolor('white')
-    plt.scatter(x=[-1,0,1],y=[-1,0,1],c=[-1,0,1], cmap='bwr')
-    plt.colorbar(label="saliency map signal", orientation="horizontal")
-    plt.savefig(resultsF + "/0_ligand_colorbar_"+str(index)+".pdf",bbox_inches='tight')
-    plt.close()
-
-    return w
+    return 1
 
