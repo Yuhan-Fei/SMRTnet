@@ -1,1 +1,1 @@
-MYC IRES	UAGGGGGCUUCGCCUCUGGCCCAGCCCUCUA	(((((((((..(((...)))..)))))))))
+MYC_IRES	UAGGGGGCUUCGCCUCUGGCCCAGCCCUCUA	(((((((((..(((...)))..)))))))))
