@@ -169,9 +169,11 @@ After adding all our data, the repo has the following structure:
 |   └── transformers_output.py
 |
 ├── data
+|   └── SMRTnet-data-demo.txt
+|   └── IHT.txt
+|   └── MYC_IRES.txt
 |
 ├── datasets
-|   └── SMRTnet-data.txt
 |
 ├── dataset_cv_best
 |
@@ -276,7 +278,7 @@ We provide the example scripts to train the model from scratch:
 
 ```python
 python main.py --do_train \
-               --data_dir=./datasets/SMRTnet-data.txt \
+               --data_dir=./data/SMRTnet-data-demo.txt \
                --cuda 0 \
                --batch_size 16 \
                --out_dir=./results/benchmark
@@ -291,7 +293,7 @@ We provide the example scripts to test the model:
 
 ```python
 python main.py --do_test \
-               --data_dir=./datasets/SMRTnet-data.txt \
+               --data_dir=./data/SMRTnet-data-demo.txt \
                --cuda 0 \
                --batch_size 16 \
                --out_dir=./results/benchmark
