@@ -321,7 +321,9 @@ DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
-python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./data/ensemble \
+python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl \
+               --infer_model_dir ${DIR} \
+               --infer_out_dir ./data/ensemble \
                --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
                --infer_drug_dir ${INPUTPATH}/data/IHT.txt
 
@@ -380,7 +382,8 @@ DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
-python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
+python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
     --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
 
