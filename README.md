@@ -67,7 +67,7 @@ Please contact us if you are interested in our work and look for academic collab
 
 ### Install via Conda and Pip manually
 ```bash
-## install the version torch==11.1, Completely consistent with the SMRTnet.
+## To set up the SMRTnet environment with CUDA version 11.1
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install torch==1.10.1+cu111 torchvision==0.11.2+cu111 torchaudio==0.10.1 -f https://download.pytorch.org/whl/cu111/torch_stable.html
@@ -76,9 +76,10 @@ pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
 pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `./fast_transformers` to your environment directory.
-cp ./env_supplementary/modeling_esm.py ~/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
+cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
 
-## install the version based on your CUDA.
+
+## To set up the SMRTnet environment with CUDA version 12.1
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
@@ -86,7 +87,7 @@ pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 t
 pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam/label/th24_cu121::dgl
-cp ./env_supplementary/modeling_esm.py ~/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
+cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
