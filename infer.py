@@ -15,7 +15,7 @@ from torch.utils.data import SequentialSampler
 from torch.utils import data
 from model import SmrtNet
 from utils import dgl_collate_func_ds, fix_seed
-from explain import interpretability_P, interpretability_D, merge_plot
+from explain import interpretability_P, merge_plot
 from tqdm import tqdm
 from prefetch_generator import BackgroundGenerator
 
@@ -123,10 +123,6 @@ def predict(df_data,model,resultF, args):
             if prob.item() > 0.70:
                 #breakpoint()
                 interpretability_P(df_data,model,device,[(infer_ds, infer_de, infer_rs, infer_re, infer_y)],'/'.join(resultF_list[:-1]),i,args.smooth_steps)
-                try:
-                    interpretability_D(df_data,model,device,[(infer_ds, infer_de, infer_rs, infer_re, infer_y)],'/'.join(resultF_list[:-1]),i)
-                except:
-                    pass
         else:
             pass
     return y_pred
