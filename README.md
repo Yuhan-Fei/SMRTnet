@@ -48,7 +48,7 @@ Please contact us if you are interested in our work and look for academic collab
  - torchaudio 0.10.1
  - pytorch-fast-transformers 0.3.0
  - pytorch-lightning 1.1.5
- - transformers 4.40.2
+ - transformers 4.28.1
  - dgllife 0.3.2
  - dgl-cuda10.2 0.9.1post1
  - rdkit 2022.3.5
