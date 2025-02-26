@@ -460,7 +460,7 @@ def main():
         make_directory(args.infer_out_dir,'/')
         for i in range(1,6):
             make_directory(args.infer_out_dir,"CV_"+str(i))
-            model_path=str(args.infer_model_dir)+"/model_CV_"+str(i)+"_best.pth"
+            model_path=str(args.infer_model_dir)+"/SMRTnet_cv"+str(i)+".pth"
             model = load_model(args.infer_config_dir, model_path, args)
             rna, seq, struct = load_rna(args.infer_rna_dir, args.maxRNA)
             drug, smiles = load_drug(args.infer_drug_dir, args.maxDrug)
@@ -473,7 +473,7 @@ def main():
         df_predict = pd.DataFrame()
         rna_slice(inputPath=args.infer_rna_dir,step=1)
         for i in range(1,6):
-            model_path=str(args.infer_model_dir)+"/model_CV_"+str(i)+"_best.pth"
+            model_path=str(args.infer_model_dir)+"/SMRTnet_cv"+str(i)+".pth"
             model = load_model(args.infer_config_dir, model_path, args)
             rna, seq, struct = load_rna(os.path.splitext(args.infer_rna_dir)[0]+"_slice"+".txt", args.maxRNA)
             drug, smiles = load_drug(args.infer_drug_dir, args.maxDrug)
@@ -495,7 +495,7 @@ def main():
         rna_slice(inputPath=args.infer_rna_dir,step=1)
         #cheeck length of RNA equal to 31nt, number =2
         for i in range(1,6):
-            model_path=str(args.infer_model_dir)+"/model_CV_"+str(i)+"_best.pth"
+            model_path=str(args.infer_model_dir)+"/SMRTnet_cv"+str(i)+".pth"
             model = load_model(args.infer_config_dir, model_path, args)
             rna, seq, struct = load_rna(args.infer_rna_dir, args.maxRNA)
             drug, smiles = load_drug(args.infer_drug_dir, args.maxDrug)
