@@ -91,21 +91,6 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/tr
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
-### Install via Conda (Coming soon...)
-```bash
-git clone https://github.com/Yuhan-Fei/SmrtNet.git
-cd SmrtNet
-conda env create -f environment.yml
-conda activate SmrtNet
-```
-
-### Install via Pip (Coming soon...)
-```bash
-conda create -n smrtnet python=3.8.10
-conda activate smrtnet
-pip install smrtnet
-```
-
 ### Disable CPU in fast-transformer
 
 <details>
@@ -137,7 +122,22 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
-  
+
+### Install via Conda (Coming soon...)
+```bash
+git clone https://github.com/Yuhan-Fei/SmrtNet.git
+cd SmrtNet
+conda env create -f environment.yml
+conda activate SmrtNet
+```
+
+### Install via Pip (Coming soon...)
+```bash
+conda create -n smrtnet python=3.8.10
+conda activate smrtnet
+pip install smrtnet
+```
+
 ## Repo Structure:
 After adding all our data, the repo has the following structure:
 
@@ -173,8 +173,6 @@ After adding all our data, the repo has the following structure:
 |   └── SMRTnet-data-demo.txt
 |   └── IHT.txt
 |   └── MYC_IRES.txt
-|
-├── datasets
 |
 ├── dataset_cv_best
 |
