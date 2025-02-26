@@ -20,6 +20,7 @@ Please contact us if you are interested in our work and look for academic collab
 - [Getting Started](#getting-started)
 - [Repo Structure](#repo-structure)
 - [SMRTnet Architecture](#smrtnet-architecture)
+  - Download our pre-trained models from zenodo
 - [Datasets](#datasets)
   - Datasets for training
   - RNA target format for inference
