@@ -19,7 +19,7 @@ Please contact us if you are interested in our work and look for academic collab
 ## Table of contents
 - [Getting Started](#getting-started)
 - [Repo Structure](#repo-structure)
-- [SmrtNet Architecture](#smrtnet-architecture)
+- [SMRTnet Architecture](#smrtnet-architecture)
 - [Datasets](#datasets)
   - Datasets for training
   - RNA target format for inference
@@ -125,10 +125,10 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ### Install via Conda (Coming soon...)
 ```bash
-git clone https://github.com/Yuhan-Fei/SmrtNet.git
-cd SmrtNet
+git clone https://github.com/Yuhan-Fei/SMRTnet.git
+cd SMRTnet
 conda env create -f environment.yml
-conda activate SmrtNet
+conda activate SMRTnet
 ```
 
 ### Install via Pip (Coming soon...)
@@ -197,7 +197,7 @@ After adding all our data, the repo has the following structure:
 ```
 </details>
 
-## SmrtNet Architecture
+## SMRTnet Architecture
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
@@ -213,7 +213,7 @@ https://zenodo.org/records/14715564
 
 Download and extract the dataset in datasets folder: SMRTnet-data.txt
 
-The original SmrtNet dataset can be found at https://www.rcsb.org/ and process by custom scripts.
+The original SMRTnet dataset can be found at https://www.rcsb.org/ and process by custom scripts.
 
 The format of data for training is show as follow:
 
@@ -558,4 +558,4 @@ This project is free to use for non-commercial purposes - see the [LICENSE](LICE
 
 
 ## Disclaimer
-The prediction of SmrtNet should be inspected manually by experts before proceeding to the wet-lab validation, and our work is still in active developement with limitations, please do not directly use the drugs.
+The prediction of SMRTnet should be inspected manually by experts before proceeding to the wet-lab validation, and our work is still in active developement with limitations, please do not directly use the drugs.
