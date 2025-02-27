@@ -240,9 +240,9 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 
 | CAS | SMILES |
 |-----------------|-------------|
-| 20013-75-6 | CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C|
-| 90-33-5| CC1=CC(=O)OC2=C1C=CC(=C2)O|
-| 55084-08-7 | COC1=CC=CC(=C1C2=CC(=O)C3=C(C(=C(C(=C3O2)OC)OC)OC)O)O | 
+| 3902-71-4 | CC1=CC(=O)OC2=C1C=C3C=C(OC3=C2C)C |
+| 149-91-7 | C1=C(C=C(C(=C1O)O)O)C(=O)O |
+| 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
 
 ### RNA sequence datasets for RNA language model (RNASwan-seq)
 
