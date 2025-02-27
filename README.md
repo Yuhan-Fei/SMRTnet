@@ -296,11 +296,13 @@ We provide the example scripts to test the model:
 ```python
 python main.py --do_test \
                --data_dir=./data/SMRTnet-data-demo.txt \
+               --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
                --batch_size 16 \
                --out_dir=./results/benchmark
 ```
-
+This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
+To obtain the results for other folds, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
 
 ### Inference
 For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
