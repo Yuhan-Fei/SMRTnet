@@ -296,7 +296,8 @@ We provide the example scripts to test the model:
 ```python
 python main.py --do_test \
                --data_dir=./data/SMRTnet-data-demo.txt \
-               --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
+               --infer_config_dir ${DIR}/config.pkl \
+               --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
                --batch_size 16 \
                --out_dir=./results/benchmark
@@ -388,7 +389,8 @@ DIR=./results/SMRTnet_model
 
 cd ${WorkDir}
 
-python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl \
+python main.py --do_explain --cuda 0
+    --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/IHT.txt --smooth_steps 3
