@@ -173,7 +173,7 @@ After adding all our data, the repo has the following structure:
 |
 ├── data
 |   └── SMRTnet-data-demo.txt
-|   └── IHT.txt
+|   └── MYC_RIBOTAC.txt
 |   └── MYC_IRES.txt
 |
 ├── dataset_cv_best
@@ -333,7 +333,7 @@ python main.py --do_ensemble --cuda 0 \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./data/ensemble \
                --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-               --infer_drug_dir ${INPUTPATH}/data/IHT.txt
+               --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt
 
 ```
 <!--
@@ -394,7 +394,7 @@ python main.py --do_explain --cuda 0
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/IHT.txt --smooth_steps 3
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3
 
 ```
 <!--
