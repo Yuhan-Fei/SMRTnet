@@ -13,8 +13,8 @@ Predicting small molecule and RNA target interactions using deep neural network,
 ```
 ## Contact us
 Please contact us if you are interested in our work and look for academic collaboration:  
-- Dr. Yuhan Fei, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
-- Jiasheng Zhang, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
+- Dr. Yuhan Fei, School of Life Sciences, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
+- Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
 ## Table of contents
 - [Getting Started](#getting-started)
