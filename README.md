@@ -29,7 +29,7 @@ Please contact us if you are interested in our work and look for academic collab
   - SMILES datasets for chemical language model (MoLFormer)
 - [Usage](#usage)
   - How to check your input format
-  - How to train your own model 
+  - How to train your own model (Coming soon...)
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
@@ -270,11 +270,12 @@ python main.py --do_check
 ### Training 
 
 To train the model from scratch, run
+
 ```python
 python main.py --do_train
 ```
 where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard
-
+<!--
 We provide the example scripts to train the model from scratch:
 
 ```python
@@ -284,7 +285,7 @@ python main.py --do_train \
                --batch_size 16 \
                --out_dir=./results/benchmark
 ```
-
+-->
 ### Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
 ```
