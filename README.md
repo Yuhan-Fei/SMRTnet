@@ -339,7 +339,7 @@ python main.py --do_ensemble --cuda 0 \
                --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt
 
 ```
-<p align="center"><img src="figs/demo3.png" width=100% /></p>  
+<p align="center"><img src="figs/demo3.png" width=80% /></p>  
 
 <!--
 or 
@@ -403,7 +403,7 @@ python main.py --do_explain --cuda 0
 
 ```
 
-<p align="center"><img src="figs/demo4.png" width=100% /></p>  
+<p align="center"><img src="figs/demo4.png" width=80% /></p>  
 
 
 <!--
