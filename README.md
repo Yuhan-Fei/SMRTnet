@@ -284,8 +284,9 @@ python main.py --do_train \
                --batch_size 16 \
                --out_dir=./results/benchmark
 ```
-<p align="center"><img src="figs/demo1.png" width=100% /></p>
 -->
+<p align="center"><img src="figs/demo1.png" width=100% /></p>  
+
 ### Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
 ```
@@ -304,6 +305,8 @@ python main.py --do_test \
 ```
 This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
 To obtain the results for other folds, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
+
+<p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
 ### Inference
 For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
@@ -336,6 +339,8 @@ python main.py --do_ensemble --cuda 0 \
                --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt
 
 ```
+<p align="center"><img src="figs/demo3.png" width=100% /></p>  
+
 <!--
 or 
 
@@ -397,6 +402,10 @@ python main.py --do_explain --cuda 0
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3
 
 ```
+
+<p align="center"><img src="figs/demo4.png" width=100% /></p>  
+
+
 <!--
 ## Example
 
