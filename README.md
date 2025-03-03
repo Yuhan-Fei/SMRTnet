@@ -268,7 +268,7 @@ python main.py --do_check
 
 ### Training 
 
-To train the model from scratch, run
+To train the model from scratch, run (Coming soon...)
 
 ```python
 python main.py --do_train
@@ -284,6 +284,7 @@ python main.py --do_train \
                --batch_size 16 \
                --out_dir=./results/benchmark
 ```
+<p align="center"><img src="figs/demo1.png" width=100% /></p>
 -->
 ### Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
