@@ -66,7 +66,7 @@ Please contact us if you are interested in our work and look for academic collab
 ```
 
 
-### Install via Conda and Pip manually (recommend!!!)
+### Install via Conda and Pip manually
 ```bash
 ## To set up the SMRTnet environment with CUDA version 11.1
 conda create -n smrtnet python=3.8.10
