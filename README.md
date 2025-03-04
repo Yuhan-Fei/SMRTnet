@@ -258,6 +258,8 @@ More details can be found in https://github.com/IBM/molformer
 
 ## Usage
 
+The training of SMRTnet requires **~10G** of GPU memory (with batch_size = 32),  
+while the testing process needs approximately **3G** of GPU memory.
 
 ### Check your input data format
 
