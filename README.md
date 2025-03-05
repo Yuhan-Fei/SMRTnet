@@ -160,6 +160,8 @@ conda activate SMRTnet
 pip
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
+pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
+conda install dglteam::dgl-cuda10.2
 pip install -r requirements.txt
 
 ```
