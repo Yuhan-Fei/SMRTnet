@@ -283,8 +283,13 @@ After downloading all our data, the repo has the following structure:
 |   └── dot_bracket.npz
 |
 ├── results
-|   └── SMRTNet_model (download from zenodo)
-|
+|   └── SMRTNet_model
+|          └── SMRTnet_cv1.pth (download from zenodo)
+|          └── SMRTnet_cv1.pth (download from zenodo)
+|          └── SMRTnet_cv1.pth (download from zenodo)
+|          └── SMRTnet_cv1.pth (download from zenodo)
+|          └── SMRTnet_cv1.pth (download from zenodo)
+|          └── config.pkl
 ├── README.md
 ├── explain.py
 ├── infer.py
