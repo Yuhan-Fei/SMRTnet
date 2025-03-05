@@ -5,11 +5,12 @@ Small molecules can bind RNAs to regulate their fate and functions, providing pr
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
 ## Cite us
-If you found this package useful, please cite [our paper](xxx):
+<!--If you found this package useful, please cite [our paper](xxx)-->
+If you found this package useful, please cite our paper (under review):
 ```
 Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang,
 
-Predicting small molecule and RNA target interactions using deep neural network, under review, 2025.
+Predicting small molecule and RNA target interactions using deep neural network, 2025.
 ```
 ## Contact us
 Please contact us if you are interested in our work and look for academic collaboration:  
