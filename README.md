@@ -23,7 +23,7 @@ Please contact us if you are interested in our work and look for academic collab
   - Install via pip/conda automatically
   - Install via offline package
   - Install via docker
-  - How to install SMRTnet on a new machine
+  - Example of install SMRTnet on a new machine
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
 - [Repo Structure](#repo-structure)
@@ -189,7 +189,7 @@ xxx
 **Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
-### 5. How to install SMRTnet on a new machine
+### 5. Example of install SMRTnet on a new machine
 <details>
 	
    <summary>[Example] Click here for the details of installation </summary>
