@@ -318,7 +318,7 @@ python main.py --do_train \
                --data_dir=./data/SMRTnet-data-demo.txt \
                --cuda 0 \
                --batch_size 16 \
-               --out_dir=./results/benchmark
+               --out_dir=./results/demo
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
