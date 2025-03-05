@@ -75,9 +75,12 @@ Please contact us if you are interested in our work and look for academic collab
 ### 1. Install via conda (recommend)
 Run the following command to check your CUDA version before installing SMRTnet:
 ```bash
-nvidia-smi or nvcc --version
+nvidia-smi
 ```
-
+ or 
+ ```bash
+nvcc --version
+```
 <details>
    <summary>[Manual] Click here for CUDA version 12.1 or above</summary>
 
