@@ -78,7 +78,7 @@ nvidia-smi
 ```
 
 <details>
-   <summary>Click here for CUDA version 12.1</summary>
+   <summary>Click here for CUDA version 12.1 or above</summary>
 
 ```bash
 ## To set up the SMRTnet environment with CUDA version 12.1,
