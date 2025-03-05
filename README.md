@@ -72,6 +72,10 @@ Please contact us if you are interested in our work and look for academic collab
 
 
 ### Install via conda (recommend)
+Run the following command to check your CUDA version before installing SMRTnet:
+```bash
+nvidia-smi
+```
 
 <details>
    <summary>Click here for CUDA version 12.1</summary>
@@ -134,10 +138,8 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
-Please run the command below to check your CUDA version before install the SMRTnet:
-```bash
-nvidia-smi
-```
+
+
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 <!--
 ### Install via Conda (Coming soon...)
