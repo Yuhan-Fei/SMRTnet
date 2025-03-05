@@ -72,6 +72,10 @@ Please contact us if you are interested in our work and look for academic collab
 
 
 ### Install via conda (recommend)
+
+<details>
+   <summary>Click here for CUDA version 12.1</summary>
+
 ```bash
 ## To set up the SMRTnet environment with CUDA version 12.1,
 ## please check your CUDA version and install corresponding torch and dgl.
@@ -85,7 +89,14 @@ conda install dgllife -c conda-forge
 conda install dglteam/label/th24_cu121::dgl
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
 
+```
+</details>
 
+
+<details>
+  <summary>Click here for CUDA version 11.1</summary>
+	
+```bash
 ## To set up the SMRTnet environment with CUDA version 11.1
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
@@ -96,15 +107,13 @@ conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
 pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `./fast_transformers` to your environment directory.
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
-```
-Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
-### Disable CPU in fast-transformer (CUDA version 11.1 only)
 
-<details>
-   <summary>Click here for the code!</summary>
 
-```bash
+##Disable CPU in fast-transformer (CUDA version 11.1 only)
+
+
+
 DIR=~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/fast_transformers
 sed -i '9,10 s/^/#/' ${DIR}/causal_product/__init__.py
 sed -i '24 s/^/#/' ${DIR}/causal_product/__init__.py
@@ -130,6 +139,8 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
+
+Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 <!--
 ### Install via Conda (Coming soon...)
 ```bash
