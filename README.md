@@ -67,7 +67,7 @@ Please contact us if you are interested in our work and look for academic collab
 -->
 
 
-### Install via Conda and Pip manually (recommend!!!)
+### Install via Conda (recommend)
 ```bash
 ## To set up the SMRTnet environment with CUDA version 12.1,
 ## please check your CUDA version and install corresponding torch and dgl.
