@@ -19,7 +19,7 @@ Please contact us if you are interested in our work and look for academic collab
 
 ## Table of contents
 - [Getting Started](#getting-started)
-  - Install via offline package
+  - Install via offline installation package
   - Install via pip/conda manually
   - Install via pip/conda automatically
   - Install via docker
@@ -82,7 +82,7 @@ nvcc --version
 ```
 Note: All tests were conducted on a Linux Ubuntu 13.x operating system with CUDA versions 11.x and 12.x.  
 
-### 1. Install via offline package 
+### 1. Install via offline installation package
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
 pip install conda-pack
