@@ -161,14 +161,14 @@ source ./smrtnet_env/bin/activate
 
 ```
 Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
-### 3. Install via pip (Comming soon...)
+### 3. Install via pip (Coming soon...)
 ```bash
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install smrtnet
 ```
 
-### 4. Install via docker (Comming soon...)
+### 4. Install via docker (Coming soon...)
 ```bash
 xxx
 ```
