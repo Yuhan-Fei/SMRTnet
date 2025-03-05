@@ -303,7 +303,7 @@ More details can be found in https://github.com/IBM/molformer
 
 ## Usage
 
-The training of SMRTnet requires **~10G** of GPU memory (with batch_size = 32),  
+The training of SMRTnet requires **~12G** of GPU memory (with batch_size = 32),  
 while the testing process needs approximately **3G** of GPU memory.
 
 ### Check your input data format
@@ -324,7 +324,7 @@ We provide the example scripts to train the model from scratch:
 python main.py --do_train \
                --data_dir=./data/SMRTnet-data-demo.txt \
                --cuda 0 \
-               --batch_size 16 \
+               --batch_size 32 \
                --out_dir=./results/demo
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
