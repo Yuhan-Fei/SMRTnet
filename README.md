@@ -79,7 +79,7 @@ nvidia-smi or nvcc --version
 ```
 
 <details>
-   <summary>Click here for CUDA version 12.1 or above</summary>
+   <summary>[Manual] Click here for CUDA version 12.1 or above</summary>
 
 ```bash
 ## To set up the SMRTnet environment with CUDA version 12.1,
@@ -99,7 +99,7 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/tr
 
 
 <details>
-  <summary>Click here for CUDA version 11.1</summary>
+  <summary>[Manual] Click here for CUDA version 11.1</summary>
 	
 ```bash
 ## To set up the SMRTnet environment with CUDA version 11.1
