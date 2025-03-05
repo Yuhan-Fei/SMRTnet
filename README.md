@@ -69,7 +69,8 @@ Please contact us if you are interested in our work and look for academic collab
 
 ### Install via Conda and Pip manually (recommend!!!)
 ```bash
-## To set up the SMRTnet environment with CUDA version 12.1, please check your CUDA version and install corresponding torch and dgl.
+## To set up the SMRTnet environment with CUDA version 12.1,
+## please check your CUDA version and install corresponding torch and dgl.
 ## nvcc --version
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
@@ -79,6 +80,7 @@ pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam/label/th24_cu121::dgl
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
+
 
 ## To set up the SMRTnet environment with CUDA version 11.1
 conda create -n smrtnet python=3.8.10
