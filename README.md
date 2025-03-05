@@ -160,7 +160,7 @@ tar -xzf ${PATH}/smrtnet_env.tar.gz -C smrtnet_env
 source ./smrtnet_env/bin/activate
 
 ```
-
+Please download the SMRTnet enviroment from xxx
 ### Install via pip (Comming soon...)
 ```bash
 conda create -n smrtnet python=3.8.10
