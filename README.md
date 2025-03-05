@@ -105,7 +105,7 @@ Please visit https://pytorch.org/get-started/previous-versions/ to install the c
    <summary>Click here for the code!</summary>
 
 ```bash
-DIR={YOUR_DIR}/anaconda3/envs/smrtnet/lib/python3.8/site-packages/fast_transformers
+DIR=~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/fast_transformers
 sed -i '9,10 s/^/#/' ${DIR}/causal_product/__init__.py
 sed -i '24 s/^/#/' ${DIR}/causal_product/__init__.py
 sed -i '28 s/^/#/' ${DIR}/causal_product/__init__.py
