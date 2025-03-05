@@ -18,6 +18,10 @@ Please contact us if you are interested in our work and look for academic collab
 
 ## Table of contents
 - [Getting Started](#getting-started)
+  - Install via conda
+  - Install via offline package
+  - Install via pip
+  - Install via docker
 - [Repo Structure](#repo-structure)
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
@@ -146,14 +150,14 @@ source ./smrtnet_env/bin/activate
 
 ```
 
-### Install via Pip (Comming soon...)
+### Install via pip (Comming soon...)
 ```bash
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install smrtnet
 ```
 
-### Install via Docker (Comming soon...)
+### Install via docker (Comming soon...)
 ```bash
 xxx
 ```
