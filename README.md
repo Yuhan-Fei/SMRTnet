@@ -134,7 +134,10 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 ```
 </details>
-
+Please run the command below to check your CUDA version before install the SMRTnet:
+```bash
+nvidia-smi
+```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 <!--
 ### Install via Conda (Coming soon...)
