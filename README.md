@@ -20,7 +20,7 @@ Please contact us if you are interested in our work and look for academic collab
 ## Table of contents
 - [Getting Started](#getting-started)
   - Install via conda
-  - Install via PyPI and pip
+  - Install via pip
   - Install via offline package
   - Install via docker
 - [SMRTnet Architecture](#smrtnet-architecture)
@@ -154,13 +154,10 @@ conda env create -f environment.yml
 conda activate SMRTnet
 ```
 -->
-### 2. Install via PyPI and pip
+### 2. Install via pip
 
 ```bash
-1) PyPI (Coming soon...)
-pip install smrtnet
-
-2) pip
+pip
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install -r requirements.txt
