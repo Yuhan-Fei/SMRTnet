@@ -113,7 +113,7 @@ pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 t
 pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
-pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `./fast_transformers` to your environment directory.
+pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
 
 ##Disable CPU in fast-transformer (CUDA version 11.1 only)
