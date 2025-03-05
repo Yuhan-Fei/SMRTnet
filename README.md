@@ -101,7 +101,7 @@ conda activate smrtnet
 pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt ## online-install
 conda install dglteam/label/th24_cu121::dgl
-pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
+pip install pytorch-fast-transformers==0.3.0 	## Note: If this installation step fails, you can directly copy `./env/fast_transformers` to your environment directory.
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
 
