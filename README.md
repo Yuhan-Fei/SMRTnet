@@ -222,6 +222,17 @@ conda install dglteam/label/th${torch_version}_${cuda_version}::dgl
 however, your should check this from the [dglteam packages 1](https://anaconda.org/dglteam/repo),  
 [dglteam packages 2](https://anaconda.org/dglteam/dgl/labels), or [dglteam install command](https://anaconda.org/dglteam/dgl).
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
+
+##### 5) install pytorch-fast-tranformers  (important)
+```
+cp -rf ./env/fast_transformers ~/anaconda3/envs/${env_name}/lib/python3.8/site-packages/
+cp ./env/modeling_esm.py ~/anaconda3/envs/${env_name}/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
+```
+
+##### 6) test model training in this example
+We demonstrated the scenario of installing the environment and SMRTnet on the new machine and training the model.  
+The update date is March 5, 2025.
+<p align="center"><img src="figs/05_trainingModel.png" width=100% /></p>
 </details>
 
 
