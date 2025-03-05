@@ -19,8 +19,8 @@ Please contact us if you are interested in our work and look for academic collab
 
 ## Table of contents
 - [Getting Started](#getting-started)
-  - Install via conda manually
-  - Install via conda automatically
+  - Install via pip/conda manually
+  - Install via pip/conda automatically
   - Install via offline package
   - Install via docker
 - [SMRTnet Architecture](#smrtnet-architecture)
@@ -72,7 +72,7 @@ Please contact us if you are interested in our work and look for academic collab
 -->
 
 
-### 1. Install via conda manually (recommend)
+### 1. Install via pip/conda manually (RECOMMEND)
 Run the following command to check your CUDA version before installing SMRTnet:
 ```bash
 nvidia-smi
@@ -154,7 +154,7 @@ conda env create -f environment.yml
 conda activate SMRTnet
 ```
 -->
-### 2. Install via pip automatically
+### 2. Install via pip/conda automatically
 
 ```bash
 pip
