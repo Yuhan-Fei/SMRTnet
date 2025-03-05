@@ -95,13 +95,13 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/tr
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
-### Disable CPU in fast-transformer with CUDA version 11.1
+### Disable CPU in fast-transformer (CUDA version 11.1 only)
 
 <details>
    <summary>Click here for the code!</summary>
 
 ```bash
-DIR=/home/yuhan/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/fast_transformers
+DIR={YOUR_DIR}/anaconda3/envs/smrtnet2/lib/python3.8/site-packages/fast_transformers
 sed -i '9,10 s/^/#/' ${DIR}/causal_product/__init__.py
 sed -i '24 s/^/#/' ${DIR}/causal_product/__init__.py
 sed -i '28 s/^/#/' ${DIR}/causal_product/__init__.py
