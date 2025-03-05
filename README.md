@@ -161,9 +161,8 @@ conda activate SMRTnet
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
-conda install dglteam/label/th24_cu121::dgl
 pip install -r requirements.txt ## online-install
-pip install -r ${PATH}/packages ## offline packages
+conda install dglteam/label/th24_cu121::dgl
 ```
 
 ### 3. Install via offline package 
