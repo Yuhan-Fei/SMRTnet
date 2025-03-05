@@ -67,7 +67,7 @@ Please contact us if you are interested in our work and look for academic collab
 -->
 
 
-### Install via Conda (recommend)
+### Install via conda (recommend)
 ```bash
 ## To set up the SMRTnet environment with CUDA version 12.1,
 ## please check your CUDA version and install corresponding torch and dgl.
@@ -95,7 +95,7 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/tr
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
-### Disable CPU in fast-transformer
+### Disable CPU in fast-transformer with CUDA version 11.1
 
 <details>
    <summary>Click here for the code!</summary>
