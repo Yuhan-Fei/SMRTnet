@@ -135,11 +135,11 @@ conda activate SMRTnet
 
 ### Install via Pip (Coming soon...)
 ```bash
-## download the offline package and install it, then you can directly source it.
+## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
 pip install conda-pack
-mkdir -p smrtnet
-tar -xzf ${PATH}/smrtnet.tar.gz -C smrtnet
-source ./smrtnet/bin/activate
+mkdir -p smrtnet_env
+tar -xzf ${PATH}/smrtnet_env.tar.gz -C smrtnet_env
+source ./smrtnet_env/bin/activate
 
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
