@@ -33,12 +33,12 @@ Please contact us if you are interested in our work and look for academic collab
   - SMILES datasets for chemical language model (MoLFormer)
 - [Usage](#usage)
   - How to check your input format
-  - How to train your own model (Coming soon...)
+  - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
 <!-- - [Example](#example)-->
-<!-- - [Web Server (Coming soon...)](#web-server)-->
+[Web Server (Coming soon...)](#web-server)
 - [Referenced Repos](#referenced-repos)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
