@@ -66,8 +66,19 @@ Please contact us if you are interested in our work and look for academic collab
 ```
 
 
-### Install via Conda and Pip manually
+### Install via Conda and Pip manually (recommend!!!)
 ```bash
+## To set up the SMRTnet environment with CUDA version 12.1, please check your CUDA version and install corresponding torch and dgl.
+## nvcc --version
+conda create -n smrtnet python=3.8.10
+conda activate smrtnet
+pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
+pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 transformers==4.28.1 pytorch-lightning==1.1.5 rdkit==2022.3.5 scipy==1.10.1 pandas==1.2.4 scikit-learn==0.24.2 pytorch-fast-transformers==0.3.0
+pip install matplotlib seaborn xsmiles
+conda install dgllife -c conda-forge
+conda install dglteam/label/th24_cu121::dgl
+cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
+
 ## To set up the SMRTnet environment with CUDA version 11.1
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
@@ -77,17 +88,6 @@ pip install matplotlib seaborn xsmiles
 conda install dgllife -c conda-forge
 conda install dglteam::dgl-cuda10.2
 pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `./fast_transformers` to your environment directory.
-cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
-
-
-## To set up the SMRTnet environment with CUDA version 12.1
-conda create -n smrtnet python=3.8.10
-conda activate smrtnet
-pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
-pip install prettytable notebook tensorboardX prefetch_generator numpy==1.20.3 transformers==4.28.1 pytorch-lightning==1.1.5 rdkit==2022.3.5 scipy==1.10.1 pandas==1.2.4 scikit-learn==0.24.2 pytorch-fast-transformers==0.3.0
-pip install matplotlib seaborn xsmiles
-conda install dgllife -c conda-forge
-conda install dglteam/label/th24_cu121::dgl
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
 ```
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
