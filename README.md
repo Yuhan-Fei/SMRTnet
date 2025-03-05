@@ -161,10 +161,10 @@ source ./smrtnet_env/bin/activate
 
 ```
 Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
-### 3. Install via pip (Coming soon...)
+### 3. Install via PyPI and pip
 
 ```bash
-1) PyPI
+1) PyPI (Coming soon...)
 pip install smrtnet
 
 2) pip
