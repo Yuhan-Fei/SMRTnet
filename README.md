@@ -40,7 +40,7 @@ Please contact us if you are interested in our work and look for academic collab
 - [Disclaimer](#disclaimer)
 
 ## Getting started
-
+<!--
 ### Requirements
 ```bash
  - Python 3.8.10
@@ -64,6 +64,7 @@ Please contact us if you are interested in our work and look for academic collab
  - matplotlib 3.7.5
  - seaborn 0.13.2
 ```
+-->
 
 
 ### Install via Conda and Pip manually (recommend!!!)
