@@ -238,7 +238,6 @@ After adding all our data, the repo has the following structure:
 ├── main.py
 ├── model.py
 └── utils.py
-
 ```
 
 
