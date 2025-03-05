@@ -34,7 +34,7 @@ Please contact us if you are interested in our work and look for academic collab
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
 <!-- - [Example](#example)-->
-- [Web Server (Coming soon...)](#web-server)
+<!-- - [Web Server (Coming soon...)](#web-server)-->
 - [Referenced Repos](#referenced-repos)
 - [Copyright and License](#copyright-and-license)
 - [Disclaimer](#disclaimer)
