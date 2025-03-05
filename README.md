@@ -22,7 +22,6 @@ Please contact us if you are interested in our work and look for academic collab
   - Install via offline installation package
   - Install via pip/conda manually
   - Install via pip/conda automatically
-  - Install via docker
   - Example of install SMRTnet on a new machine
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
@@ -182,11 +181,12 @@ pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
 
-
+<!--
 ### 4. Install via docker (Coming soon...)
 ```bash
 xxx
 ```
+-->
 <br/>
 
 **Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
