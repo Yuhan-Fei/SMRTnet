@@ -212,8 +212,6 @@ please check your CUDA version and find the torch version number match this.
 <p align="center"><img src="figs/02_torch.png" width=100% /></p>  
 
 ##### 3) pip install -r requirements.txt [Install via pip/conda automatically]
-Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.  
-If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
 <p align="center"><img src="figs/03_requirements.png" width=100% /></p>
 
 ##### 4) install dgl-cuda  (important)
@@ -224,7 +222,10 @@ however, your should check this from the [dglteam packages 1](https://anaconda.o
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
 
 ##### 5) install pytorch-fast-tranformers  (important)
+Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.  
+If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
 ```
+#pip install pytorch-fast-transformers==0.3.0
 cp -rf ./env/fast_transformers ~/anaconda3/envs/${env_name}/lib/python3.8/site-packages/
 cp ./env/modeling_esm.py ~/anaconda3/envs/${env_name}/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
