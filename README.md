@@ -147,7 +147,9 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 #### We present an example of how to install SMRTnet on a new machine:
 <details>
-   <summary>[Manual] Click here for Cthe details</summary>
+	
+   <summary>[Manual] Click here for the details</summary>
+	
 ##### machine version & CUDA version
 <p align="center"><img src="figs/00_version.png" width=100% /></p>
 
