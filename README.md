@@ -20,7 +20,7 @@ Please contact us if you are interested in our work and look for academic collab
 - [Getting Started](#getting-started)
   - Install via conda
   - Install via offline package
-  - Install via pip
+  - Install via PyPI and pip
   - Install via docker
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
@@ -150,18 +150,7 @@ conda env create -f environment.yml
 conda activate SMRTnet
 ```
 -->
-
-### 2. Install via offline package 
-```bash
-## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
-pip install conda-pack
-mkdir -p smrtnet_env
-tar -xzf ${PATH}/smrtnet_env.tar.gz -C smrtnet_env
-source ./smrtnet_env/bin/activate
-
-```
-Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
-### 3. Install via PyPI and pip
+### 2. Install via PyPI and pip
 
 ```bash
 1) PyPI (Coming soon...)
@@ -173,6 +162,18 @@ conda activate smrtnet
 pip install -r requirements.txt
 
 ```
+
+### 3. Install via offline package 
+```bash
+## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
+pip install conda-pack
+mkdir -p smrtnet_env
+tar -xzf ${PATH}/smrtnet_env.tar.gz -C smrtnet_env
+source ./smrtnet_env/bin/activate
+
+```
+Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
+
 
 
 ### 4. Install via docker (Coming soon...)
