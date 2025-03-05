@@ -153,15 +153,21 @@ Please visit https://pytorch.org/get-started/previous-versions/ to install the c
 <p align="center"><img src="figs/01_python.png" width=100% /></p>
 
 ##### activate environment and install torch (important)
-we suggest installing the torch in accordance with the following statemen: 
-pip install torch==2.4.1+${cuda version} torchvision==0.19.1+${cuda version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda version}
+we suggest installing the torch in accordance with the following statement: 
+pip install torch==2.4.1+${cuda version} torchvision==0.19.1+${cuda version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda version}  
 please check your CUDA version and find the torch version number match this.
-<p align="center"><img src="figs/02_torch.png" width=100% /></p>
+<p align="center"><img src="figs/02_torch.png" width=100% /></p>  
 
 ##### pip install -r requirements.txt
+Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.
 <p align="center"><img src="figs/03_requirements.png" width=100% /></p>
 
 ##### install dgl-cuda  (important)
+we suggest installing the dgl-cuda in accordance with the following statement:  
+conda install dglteam/label/th${torch version}_${cuda version}::dgl
+however, your should check this from the [dglteam packages 1](https://anaconda.org/dglteam/repo),  
+[dglteam packages 2](https://anaconda.org/dglteam/dgl/labels),  
+or [dglteam install command](https://anaconda.org/dglteam/dgl).
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
 
 <!--
