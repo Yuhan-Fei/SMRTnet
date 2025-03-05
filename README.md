@@ -188,10 +188,8 @@ https://zenodo.org/records/14715564
 ## Repo Structure:
 After adding all our data, the repo has the following structure:
 
-<details>
-   <summary>Click here for the code!</summary>
 
-```
+```bash
 ├── LM_Mol
 |  └── Pretrained
 |      └── hparams.yaml
@@ -242,7 +240,6 @@ After adding all our data, the repo has the following structure:
 └── utils.py
 
 ```
-</details>
 
 
 ## Datasets
