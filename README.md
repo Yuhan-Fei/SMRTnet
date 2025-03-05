@@ -148,7 +148,7 @@ Please visit https://pytorch.org/get-started/previous-versions/ to install the c
 #### We present an example of how to install SMRTnet on a new machine:
 <details>
 	
-   <summary>[Manual] Click here for the details</summary>
+   <summary>[Example] Click here for the details of installation </summary>
 	
 ##### machine version & CUDA version
 <p align="center"><img src="figs/00_version.png" width=100% /></p>
