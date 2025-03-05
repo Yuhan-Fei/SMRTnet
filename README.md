@@ -108,12 +108,7 @@ conda install dglteam::dgl-cuda10.2
 pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `./fast_transformers` to your environment directory.
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py ## because we modified this file.
 
-
-
 ##Disable CPU in fast-transformer (CUDA version 11.1 only)
-
-
-
 DIR=~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/fast_transformers
 sed -i '9,10 s/^/#/' ${DIR}/causal_product/__init__.py
 sed -i '24 s/^/#/' ${DIR}/causal_product/__init__.py
