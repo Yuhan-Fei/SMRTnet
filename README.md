@@ -145,7 +145,9 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
-#### Here we show one example on another new machine:
+#### We present an example of how to install SMRTnet on a new machine:
+<details>
+   <summary>[Manual] Click here for Cthe details</summary>
 ##### machine version & CUDA version
 <p align="center"><img src="figs/00_version.png" width=100% /></p>
 
@@ -168,6 +170,7 @@ conda install dglteam/label/th${torch_version}_${cuda_version}::dgl
 however, your should check this from the [dglteam packages 1](https://anaconda.org/dglteam/repo),  
 [dglteam packages 2](https://anaconda.org/dglteam/dgl/labels), or [dglteam install command](https://anaconda.org/dglteam/dgl).
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
+</details>
 
 <!--
 ### Install via Conda (Coming soon...)
