@@ -22,9 +22,9 @@ Please contact us if you are interested in our work and look for academic collab
   - Install via offline package
   - Install via pip
   - Install via docker
-- [Repo Structure](#repo-structure)
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
+- [Repo Structure](#repo-structure)
 - [Datasets](#datasets)
   - Datasets for training
   - RNA target format for inference
@@ -173,6 +173,18 @@ pip install smrtnet
 xxx
 ```
 
+
+## SMRTnet Architecture
+
+<p align="center"><img src="figs/architecture.png" width=100% /></p>
+
+### Download our pre-trained models from zenodo （Required）
+Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model), from link below, and place these models into the SMRTnet folder:  
+https://zenodo.org/records/14715564
+
+<p align="center"><img src="figs/zenodo.png" width=100% /></p>
+
+
 ## Repo Structure:
 After adding all our data, the repo has the following structure:
 
@@ -232,16 +244,7 @@ After adding all our data, the repo has the following structure:
 ```
 </details>
 
-## SMRTnet Architecture
 
-<p align="center"><img src="figs/architecture.png" width=100% /></p>
-
-### Download our pre-trained models from zenodo （Required）
-Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model), from link below, and place these models into the SMRTnet folder:  
-https://zenodo.org/records/14715564
-
-<p align="center"><img src="figs/zenodo.png" width=100% /></p>
-  
 ## Datasets
 
 ### Datasets for training
