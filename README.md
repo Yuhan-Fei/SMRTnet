@@ -203,7 +203,7 @@ After downloading all our data, the repo has the following structure:
 
 
 ```bash
-├── LM_Mol
+├── LM_Mol (download from zenodo)
 |  └── Pretrained
 |      └── hparams.yaml
 |      └── checkpoints
@@ -214,7 +214,7 @@ After downloading all our data, the repo has the following structure:
 |  └── rotate_builder.py
 |  └── tokenizer.py
 |
-├── LM_RNA
+├── LM_RNA (download from zenodo)
 |   └── model_state_dict
 |      └── rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213
 |          └── epoch_0
@@ -234,6 +234,10 @@ After downloading all our data, the repo has the following structure:
 |
 ├── dataset_cv_best
 |
+├── env
+|   └── fast_transformers.zip
+|   └── modeling_esm.py
+|
 ├── img_log
 |   └── 1.png
 |   └── 2.png
@@ -242,15 +246,18 @@ After downloading all our data, the repo has the following structure:
 |   └── dot_bracket.npz
 |
 ├── results
-|   └── SMRTNet_model
+|   └── SMRTNet_model (download from zenodo)
 |
+├── README.md
 ├── explain.py
 ├── infer.py
 ├── loader.py
 ├── loop.py
 ├── main.py
 ├── model.py
-└── utils.py
+├── requirements.txt(yml)
+├── utils.py
+└── visual.py
 ```
 
 
