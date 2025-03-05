@@ -164,13 +164,14 @@ Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
 ### 3. Install via pip (Coming soon...)
 
 ```bash
-1)
+1) PyPI
+pip install smrtnet
+
+2) pip
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install -r requirements.txt
 
-2)
-pip install smrtnet
 ```
 
 
