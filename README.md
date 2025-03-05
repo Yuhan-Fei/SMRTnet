@@ -193,13 +193,13 @@ xxx
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
 ### Download our pre-trained models from zenodo （Required）
-Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these models into the SMRTnet folder: https://zenodo.org/records/14715564
+Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
 
 
 ## Repo Structure:
-After adding all our data, the repo has the following structure:
+After downloading all our data, the repo has the following structure:
 
 
 ```bash
