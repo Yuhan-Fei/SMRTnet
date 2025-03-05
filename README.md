@@ -188,14 +188,6 @@ xxx
 
 **Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
-## SMRTnet Architecture
-
-<p align="center"><img src="figs/architecture.png" width=100% /></p>
-
-### Download our pre-trained models from zenodo （Required）
-Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
-
-<p align="center"><img src="figs/zenodo.png" width=100% /></p>
 
 ### 5. How to install SMRTnet on a new machine
 <details>
@@ -226,6 +218,16 @@ however, your should check this from the [dglteam packages 1](https://anaconda.o
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
 </details>
 
+
+
+## SMRTnet Architecture
+
+<p align="center"><img src="figs/architecture.png" width=100% /></p>
+
+### Download our pre-trained models from zenodo （Required）
+Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
+
+<p align="center"><img src="figs/zenodo.png" width=100% /></p>
 
 
 
