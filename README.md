@@ -19,9 +19,9 @@ Please contact us if you are interested in our work and look for academic collab
 
 ## Table of contents
 - [Getting Started](#getting-started)
+  - Install via offline package
   - Install via pip/conda manually
   - Install via pip/conda automatically
-  - Install via offline package
   - Install via docker
   - Example of install SMRTnet on a new machine
 - [SMRTnet Architecture](#smrtnet-architecture)
@@ -81,7 +81,19 @@ nvidia-smi
 nvcc --version
 ```
 Note: All tests were conducted on a Linux Ubuntu 13.x operating system with CUDA versions 11.x and 12.x.  
-### 1. Install via pip/conda manually
+
+### 1. Install via offline package 
+```bash
+## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
+pip install conda-pack
+mkdir -p smrtnet_env
+tar -xzf ${PATH}/smrtnet_env.tar.gz -C smrtnet_env
+source ./smrtnet_env/bin/activate
+
+```
+Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
+
+### 2. Install via pip/conda manually
 
 <details>
    <summary>[Manual] Click here for CUDA version 12.x </summary>
@@ -157,7 +169,7 @@ conda env create -f environment.yml
 conda activate SMRTnet
 ```
 -->
-### 2. Install via pip/conda automatically
+### 3. Install via pip/conda automatically
 
 ```bash
 ## download the pip offline packages or online-install
@@ -169,18 +181,6 @@ conda install dglteam/label/th24_cu121::dgl
 pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
-
-### 3. Install via offline package 
-```bash
-## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
-pip install conda-pack
-mkdir -p smrtnet_env
-tar -xzf ${PATH}/smrtnet_env.tar.gz -C smrtnet_env
-source ./smrtnet_env/bin/activate
-
-```
-Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
-
 
 
 ### 4. Install via docker (Coming soon...)
