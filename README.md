@@ -181,6 +181,7 @@ Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
 xxx
 ```
 
+Thank you for your interest in SMRTnet! If you encounter any issues during the installation process, you can describe the problem in the Issues module or contact us directly via email.
 
 ## SMRTnet Architecture
 
