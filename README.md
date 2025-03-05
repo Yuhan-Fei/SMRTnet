@@ -71,7 +71,7 @@ Please contact us if you are interested in our work and look for academic collab
 -->
 
 
-### Install via conda (recommend)
+### 1. Install via conda (recommend)
 Run the following command to check your CUDA version before installing SMRTnet:
 ```bash
 nvidia-smi
@@ -151,7 +151,7 @@ conda activate SMRTnet
 ```
 -->
 
-### Install via offline package 
+### 2. Install via offline package 
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
 pip install conda-pack
@@ -161,14 +161,14 @@ source ./smrtnet_env/bin/activate
 
 ```
 Please download the SMRTnet enviroment from xxx
-### Install via pip (Comming soon...)
+### 3. Install via pip (Comming soon...)
 ```bash
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install smrtnet
 ```
 
-### Install via docker (Comming soon...)
+### 4. Install via docker (Comming soon...)
 ```bash
 xxx
 ```
