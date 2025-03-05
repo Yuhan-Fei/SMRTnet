@@ -146,34 +146,6 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
-#### We present an example of how to install SMRTnet on a new machine:
-<details>
-	
-   <summary>[Example] Click here for the details of installation </summary>
-	
-##### machine version & CUDA version
-<p align="center"><img src="figs/00_version.png" width=100% /></p>
-
-##### install python
-<p align="center"><img src="figs/01_python.png" width=100% /></p>
-
-##### activate environment and install torch (important)
-we suggest installing the torch in accordance with the following statement: 
-pip install torch==2.4.1+${cuda_version} torchvision==0.19.1+${cuda_version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda_version}  
-please check your CUDA version and find the torch version number match this.
-<p align="center"><img src="figs/02_torch.png" width=100% /></p>  
-
-##### pip install -r requirements.txt
-Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.
-<p align="center"><img src="figs/03_requirements.png" width=100% /></p>
-
-##### install dgl-cuda  (important)
-we suggest installing the dgl-cuda in accordance with the following statement:  
-conda install dglteam/label/th${torch_version}_${cuda_version}::dgl
-however, your should check this from the [dglteam packages 1](https://anaconda.org/dglteam/repo),  
-[dglteam packages 2](https://anaconda.org/dglteam/dgl/labels), or [dglteam install command](https://anaconda.org/dglteam/dgl).
-<p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
-</details>
 
 <!--
 ### Install via Conda (Coming soon...)
@@ -224,6 +196,37 @@ xxx
 Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
+
+### 5. How to install SMRTnet on a new machine
+<details>
+	
+   <summary>[Example] Click here for the details of installation </summary>
+	
+##### machine version & CUDA version
+<p align="center"><img src="figs/00_version.png" width=100% /></p>
+
+##### install python
+<p align="center"><img src="figs/01_python.png" width=100% /></p>
+
+##### activate environment and install torch (important)
+we suggest installing the torch in accordance with the following statement: 
+pip install torch==2.4.1+${cuda_version} torchvision==0.19.1+${cuda_version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda_version}  
+please check your CUDA version and find the torch version number match this.
+<p align="center"><img src="figs/02_torch.png" width=100% /></p>  
+
+##### pip install -r requirements.txt
+Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.
+<p align="center"><img src="figs/03_requirements.png" width=100% /></p>
+
+##### install dgl-cuda  (important)
+we suggest installing the dgl-cuda in accordance with the following statement:  
+conda install dglteam/label/th${torch_version}_${cuda_version}::dgl
+however, your should check this from the [dglteam packages 1](https://anaconda.org/dglteam/repo),  
+[dglteam packages 2](https://anaconda.org/dglteam/dgl/labels), or [dglteam install command](https://anaconda.org/dglteam/dgl).
+<p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
+</details>
+
+
 
 
 ## Repo Structure:
