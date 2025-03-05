@@ -166,8 +166,7 @@ Please verify whether the installation of pytorch-fast-transformers==0.3.0 can b
 we suggest installing the dgl-cuda in accordance with the following statement:  
 conda install dglteam/label/th${torch version}_${cuda version}::dgl
 however, your should check this from the [dglteam packages 1](https://anaconda.org/dglteam/repo),  
-[dglteam packages 2](https://anaconda.org/dglteam/dgl/labels),  
-or [dglteam install command](https://anaconda.org/dglteam/dgl).
+[dglteam packages 2](https://anaconda.org/dglteam/dgl/labels), or [dglteam install command](https://anaconda.org/dglteam/dgl).
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
 
 <!--
