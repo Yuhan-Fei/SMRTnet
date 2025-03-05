@@ -20,8 +20,8 @@ Please contact us if you are interested in our work and look for academic collab
 ## Table of contents
 - [Getting Started](#getting-started)
   - Install via offline installation package
-  - Install via pip/conda manually
   - Install via pip/conda automatically
+  - Install via pip/conda manually
   - Example of install SMRTnet on a new machine
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
@@ -92,7 +92,20 @@ source ./smrtnet_env/bin/activate
 ```
 Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
 
-### 2. Install via pip/conda manually
+### 2. Install via pip/conda automatically
+
+```bash
+## download the pip offline packages or online-install
+conda create -n smrtnet python=3.8.10
+conda activate smrtnet
+pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
+pip install -r requirements.txt ## online-install
+conda install dglteam/label/th24_cu121::dgl
+pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
+cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
+```
+
+### 3. Install via pip/conda manually
 
 <details>
    <summary>[Manual] Click here for CUDA version 12.x </summary>
@@ -168,18 +181,7 @@ conda env create -f environment.yml
 conda activate SMRTnet
 ```
 -->
-### 3. Install via pip/conda automatically
 
-```bash
-## download the pip offline packages or online-install
-conda create -n smrtnet python=3.8.10
-conda activate smrtnet
-pip install torch==2.4.1+cu121 torchvision==0.19.1+cu121 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu121
-pip install -r requirements.txt ## online-install
-conda install dglteam/label/th24_cu121::dgl
-pip install pytorch-fast-transformers==0.3.0 	## If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
-cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
-```
 
 <!--
 ### 4. Install via docker (Coming soon...)
@@ -192,7 +194,7 @@ xxx
 **Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
-### 5. Example of install SMRTnet on a new machine
+### 4. Example of install SMRTnet on a new machine
 <details>
 	
    <summary>[Example] Click here for the details of installation </summary>
