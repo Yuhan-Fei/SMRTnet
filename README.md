@@ -145,6 +145,25 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
+#### Here we show one example on another new machine:
+##### machine version & CUDA version
+<p align="center"><img src="figs/00_version.png" width=100% /></p>
+
+##### install python
+<p align="center"><img src="figs/01_python.png" width=100% /></p>
+
+##### activate environment and install torch (important)
+we suggest installing the torch in accordance with the following statemen: 
+pip install torch==2.4.1+${cuda version} torchvision==0.19.1+${cuda version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda version}
+please check your CUDA version and find the torch version number match this.
+<p align="center"><img src="figs/02_torch.png" width=100% /></p>
+
+##### pip install -r requirements.txt
+<p align="center"><img src="figs/03_requirements.png" width=100% /></p>
+
+##### install dgl-cuda  (important)
+<p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
+
 <!--
 ### Install via Conda (Coming soon...)
 ```bash
