@@ -118,7 +118,6 @@ pyparsing==3.1.4
 PySocks==1.7.1
 python-dateutil==2.8.2
 python-json-logger==3.2.1
-pytorch-fast-transformers==0.3.0
 pytorch-lightning==1.1.5
 pytz==2024.2
 PyYAML==6.0.2
