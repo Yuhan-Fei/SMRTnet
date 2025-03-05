@@ -310,11 +310,9 @@ python main.py --do_check
 
 To train the model from scratch, run (Coming soon...)
 
-```python
-python main.py --do_train
-```
+
 where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard
-<!--
+
 We provide the example scripts to train the model from scratch:
 
 ```python
@@ -324,7 +322,6 @@ python main.py --do_train \
                --batch_size 16 \
                --out_dir=./results/benchmark
 ```
--->
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
 ### Evaluation
