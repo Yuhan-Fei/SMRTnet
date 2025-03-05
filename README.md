@@ -19,8 +19,8 @@ Please contact us if you are interested in our work and look for academic collab
 ## Table of contents
 - [Getting Started](#getting-started)
   - Install via conda
-  - Install via offline package
   - Install via PyPI and pip
+  - Install via offline package
   - Install via docker
 - [SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
