@@ -359,7 +359,7 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 | 3902-71-4 | CC1=CC(=O)OC2=C1C=C3C=C(OC3=C2C)C |
 | 149-91-7 | C1=C(C=C(C(=C1O)O)O)C(=O)O |
 | 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
-
+| ... | ... | 
 ### RNA sequence datasets for RNA language model (RNASwan-seq)
 
 The dataset used for RNA language model was compiled from 7 sources: the European Nucleotide Archive, NCBI's nucleotide database, GenBank, Ensembl, RNAcentral, CSCD2, and GreeNC 2.0, encompassing a total of **470 million** RNA sequences. We de-duplicated with 100% sequence similarity using MMSeqs2, resulting in about **214 million** unique RNA sequences
