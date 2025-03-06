@@ -86,7 +86,7 @@ nvcc --version
 ```
 Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  
 
-### :hearts: Install via offline installation package
+### :hearts:  Install via offline installation package
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
 pip install conda-pack
@@ -254,7 +254,7 @@ The update date is March 5, 2025.
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
-### Download our pre-trained models from zenodo （Required）
+### :exclamation: Download our pre-trained models from zenodo （Required）
 Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
@@ -391,7 +391,7 @@ python main.py --do_check
 ```
 -->
 
-### Training 
+### :hearts: Training 
 
 
 <!-- where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard -->
@@ -407,7 +407,7 @@ python main.py --do_train \
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
-### Evaluation
+### :spades: Evaluation
 For evaluation of the models, we provide the script `eval.sh`. You can run it using
 ```
 python main.py --do_test
@@ -428,7 +428,7 @@ To obtain the results for other folds, the infer_model_dir parameter needs to be
 
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
-### Inference
+### :diamonds: Inference
 For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
@@ -503,7 +503,7 @@ nohup python main.py --do_infer --cuda 4 \
 ```
 -->
 
-### Interpretability
+### :clubs: Interpretability
 For computing high attention regions using the trained models, You can run it using the following scripts and visualize the results in jupyter-notebook
 ```
 python main.py --do_explain
