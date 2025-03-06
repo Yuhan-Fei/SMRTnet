@@ -8,7 +8,7 @@ Small molecules can bind RNAs to regulate their fate and functions, providing pr
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
-## Cite us
+## :confetti_ball: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
 If you found this package useful, please cite our paper (under review):
 ```
@@ -16,7 +16,7 @@ Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yang
 
 Predicting small molecule and RNA target interactions using deep neural network, 2025.
 ```
-## Contact us
+## :telephone: Contact us
 Please contact us if you are interested in our work and look for academic collaboration:  
 - Dr. Yuhan Fei, School of Life Sciences, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
