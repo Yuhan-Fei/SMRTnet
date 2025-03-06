@@ -323,7 +323,7 @@ After downloading all our data, the repo has the following structure:
 ├── loop.py
 ├── main.py
 ├── model.py
-├── requirements.txt(yml)
+├── requirements.txt
 ├── utils.py
 └── visual.py
 ```
