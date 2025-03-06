@@ -8,7 +8,7 @@ Small molecules can bind RNAs to regulate their fate and functions, providing pr
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
-## :thumbsup: Cite us
+## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
 If you found this package useful, please cite our paper (under review):
 ```
@@ -86,7 +86,7 @@ nvcc --version
 ```
 Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  
 
-### :hearts:  Install via offline installation package
+### :pushpin:  Install via offline installation package
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
 pip install conda-pack
@@ -97,7 +97,7 @@ source ./smrtnet_env/bin/activate
 ```
 Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
 
-### :spades: Install via pip/conda automatically
+### :pushpin: Install via pip/conda automatically
 
 ```bash
 ## download the pip offline packages or online-install
@@ -110,7 +110,7 @@ pip install pytorch-fast-transformers==0.3.0 	## Note: If this installation step
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
 
-### :diamonds: Install via pip/conda manually
+### :pushpin: Install via pip/conda manually
 
 <details>
    <summary>[Manual] Click here for CUDA version 12.x </summary>
@@ -199,7 +199,7 @@ xxx
 **Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
-### :clubs: Example of install SMRTnet on a new machine
+### :pushpin: Example of install SMRTnet on a new machine
 <details>
 	
    <summary>[Example] Click here for the details of installation </summary>
