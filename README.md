@@ -292,6 +292,7 @@ After downloading all our data, the repo has the following structure:
 |
 ├── data
 |   └── SMRTnet-data-demo.txt
+|   └── SMRTnet-benchmark-demo.txt
 |   └── MYC_RIBOTAC.txt
 |   └── MYC_IRES.txt
 |
@@ -413,7 +414,7 @@ We provide the example scripts to test the model:
 
 ```python
 python main.py --do_test \
-               --data_dir=./data/SMRTnet-data-demo.txt \
+               --data_dir=./data/SMRTnet-benchmark-demo.txt \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
