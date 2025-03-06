@@ -18,21 +18,21 @@ Please contact us if you are interested in our work and look for academic collab
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
 ## Table of contents
-- [Getting Started](#getting-started)
+- [1. Getting Started](#getting-started)
   - Install via offline installation package
   - Install via pip/conda automatically
   - Install via pip/conda manually
   - Example of install SMRTnet on a new machine
-- [SMRTnet Architecture](#smrtnet-architecture)
+- [2. SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
-- [Repo Structure](#repo-structure)
-- [Datasets](#datasets)
+- [3. Repo Structure](#repo-structure)
+- [4. Datasets](#datasets)
   - Datasets for training
   - RNA target format for inference
   - Small molecule format for inference
   - RNA sequence datasets for RNA language model (RNASwan-seq)
   - SMILES datasets for chemical language model (MoLFormer)
-- [Usage](#usage)
+- [5. Usage](#usage)
   - How to check your input format
   - How to train your own model
   - How to test the performance of model
