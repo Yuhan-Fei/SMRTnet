@@ -495,6 +495,7 @@ def plot_saliency(X, W, nt_width=100, norm_factor=3, str_null=None, outdir="resu
 
     # plot    
     #fig = plt.figure(figsize=(10.1,2))
+    plt.style.use('default')
     fig = plt.figure(figsize=(11,3))
     gs = gridspec.GridSpec(nrows=5, ncols=1, height_ratios=[2.5, 0.25, 0.5, 0.5, 0.25])
     cmap_reversed = mpl.cm.get_cmap('Spectral_r')             # jet, Spectral_r, coolwarm, RdBu_r
