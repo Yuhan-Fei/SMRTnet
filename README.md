@@ -311,10 +311,10 @@ After downloading all our data, the repo has the following structure:
 ├── results
 |   └── SMRTNet_model (download from zenodo)
 |          └── SMRTnet_cv1.pth
-|          └── SMRTnet_cv1.pth
-|          └── SMRTnet_cv1.pth
-|          └── SMRTnet_cv1.pth
-|          └── SMRTnet_cv1.pth
+|          └── SMRTnet_cv2.pth
+|          └── SMRTnet_cv3.pth
+|          └── SMRTnet_cv4.pth
+|          └── SMRTnet_cv5.pth
 |          └── config.pkl
 ├── README.md
 ├── explain.py
