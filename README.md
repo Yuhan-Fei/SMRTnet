@@ -1,4 +1,4 @@
-# :computer: SMRTnet
+# :computer:  SMRTnet
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
