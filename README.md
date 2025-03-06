@@ -79,7 +79,7 @@ nvidia-smi
  ```bash
 nvcc --version
 ```
-Note: All tests were conducted on a Linux Ubuntu 13.x operating system with CUDA versions 11.x and 12.x.  
+Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  
 
 ### 1. Install via offline installation package
 ```bash
