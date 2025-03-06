@@ -140,6 +140,7 @@ def RNA_plot(inputPath, resultsF, index, smooth_steps=3):
     '''
     testData = pd.read_csv(inputPath,sep='\t',header=None,index_col=0,names=['drug', 'rna', 'SMILES', 'Sequence', 'Structure', 'prob'])
     df_p = np.zeros((5,6,31))
+    df_p_median = np.zeros((6,31))
     resM = pd.read_table(resultsF + '/merge_results.txt',sep='\t',header=None,names=['ids','drug', 'rna', 'SMILES', 'Sequence', 'Structure', 'prob'])
     shreshold = resM.loc[index,'prob']
     for i in range(5):
@@ -150,15 +151,16 @@ def RNA_plot(inputPath, resultsF, index, smooth_steps=3):
             df_tmp_pe = pd.read_table(resultsF + '/CV_' + str(i+1) + '/0_salency_Pe_'+str(index)+'.txt',sep=',',header=None)
             df_tmp = pd.concat([df_tmp_p, df_tmp_pe], axis=0)
             df_tmp = df_tmp.values
+            if pd.read_table(resultsF + '/CV_' + str(i+1) + '/results_sort.txt',sep='\t').loc[0,'prob']==shreshold:
+                df_p_median = df_tmp.copy()
             df_tmp = (df_tmp-df_tmp.min(axis=1)[:,np.newaxis])/(df_tmp.max(axis=1)[:,np.newaxis]-df_tmp.min(axis=1)[:,np.newaxis])
         except:
             df_tmp = np.zeros((6,31))
-
         df_p[i,:,:] = df_tmp.reshape(1,6,31)
 
     df_p = df_p.sum(axis=0)/3
     df_p = pd.DataFrame(df_p)
-
+    df_p_median = pd.DataFrame(df_p_median)
 
 
     df3 = pd.Series(list(testData['Sequence'][index]+'AUGC'))
@@ -167,6 +169,7 @@ def RNA_plot(inputPath, resultsF, index, smooth_steps=3):
     df2=pd.DataFrame(index=np.arange(2), columns=np.arange(31)).fillna(1)
     merge = df4.append(df2, ignore_index=True)
     df_final=df_p*merge
+    df_final_median = df_p_median*merge
     
     window_size = 8
     max_value = 0
@@ -194,8 +197,13 @@ def RNA_plot(inputPath, resultsF, index, smooth_steps=3):
 
     if smooth_steps >= 3:
         df_final.iloc[:4,:] = df_final.iloc[:4,:].sum(axis=0)
+        df_final_median.iloc[:4,:] = df_final_median.iloc[:4,:].sum(axis=0)
+        
         df_final = savgol_filter(df_final, smooth_steps, 1, axis=1, mode='nearest')
+        df_final_median = savgol_filter(df_final_median, smooth_steps, 1, axis=1, mode='nearest')
+        
         df_final=df_final*merge
+        df_final_median=df_final_median*merge
     else:
         pass
     
@@ -206,8 +214,9 @@ def RNA_plot(inputPath, resultsF, index, smooth_steps=3):
     merge = df4.append(df5, ignore_index=True)
 
     w = plot_saliency(merge.iloc[:7,:].values, df_final.iloc[:5,:].values, nt_width=100, norm_factor=3, str_null=np.zeros(31), outdir=resultsF + '/2_RNA_final_'+str(index)+'.pdf')
-    
-    return w
+    w_median = plot_saliency(merge.iloc[:7,:].values, df_final_median.iloc[:5,:].values, nt_width=100, norm_factor=3, str_null=np.zeros(31), outdir=resultsF + '/3_RNA_final_'+str(index)+'.pdf')
+
+    return w, w_median
 
 def load(inputPath, select_cv=0):
     restsAll = pd.DataFrame({})
@@ -220,11 +229,13 @@ def load(inputPath, select_cv=0):
         restsAll = pd.concat([restsAll,resTmp['prob']],axis=1)
     restsAll.columns = ['index','drug','rna','probs1','probs2','probs3','probs4','probs5']
     restsAll['median'] = restsAll[['probs1','probs2','probs3','probs4','probs5']].median(axis=1)
-    drug_visualization,rna_visualization = [],[]
+    drug_visualization,rna_visualization = [],{'merge':[],'median':[]}
     for i in range(len(restsAll.index)):
-        drug_visualization.append(xsimles(inputPath+'/merge_results.txt',inputPath,i,3,select_cv))
-        rna_visualization.append(RNA_plot(inputPath+'/merge_results.txt',inputPath,i,3))
-        
-    print("There are "+str(len(drug_visualization))+" of interactions has been loaded...")
-    print("Please use visualization[index],index=(1,2,3..."+str(len(drug_visualization))+") to visualize the key functional groups")
-    return restsAll, drug_visualization, rna_visualization
+        #drug_visualization.append(xsimles(inputPath+'/merge_results.txt',inputPath,i,3,select_cv))
+        fig_merge, fig_median = RNA_plot(inputPath+'/merge_results.txt',inputPath,i,3)
+        rna_visualization['merge'].append(fig_merge)
+        rna_visualization['median'].append(fig_median)
+    rna_visualization = pd.DataFrame(rna_visualization)
+    print("There are "+str(len(rna_visualization))+" of interactions has been loaded...")
+    #print("Please use visualization[index],index=(1,2,3..."+str(len(drug_visualization))+") to visualize the key functional groups")
+    return restsAll, rna_visualization
