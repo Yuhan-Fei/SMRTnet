@@ -86,7 +86,7 @@ nvcc --version
 ```
 Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  
 
-### 1. Install via offline installation package
+### :hearts: Install via offline installation package
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
 pip install conda-pack
@@ -97,7 +97,7 @@ source ./smrtnet_env/bin/activate
 ```
 Please download the SMRTnet enviroment from https://zenodo.org/records/14970392
 
-### 2. Install via pip/conda automatically
+### :spades: Install via pip/conda automatically
 
 ```bash
 ## download the pip offline packages or online-install
@@ -110,7 +110,7 @@ pip install pytorch-fast-transformers==0.3.0 	## Note: If this installation step
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
 
-### 3. Install via pip/conda manually
+### :diamonds: Install via pip/conda manually
 
 <details>
    <summary>[Manual] Click here for CUDA version 12.x </summary>
@@ -199,7 +199,7 @@ xxx
 **Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
-### 4. Example of install SMRTnet on a new machine
+### :clubs: Example of install SMRTnet on a new machine
 <details>
 	
    <summary>[Example] Click here for the details of installation </summary>
