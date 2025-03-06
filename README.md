@@ -226,7 +226,7 @@ However, please verify the appropriate installation command by checking the avai
 - [dglteam packages 1](https://anaconda.org/dglteam/repo)  
 - [dglteam packages 2](https://anaconda.org/dglteam/dgl/labels)  
 - [dglteam install command](https://anaconda.org/dglteam/dgl)  
-<p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
+<p align="center"><img src="figs/04_dgl-cuda.png" width=90% /></p>
 
 ##### 5) Install pytorch-fast-tranformers  (important)
 Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.  
@@ -241,7 +241,7 @@ cp -rf ./env/fast_transformers ~/anaconda3/envs/${env_name}/lib/python3.8/site-p
 ##### 6) To test model training in your SMRTnet setup
 We demonstrated the complete process of setting up the environment, installing SMRTnet on a new machine, and successfully training the model.
 The update date is March 5, 2025.
-<p align="center"><img src="figs/05_trainingModel.png" width=100% /></p>
+<p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
 </details>
 
 
