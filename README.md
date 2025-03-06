@@ -22,7 +22,7 @@ Please contact us if you are interested in our work and look for academic collab
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
 ## :speech_balloon: Table of contents
-- [1. Getting Started](#getting-started)
+- [:one:  Getting Started](#getting-started)
   - Install via offline installation package
   - Install via pip/conda automatically
   - Install via pip/conda manually
