@@ -254,7 +254,7 @@ The update date is March 5, 2025.
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
-### :exclamation: Download our pre-trained models from zenodo （Required）
+### :bangbang: Download our pre-trained models from zenodo （Required）
 Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
@@ -332,7 +332,7 @@ After downloading all our data, the repo has the following structure:
 
 ## Datasets
 
-### Datasets for training
+### :round_pushpin: Datasets for training
 
 Download and extract the dataset in datasets folder: SMRTnet-data.txt
 
@@ -346,7 +346,7 @@ The format of data for training is show as follow:
 | CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
 
 
-### Format of input RNA target for inference:
+### :round_pushpin: Format of input RNA target for inference:
 
 The length of RNA should >=31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
 
@@ -356,7 +356,7 @@ The length of RNA should >=31nt, and the sequence length should equal to the str
 | MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
 
 
-### Format of input small molecule  for inference:
+### :round_pushpin: Format of input small molecule  for inference:
 The SMILES of small molecule should meet the requirement of RDkit. Data are split by tab and ignore the first header row.
 
 | CAS | SMILES |
@@ -365,12 +365,13 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 | 149-91-7 | C1=C(C=C(C(=C1O)O)O)C(=O)O |
 | 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
 | ... | ... | 
-### RNA sequence datasets for RNA language model (RNASwan-seq)
+
+### :round_pushpin: RNA sequence datasets for RNA language model (RNASwan-seq)
 
 The dataset used for RNA language model was compiled from 7 sources: the European Nucleotide Archive, NCBI's nucleotide database, GenBank, Ensembl, RNAcentral, CSCD2, and GreeNC 2.0, encompassing a total of **470 million** RNA sequences. We de-duplicated with 100% sequence similarity using MMSeqs2, resulting in about **214 million** unique RNA sequences
 
 
-### SMILES datasets for chemical language model (MoLFormer)
+### :round_pushpin: SMILES datasets for chemical language model (MoLFormer)
 
 Datasets are available at https://ibm.box.com/v/MoLFormer-data
 
