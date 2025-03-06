@@ -37,7 +37,6 @@ Please contact us if you are interested in our work and look for academic collab
   - RNA sequence datasets for RNA language model (RNASwan-seq)
   - SMILES datasets for chemical language model (MoLFormer)
 - [5. Usage](#usage)
-  - How to check your input format
   - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
@@ -46,6 +45,7 @@ Please contact us if you are interested in our work and look for academic collab
 - [7. Copyright and License](#copyright-and-license)
 - [8. Disclaimer](#disclaimer)
 
+<!--  - How to check your input format -->
 <!-- - [Example](#example)-->
 <!-- - [6. Web Server (Coming soon...)](#web-server) -->
 
@@ -382,12 +382,14 @@ More details can be found in https://github.com/IBM/molformer
 The training of SMRTnet requires **~12G** of GPU memory (with batch_size = 32),  
 while the testing process needs approximately **3G** of GPU memory.
 
+<!--
 ### Check your input data format
 
 Check input format
 ```
 python main.py --do_check
 ```
+-->
 
 ### Training 
 
