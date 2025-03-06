@@ -201,10 +201,10 @@ xxx
    <summary>[Example] Click here for the details of installation </summary>
 	
 ##### 1) To check your machine's specifications and CUDA version
-<p align="center"><img src="figs/00_version.png" width=100% /></p>
+<p align="center"><img src="figs/00_version.png" width=90% /></p>
 
 ##### 2) Before installing SMRTnet, ensure that Python (3.8.10) is installed on your system
-<p align="center"><img src="figs/01_python.png" width=100% /></p>
+<p align="center"><img src="figs/01_python.png" width=90% /></p>
 
 ##### 3) To activate your environment and install PyTorch before setting up SMRTnet
 We recommend installing PyTorch using the following command:
@@ -212,10 +212,10 @@ We recommend installing PyTorch using the following command:
 pip install torch==2.4.1+${cuda_version} torchvision==0.19.1+${cuda_version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda_version}
 ```
 Before installation, please check your CUDA version and ensure that the specified PyTorch version is compatible with it.
-<p align="center"><img src="figs/02_torch.png" width=100% /></p>  
+<p align="center"><img src="figs/02_torch.png" width=90% /></p>  
 
 ##### 3) Pip install -r requirements.txt [Install via pip/conda automatically]
-<p align="center"><img src="figs/03_requirements.png" width=100% /></p>
+<p align="center"><img src="figs/03_requirements.png" width=90% /></p>
 
 ##### 4) Install dgl-cuda  (important)
 We recommend installing DGL with the following command:
