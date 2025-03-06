@@ -49,7 +49,7 @@ Please contact us if you are interested in our work and look for academic collab
 <!-- - [Example](#example)-->
 <!-- - [6. Web Server (Coming soon...)](#web-server) -->
 
-## :one: Getting started
+## Getting started
 <!--
 ### Requirements
 ```bash
