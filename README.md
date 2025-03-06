@@ -38,13 +38,14 @@ Please contact us if you are interested in our work and look for academic collab
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
-<!-- - [Example](#example)-->
-- [Web Server (Coming soon...)](#web-server)
-- [Referenced Repos](#referenced-repos)
-- [Copyright and License](#copyright-and-license)
-- [Disclaimer](#disclaimer)
+- [6. Referenced Repos](#referenced-repos)
+- [7. Copyright and License](#copyright-and-license)
+- [8. Disclaimer](#disclaimer)
 
-## Getting started
+<!-- - [Example](#example)-->
+<!-- - [6. Web Server (Coming soon...)](#web-server) -->
+
+## 1. Getting started
 <!--
 ### Requirements
 ```bash
