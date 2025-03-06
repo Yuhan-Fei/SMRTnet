@@ -22,28 +22,28 @@ Please contact us if you are interested in our work and look for academic collab
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
 ## :speech_balloon: Table of contents
-- [:one:  Getting Started](#getting-started)
+- [:one: Getting Started](#getting-started)
   - Install via offline installation package
   - Install via pip/conda automatically
   - Install via pip/conda manually
   - Example of install SMRTnet on a new machine
-- [2. SMRTnet Architecture](#smrtnet-architecture)
+- [:two: SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
-- [3. Repo Structure](#repo-structure)
-- [4. Datasets](#datasets)
+- [:three: Repo Structure](#repo-structure)
+- [:four: Datasets](#datasets)
   - Datasets for training
   - RNA target format for inference
   - Small molecule format for inference
   - RNA sequence datasets for RNA language model (RNASwan-seq)
   - SMILES datasets for chemical language model (MoLFormer)
-- [5. Usage](#usage)
+- [:five: Usage](#usage)
   - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
-- [6. Referenced Repos](#referenced-repos)
-- [7. Copyright and License](#copyright-and-license)
-- [8. Disclaimer](#disclaimer)
+- [:six: Referenced Repos](#referenced-repos)
+- [:seven: Copyright and License](#copyright-and-license)
+- [:eight: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
 <!-- - [Example](#example)-->
