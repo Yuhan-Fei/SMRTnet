@@ -222,9 +222,9 @@ We recommend installing DGL with the following command:
 conda install dglteam/label/th${torch_version}_${cuda_version}::dgl
 ```
 However, please verify the appropriate installation command by checking the available DGL packages from the following sources:  
-- [dglteam packages 1](https://anaconda.org/dglteam/repo),  
-- [dglteam packages 2](https://anaconda.org/dglteam/dgl/labels),  
-- [dglteam install command](https://anaconda.org/dglteam/dgl).
+- [dglteam packages 1](https://anaconda.org/dglteam/repo)  
+- [dglteam packages 2](https://anaconda.org/dglteam/dgl/labels)  
+- [dglteam install command](https://anaconda.org/dglteam/dgl)  
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
 
 ##### 5) Install pytorch-fast-tranformers  (important)
