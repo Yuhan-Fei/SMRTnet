@@ -2,7 +2,7 @@
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
-## Predicting small molecule and RNA target interactions using deep neural network
+## :newspaper: Predicting small molecule and RNA target interactions using deep neural network
 
 Small molecules can bind RNAs to regulate their fate and functions, providing promising opportunities for treating human diseases. However, current tools for predicting small molecule-RNA interactions (SRIs) require prior knowledge of RNA tertiary structures, limiting their utility in drug discovery. Here, we present SMRTnet, a deep learning method to predict SRIs based on RNA secondary structure. By integrating **large language models**, **convolutional neural networks**, **graph attention networks**, and **multimodal data fusion**, SMRTnet achieves high performance across multiple experimental benchmarks, substantially outperforming existing state-of-the-art tools.
 
