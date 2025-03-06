@@ -1,4 +1,4 @@
-# :computer:  SMRTnet
+# :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
@@ -8,7 +8,7 @@ Small molecules can bind RNAs to regulate their fate and functions, providing pr
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
-## :confetti_ball: Cite us
+## :thumbsup: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
 If you found this package useful, please cite our paper (under review):
 ```
@@ -21,7 +21,7 @@ Please contact us if you are interested in our work and look for academic collab
 - Dr. Yuhan Fei, School of Life Sciences, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
-## Table of contents
+## :speech_balloon: Table of contents
 - [1. Getting Started](#getting-started)
   - Install via offline installation package
   - Install via pip/conda automatically
@@ -49,7 +49,7 @@ Please contact us if you are interested in our work and look for academic collab
 <!-- - [Example](#example)-->
 <!-- - [6. Web Server (Coming soon...)](#web-server) -->
 
-## Getting started
+## :one: Getting started
 <!--
 ### Requirements
 ```bash
