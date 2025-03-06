@@ -237,5 +237,6 @@ def load(inputPath, select_cv=0):
         rna_visualization['median'].append(fig_median)
     rna_visualization = pd.DataFrame(rna_visualization)
     print("There are "+str(len(rna_visualization))+" of interactions has been loaded...")
-    #print("Please use visualization[index],index=(1,2,3..."+str(len(drug_visualization))+") to visualize the key functional groups")
+    print("Please use visualization.loc[index,'merge'],index=(1,2,3..."+str(len(rna_visualization))+") to visualize the merge 5-CV binding sites prediction")
+    print("Please use visualization.loc[index,'median'],index=(1,2,3..."+str(len(rna_visualization))+") to visualize the final results' binding sites prediction")
     return restsAll, rna_visualization
