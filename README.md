@@ -199,13 +199,13 @@ xxx
 	
    <summary>[Example] Click here for the details of installation </summary>
 	
-##### 1) machine version & CUDA version
+##### 1) To check your machine's specifications and CUDA version
 <p align="center"><img src="figs/00_version.png" width=100% /></p>
 
-##### 2) install python
+##### 2) Before installing SMRTnet, ensure that Python (3.8.10) is installed on your system
 <p align="center"><img src="figs/01_python.png" width=100% /></p>
 
-##### 3) activate environment and install torch (important)
+##### 3) To activate your environment and install PyTorch before setting up SMRTnet
 We recommend installing PyTorch using the following command:
 ```bash
 pip install torch==2.4.1+${cuda_version} torchvision==0.19.1+${cuda_version} torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/${cuda_version}
@@ -213,10 +213,10 @@ pip install torch==2.4.1+${cuda_version} torchvision==0.19.1+${cuda_version} tor
 Before installation, please check your CUDA version and ensure that the specified PyTorch version is compatible with it.
 <p align="center"><img src="figs/02_torch.png" width=100% /></p>  
 
-##### 3) pip install -r requirements.txt [Install via pip/conda automatically]
+##### 3) Pip install -r requirements.txt [Install via pip/conda automatically]
 <p align="center"><img src="figs/03_requirements.png" width=100% /></p>
 
-##### 4) install dgl-cuda  (important)
+##### 4) Install dgl-cuda  (important)
 We recommend installing DGL with the following command:
 ```bash
 conda install dglteam/label/th${torch_version}_${cuda_version}::dgl
@@ -227,9 +227,9 @@ However, please verify the appropriate installation command by checking the avai
 - [dglteam install command](https://anaconda.org/dglteam/dgl).
 <p align="center"><img src="figs/04_dgl-cuda.png" width=100% /></p>
 
-##### 5) install pytorch-fast-tranformers  (important)
+##### 5) Install pytorch-fast-tranformers  (important)
 Please verify whether the installation of pytorch-fast-transformers==0.3.0 can be carried out successfully.  
-If this installation step fails, you can directly copy `.env/fast_transformers` to your environment directory.
+If this installation step fails, you can directly copy `./env/fast_transformers` to your environment directory.
 ```
 cp ./env/modeling_esm.py ~/anaconda3/envs/${env_name}/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 
@@ -237,8 +237,8 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/${env_name}/lib/python3.8/site-package
 cp -rf ./env/fast_transformers ~/anaconda3/envs/${env_name}/lib/python3.8/site-packages/
 ```
 
-##### 6) test model training in this example
-We demonstrated the scenario of installing the environment and SMRTnet on the new machine and training the model.  
+##### 6) To test model training in your SMRTnet setup
+We demonstrated the complete process of setting up the environment, installing SMRTnet on a new machine, and successfully training the model.
 The update date is March 5, 2025.
 <p align="center"><img src="figs/05_trainingModel.png" width=100% /></p>
 </details>
