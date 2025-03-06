@@ -332,7 +332,7 @@ After downloading all our data, the repo has the following structure:
 
 ## Datasets
 
-### :round_pushpin: Datasets for training
+### :pushpin: Datasets for training
 
 Download and extract the dataset in datasets folder: SMRTnet-data.txt
 
@@ -346,7 +346,7 @@ The format of data for training is show as follow:
 | CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
 
 
-### :round_pushpin: Format of input RNA target for inference:
+### :pushpin: Format of input RNA target for inference:
 
 The length of RNA should >=31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
 
@@ -356,7 +356,7 @@ The length of RNA should >=31nt, and the sequence length should equal to the str
 | MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
 
 
-### :round_pushpin: Format of input small molecule  for inference:
+### :pushpin: Format of input small molecule  for inference:
 The SMILES of small molecule should meet the requirement of RDkit. Data are split by tab and ignore the first header row.
 
 | CAS | SMILES |
@@ -366,12 +366,12 @@ The SMILES of small molecule should meet the requirement of RDkit. Data are spli
 | 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
 | ... | ... | 
 
-### :round_pushpin: RNA sequence datasets for RNA language model (RNASwan-seq)
+### :pushpin: RNA sequence datasets for RNA language model (RNASwan-seq)
 
 The dataset used for RNA language model was compiled from 7 sources: the European Nucleotide Archive, NCBI's nucleotide database, GenBank, Ensembl, RNAcentral, CSCD2, and GreeNC 2.0, encompassing a total of **470 million** RNA sequences. We de-duplicated with 100% sequence similarity using MMSeqs2, resulting in about **214 million** unique RNA sequences
 
 
-### :round_pushpin: SMILES datasets for chemical language model (MoLFormer)
+### :pushpin: SMILES datasets for chemical language model (MoLFormer)
 
 Datasets are available at https://ibm.box.com/v/MoLFormer-data
 
