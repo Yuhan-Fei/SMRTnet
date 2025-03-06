@@ -513,6 +513,8 @@ python main.py --do_explain --cuda 0 \
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3
 
+## then you can run the interpret.ipynb to plot the binding sites results
+## you can show the final results with rna.loc[0,'median']
 ```
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
