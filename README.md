@@ -348,7 +348,7 @@ The length of RNA should >=31nt, and the sequence length should equal to the str
 
 | RNA  | Sequence | Structure |
 |-----------------|-------------|-------------|
-| MYC_IRES | GAGGGGGCUUCGCCUCUGGCCCAGCCCUCUC | (((((((((..(((...)))..))))))))) |
+| MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
 
 
 ### Format of input small molecule  for inference:
