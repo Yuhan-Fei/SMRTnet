@@ -524,7 +524,7 @@ python main.py --do_explain --cuda 0 \
 
 
 ```
-You can run **interpret.ipynb** after executing the command above to plot the binding site results, and display the final results as below:
+You can run [interpret.ipynb](./interpret.ipynb) after executing the command above to plot the binding site results as below:
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
