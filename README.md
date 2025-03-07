@@ -254,6 +254,8 @@ The update date is March 5, 2025.
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
+### :mag: The architecture of each module in SMRTnet.
+
 <details>
    <summary> Click here for architecture of RNA language model (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
@@ -262,7 +264,7 @@ The update date is March 5, 2025.
 <details>
    <summary> Click here for architecture of chemical language model (MoLFormer) </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
-   Figure from the [MoLFormer](https://www.nature.com/articles/s42256-022-00580-7) publication.
+   Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
 
 
