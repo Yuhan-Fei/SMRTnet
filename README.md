@@ -254,7 +254,7 @@ The update date is March 5, 2025.
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
-### :mag: The architecture of each module in SMRTnet.
+### :postbox: The architecture of each module in SMRTnet.
 
 <details>
    <summary> Click here for architecture of RNA language model (RNASwan-seq) </summary>
