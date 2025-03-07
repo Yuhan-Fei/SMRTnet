@@ -1,4 +1,4 @@
-# :sparkles: SMRTnet :sparkles:
+![image](https://github.com/user-attachments/assets/423ad25e-84db-4989-82c6-df29d0ec2898)# :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
@@ -257,13 +257,30 @@ The update date is March 5, 2025.
 ### :postbox: The architecture of each module in SMRTnet.
 
 <details>
-   <summary> Click here for architecture of RNA language model (RNASwan-seq) </summary>
+   <summary> Click here for architecture of RNA sequence encoder (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of chemical language model (MoLFormer) </summary>
+   <summary> Click here for architecture of RNA structure encoder (RNASwan-seq) </summary>
+   <p align="center"><img src="figs/CNN.png" width=100% /></p>
+</details>
+
+<details>
+   <summary> Click here for architecture of small molecule SMILES (MoLFormer) </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
+   Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
+</details>
+
+<details>
+   <summary> Click here for architecture of small molecule structure encoder (MoLFormer) </summary>
+   <p align="center"><img src="figs/GAT.png" width=100% /></p>
+   Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
+</details>
+
+<details>
+   <summary> Click here for architecture of multimodal data fusion module </summary>
+   <p align="center"><img src="figs/MDF.png" width=100% /></p>
    Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
 
