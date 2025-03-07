@@ -255,13 +255,13 @@ The update date is March 5, 2025.
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
 <details>
-   <summary> Click here for architecture of RNA language model </summary>
-   <p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
+   <summary> Click here for architecture of RNA language model (RNASwan-seq) </summary>
+   <p align="center"><img src="figs/RNA_LM.png" width=90% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of chemical language model </summary>
-   <p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
+   <summary> Click here for architecture of chemical language model (MoLFormer) </summary>
+   <p align="center"><img src="figs/Mol_LM.png" width=90% /></p>
 </details>
 
 
