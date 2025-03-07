@@ -267,7 +267,7 @@ The update date is March 5, 2025.
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule SMILES </summary>
+   <summary> Click here for architecture of small molecule SMILES encoder </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
    Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
