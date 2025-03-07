@@ -257,23 +257,23 @@ The update date is March 5, 2025.
 ### :postbox: The architecture of each module in SMRTnet.
 
 <details>
-   <summary> Click here for architecture of RNA sequence encoder (RNA language model: RNASwan-seq) </summary>
+   <summary> Click here for architecture of RNA sequence encoder </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of RNA structure encoder (Convolutional neural network with Residual neural network) </summary>
+   <summary> Click here for architecture of RNA structure encoder </summary>
    <p align="center"><img src="figs/CNN.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule SMILES (Chemical language model: MoLFormer) </summary>
+   <summary> Click here for architecture of small molecule SMILES </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
    Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule structure encoder (Graph attention network) </summary>
+   <summary> Click here for architecture of small molecule structure encoder </summary>
    <p align="center"><img src="figs/GAT.png" width=100% /></p>
 </details>
 
