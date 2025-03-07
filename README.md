@@ -347,8 +347,10 @@ After downloading all our data, the repo has the following structure:
 |          └── SMRTnet_cv5.pth
 |          └── config.pkl
 ├── README.md
+├── LISENCE
 ├── explain.py
 ├── infer.py
+├── interpret.ipynb
 ├── loader.py
 ├── loop.py
 ├── main.py
