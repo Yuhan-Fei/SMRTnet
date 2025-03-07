@@ -366,7 +366,7 @@ After downloading all our data, the repo has the following structure:
 Demo of the training data for SMRTnet is available in the data folder: `SMRTnet-data-demo.txt`
 
 The data of SMRTnet is sourced from https://www.rcsb.org/  
-Raw structure data and processed data can be downloaded from https://zenodo.org/records/14986116
+Raw structure data can be downloaded from https://zenodo.org/records/14986116
 
 The format of data for training is show as follow:
 
