@@ -426,6 +426,11 @@ python main.py --do_check
 
 <!-- where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard -->
 
+You can run the training using:  
+```
+python main.py --do_train
+```
+
 We provide the example scripts to train the model from scratch:
 
 ```python
@@ -438,7 +443,7 @@ python main.py --do_train \
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
 ### :spades: Evaluation
-For evaluation of the models, we provide the script `eval.sh`. You can run it using
+You can run the evaluation using: 
 ```
 python main.py --do_test
 ```
@@ -461,12 +466,12 @@ To obtain the results for other folds, the infer_model_dir parameter needs to be
 ### :diamonds: Inference
 For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
-<!--
+
 You can run the inference using:  
 ```
 python main.py --do_ensemble
 ```
-
+<!--
 we provide the script `infer.sh`. 
 or 
 
