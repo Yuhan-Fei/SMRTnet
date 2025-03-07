@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/21311906-d361-4d2d-9e07-e8af890415fb)![image](https://github.com/user-attachments/assets/423ad25e-84db-4989-82c6-df29d0ec2898)# :sparkles: SMRTnet :sparkles:
+# :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
