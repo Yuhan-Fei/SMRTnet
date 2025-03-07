@@ -461,12 +461,12 @@ To obtain the results for other folds, the infer_model_dir parameter needs to be
 ### :diamonds: Inference
 For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
-
+<!--
 You can run the inference using:  
 ```
 python main.py --do_ensemble
 ```
-<!--
+
 we provide the script `infer.sh`. 
 or 
 
