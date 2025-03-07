@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/423ad25e-84db-4989-82c6-df29d0ec2898)# :sparkles: SMRTnet :sparkles:
+![image](https://github.com/user-attachments/assets/21311906-d361-4d2d-9e07-e8af890415fb)![image](https://github.com/user-attachments/assets/423ad25e-84db-4989-82c6-df29d0ec2898)# :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
@@ -257,23 +257,23 @@ The update date is March 5, 2025.
 ### :postbox: The architecture of each module
 
 <details>
-   <summary> Click here for architecture of RNA sequence encoder </summary>
+   <summary> Click here for architecture of RNA sequence encoder (RNA language model) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of RNA structure encoder </summary>
+   <summary> Click here for architecture of RNA structure encoder (convolution block) </summary>
    <p align="center"><img src="figs/CNN.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule SMILES encoder </summary>
+   <summary> Click here for architecture of small molecule SMILES encoder (Chemical language model) </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
    Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule structure encoder </summary>
+   <summary> Click here for architecture of small molecule structure encoder (Graph attention block)</summary>
    <p align="center"><img src="figs/GAT.png" width=100% /></p>
 </details>
 
