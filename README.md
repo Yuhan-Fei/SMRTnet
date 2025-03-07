@@ -194,9 +194,6 @@ conda activate SMRTnet
 xxx
 ```
 -->
-<br/>
-
-**Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
 ### :pushpin: Example of install SMRTnet on a new machine
@@ -247,6 +244,9 @@ We demonstrated the complete process of setting up the environment, installing S
 The update date is March 5, 2025.
 <p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
 </details>
+<br/>
+
+**Note**: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
 
