@@ -27,7 +27,7 @@ Please contact us if you are interested in our work and look for academic collab
   - Install via pip/conda automatically
   - Install via pip/conda manually
   - Example of install SMRTnet on a new machine
-- [:two: SMRTnet Architecture](#smrtnet-architecture)
+- [:two: SMRTnet Architecture](#smrtnet-architecture)ra
   - Download our pre-trained models from zenodo
 - [:three: Repo Structure](#repo-structure)
 - [:four: Datasets](#datasets)
@@ -366,7 +366,7 @@ After downloading all our data, the repo has the following structure:
 Demo of the training data for SMRTnet is available in the data folder: `SMRTnet-data-demo.txt`
 
 The data of SMRTnet is sourced from https://www.rcsb.org/  
-Raw structure data can be downloaded from https://zenodo.org/records/14986116
+The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116
 
 The format of data for training is show as follow:
 
