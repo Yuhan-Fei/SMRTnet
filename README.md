@@ -254,6 +254,17 @@ The update date is March 5, 2025.
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 
+<details>
+   <summary> Click here for architecture of RNA language model </summary>
+   <p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
+</details>
+
+<details>
+   <summary> Click here for architecture of chemical language model </summary>
+   <p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
+</details>
+
+
 ### :bangbang: Download our pre-trained models from zenodo （Required）
 Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
 
