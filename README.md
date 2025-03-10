@@ -109,6 +109,7 @@ conda install dglteam/label/th24_cu121::dgl
 pip install pytorch-fast-transformers==0.3.0 	## Note: If this installation step fails, you can directly copy `./env/fast_transformers` to your environment directory.
 cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py
 ```
+Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
 ### :pushpin: Install via pip/conda manually
 
@@ -130,7 +131,7 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/tr
 
 ```
 </details>
-Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
+
 
 <details>
   <summary>[Manual] Click here for CUDA version 11.x </summary>
