@@ -130,7 +130,7 @@ cp ./env/modeling_esm.py ~/anaconda3/envs/smrtnet/lib/python3.8/site-packages/tr
 
 ```
 </details>
-
+Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
 
 <details>
   <summary>[Manual] Click here for CUDA version 11.x </summary>
