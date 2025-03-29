@@ -28,6 +28,7 @@ Please contact us if you are interested in our work and look for academic collab
   - Install via pip/conda manually
   - Example of install SMRTnet on a new machine
 - [:two: SMRTnet Architecture](#smrtnet-architecture)
+  - The details of each module
   - Download our pre-trained models from zenodo
 - [:three: Repo Structure](#repo-structure)
 - [:four: Datasets](#datasets)
