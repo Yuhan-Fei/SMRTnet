@@ -13,11 +13,11 @@ import torch.optim as optim
 import torch.nn as nn
 from torch.utils.data import SequentialSampler
 from torch.utils.data import DataLoader
-from model import SmrtNet
-from utils import fix_seed, make_directory ,save_dict, dgl_collate_func_ds, shuffle_dataset, get_kfold_data, get_kfold_data_target, get_kfold_data_drug_fix, get_kfold_data_drug_fix_best_final, GradualWarmupScheduler
-from loader import data_process_loader
-from loop import train, valid, test, bench
-from infer import *
+from smrtnet.model import SmrtNet
+from smrtnet.utils import fix_seed, make_directory ,save_dict, dgl_collate_func_ds, shuffle_dataset, get_kfold_data, get_kfold_data_target, get_kfold_data_drug_fix, get_kfold_data_drug_fix_best_final, GradualWarmupScheduler
+from smrtnet.loader import data_process_loader
+from smrtnet.loop import train, valid, test, bench
+from smrtnet.infer import *
 from tensorboardX import SummaryWriter
 
 from dgllife.utils import smiles_to_bigraph, smiles_to_complete_graph
