@@ -105,9 +105,9 @@ conda install dglteam/label/th24_cu118::dgl
 ```bash
 ## don't need any installation, just running the notebook step-by-step
 ```
-Notes:
+Notes:  
 [shared_drive](https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing) in Google Drive,  
-       [SMRTnet.ipynb](https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing) in Colab
+[SMRTnet.ipynb](https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing) in Colab
 
 ### :pushpin:  Install via offline installation package
 ```bash
