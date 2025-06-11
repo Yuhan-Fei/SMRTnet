@@ -87,6 +87,24 @@ nvcc --version
 ```
 Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  
 
+### :pushpin: Install via PyPI
+
+```bash
+## pip install our packages online
+conda create -n smrtnet python=3.8.10
+conda activate smrtnet
+pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu118
+pip install smrtnet
+conda install dglteam/label/th24_cu118::dgl
+```
+
+### :pushpin: running on Google Colab
+
+```bash
+## don't need any installation, just running the notebook step-by-step
+```
+[SMRTnet.ipynb](https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing) in Colab
+
 ### :pushpin:  Install via offline installation package
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
