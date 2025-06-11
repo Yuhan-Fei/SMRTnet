@@ -465,7 +465,11 @@ python main.py --do_train \
                --data_dir=./data/SMRTnet-data-demo.txt \
                --cuda 0 \
                --batch_size 32 \
-               --out_dir=./results/demo
+               --out_dir=./results/demo \
+               --lm_rna_config ./LM_RNA/parameters.json \
+               --lm_rna_model ./LM_RNA/LMmodel.pt \
+	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	       --lm_mol_model ./LM_Mol/N-Step-Checkpoint_3_30000.ckpt
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
@@ -483,7 +487,11 @@ python main.py --do_test \
                --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
                --batch_size 16 \
-               --out_dir=./results/benchmark
+               --out_dir=./results/benchmark \
+               --lm_rna_config ./LM_RNA/parameters.json \
+               --lm_rna_model ./LM_RNA/LMmodel.pt \
+	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	       --lm_mol_model ./LM_Mol/N-Step-Checkpoint_3_30000.ckpt
 ```
 This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
 To obtain the results for other folds, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
@@ -518,7 +526,11 @@ python main.py --do_ensemble --cuda 0 \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./data/ensemble \
                --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-               --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt
+               --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+               --lm_rna_config ./LM_RNA/parameters.json \
+               --lm_rna_model ./LM_RNA/LMmodel.pt \
+	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	       --lm_mol_model ./LM_Mol/N-Step-Checkpoint_3_30000.ckpt
 
 ```
 <p align="center"><img src="figs/demo3.png" width=60% /></p>  
@@ -581,8 +593,11 @@ python main.py --do_explain --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3
-
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3 \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/N-Step-Checkpoint_3_30000.ckpt
 
 ```
 You can run [interpret.ipynb](./interpret.ipynb) after executing the command above to plot the binding site results as below:
