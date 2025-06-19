@@ -190,8 +190,8 @@ def infer(smiles, sequence, structure, drug_names, target_names, model, args, re
             d_n = np.tile(drug_names, (len(target_names),1)).reshape(-1,).tolist()
             t_n=target_names
         elif len(target_names) >1 and len(drug_names) > 1:
-            for i in range(len(drug_names)):
-                for j in range(len(target_names)):
+            for j in range(len(target_names)):
+                for i in range(len(drug_names)):
                     d_n.append(drug_names[i])
                     t_n.append(target_names[j])
 
