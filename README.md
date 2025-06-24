@@ -110,7 +110,7 @@ Notes:
    <summary> Click here to view the demonstration image on how to obtain the shared folder </summary>
    <p align="center"><img src="figs/Google drive_mod.png" width=100% /></p>
 </details>
-We [shared folder](https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing) in Google Drive. You need to click on this link, then copy this shared folder, drag it into your Google Drive, and then you'll have a soft link ready.   
+We [shared_folder](https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing) in Google Drive. You need to click on this link, then copy this shared folder, drag it into your Google Drive, and then you'll have a soft link ready.   
 Finally, simply follow the step-by-step script in [SMRTnet.ipynb](https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing) in Colab to execute it.
 
 ### :pushpin:  Install via offline installation package
