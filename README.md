@@ -10,7 +10,7 @@ Small molecules can bind RNAs to regulate their fate and functions, providing pr
 
 ## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
-If you found this package useful, please cite our paper (under review):
+If you found this package useful, please cite our paper (under revision):
 ```
 Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang,
 
@@ -25,28 +25,17 @@ Please contact us if you are interested in our work and look for academic collab
 - [:one: Getting Started](#getting-started)
   - Install via PyPI
   - Running on Google Colab
-  - Install via offline installation package
-  - Install via pip/conda automatically
-  - Install via pip/conda manually
-  - Example of install SMRTnet on a new machine
 - [:two: SMRTnet Architecture](#smrtnet-architecture)
-  - The details of each module
   - Download our pre-trained models from zenodo
 - [:three: Repo Structure](#repo-structure)
-- [:four: Datasets](#datasets)
-  - Datasets for training
-  - RNA target format for inference
-  - Small molecule format for inference
-  - RNA sequence datasets for RNA language model (RNASwan-seq)
-  - SMILES datasets for chemical language model (MoLFormer)
-- [:five: Usage](#usage)
+- [:three: Usage](#usage)
   - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
-- [:six: Referenced Repos](#referenced-repos)
-- [:seven: Copyright and License](#copyright-and-license)
-- [:eight: Disclaimer](#disclaimer)
+- [:four: Referenced Repos](#referenced-repos)
+- [:five: Copyright and License](#copyright-and-license)
+- [:six: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
 <!-- - [Example](#example)-->
@@ -113,6 +102,7 @@ Notes:
 We [shared_folder](https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing) in Google Drive. You need to click on this link, then copy this shared folder, drag it into your Google Drive, and then you'll have a soft link ready.   
 Finally, simply follow the step-by-step script in [SMRTnet.ipynb](https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing) in Colab to execute it.
 
+<!--
 ### :pushpin:  Install via offline installation package
 ```bash
 ## download the offline package smrtnet_env.tar.gz and install it, then you can directly source it.
@@ -204,6 +194,7 @@ sed -i '76 s/^/#/' ${DIR}/local_product/__init__.py
 
 
 Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your CUDA version
+-->
 
 <!--
 ### Install via Conda (Coming soon...)
@@ -223,7 +214,7 @@ xxx
 ```
 -->
 
-
+<!--
 ### :pushpin: Example of install SMRTnet on a new machine
 <details>
 	
@@ -273,6 +264,7 @@ The update date is March 5, 2025.
 <p align="center"><img src="figs/05_trainingModel.png" width=90% /></p>
 </details>
 <br/>
+-->
 
 :heavy_exclamation_mark: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
@@ -281,7 +273,7 @@ The update date is March 5, 2025.
 ## SMRTnet Architecture
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
-
+<!--
 ### :postbox: The details of each module
 
 <details>
@@ -309,7 +301,7 @@ The update date is March 5, 2025.
    <summary> Click here for architecture of multimodal data fusion module </summary>
    <p align="center"><img src="figs/MDF.png" width=100% /></p>
 </details>
-
+-->
 
 ### :bangbang: Download our pre-trained models from zenodo （Required）
 Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
@@ -388,7 +380,7 @@ After downloading all our data, the repo has the following structure:
 └── visual.py
 ```
 
-
+<!--
 ## Datasets
 
 ### :pushpin: Datasets for training
@@ -436,7 +428,7 @@ The dataset used for RNA language model was compiled from 7 sources: the Europea
 Datasets are available at https://ibm.box.com/v/MoLFormer-data
 
 More details can be found in https://github.com/IBM/molformer
-
+-->
 
 ## Usage
 
