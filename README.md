@@ -92,7 +92,7 @@ conda install dglteam/label/th24_cu118::dgl
 
 We have developed an online jupyter-notebook that enables installation-free execution of SMRTnet in the web browser via Google Colab  (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing). This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
 
-To use it, please click the link above, then copy the shared folder to your own Google Drive by dragging it into your Drive interface (see screenshot below). This action will create a soft link to the shared content. Afterward, you can simply follow the step-by-step instructions provided in the SMRTnet.ipynb notebook on Google Colab to execute the program.
+Please click the link above, then copy the shared folder to your own Google Drive by dragging it into your Drive interface (see screenshot below for details). THen, you can follow the step-by-step instructions provided in the SMRTnet.ipynb notebook on Google Colab to execute SMRTnet on the web browser directly.
 
 <details>
    <summary> Click here to view the demonstration image to guide users on how to obtain the shared folder by copying it into their personal Google Drive. </summary>
