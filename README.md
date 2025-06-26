@@ -330,7 +330,7 @@ To obtain the results for other folds, the infer_model_dir parameter needs to be
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
 ### :diamonds: Inference
-For inference data (the same format as the *.tsv file used in [Datasets](#datasets)) using the 5 models from 5-fold cross-validation (CV) based on ensemble scoring strategy  
+SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation (CV)  
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
 You can run the inference using:  
