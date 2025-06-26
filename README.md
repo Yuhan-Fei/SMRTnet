@@ -112,17 +112,26 @@ We have developed an online jupyter-notebook that enables installation-free exec
 -->
 
 ### :bangbang: Download our pre-trained models from zenodo （Required）
-Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder (see details in the Repo Structure): https://zenodo.org/records/14715564 
+Please manually download the pre-trained models, including RNA language model (RNASwan-seq), chemical language model (MoLFormer), and SMRTnet model, from the following link below and place them into the SMRTnet folder (See Reop Structure section below for guidance): https://zenodo.org/records/14715564 
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
-Or users can run the following command to download pre-trained models diirectly and put them into the correct directory according to the Repo structure we provided below:
+Alternatively, we also provided the command lines for users to download pre-trained models diirectly and put them into the SMRTnet directory:
 
 ```bash
+# Step 1: Navigate to the SMRTnet directory:
+cd ${your_directory}/SMRTnet
+
+# Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
 wget https://zenodo.org/records/14715564/files/LM_Mol.zip?download=1
+unzip LM_Mol.zip
 
+# Step 3: Download and unzip the pre-trained RNA language model (RNASwan-seq)
 wget https://zenodo.org/records/14715564/files/LM_RNA.zip?download=1
+unzip LM_RNA.zip
 
+# Step 4:  Download and unzip the SMRTnet model
 wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip?download=1
+unzip SMRTnet_model.zip
 
 ```
 
