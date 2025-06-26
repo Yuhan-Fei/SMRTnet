@@ -24,9 +24,8 @@ Please contact us if you are interested in our work and look for academic collab
 ## :speech_balloon: Table of contents
 - [:one: Getting Started](#getting-started)
   - Install via PyPI
-  - Running on Google Colab
-- [:two: SMRTnet Architecture](#smrtnet-architecture)
-  - Download our pre-trained models from zenodo
+  - Run SMRTnet via Google Colab
+- [:two: Download pre-trained models](#download-pre-trained-models)
 - [:three: Repo Structure](#repo-structure)
 - [:four: Usage](#usage)
   - How to train your own model
@@ -89,7 +88,7 @@ pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
 
-### :pushpin: running on Google Colab
+### :pushpin: Run SMRTnet via Google Colab
 
 ```bash
 ## don't need any installation, just running the notebook step-by-step
@@ -270,7 +269,7 @@ The update date is March 5, 2025.
 
 
 
-## SMRTnet Architecture
+## Download pre-trained models
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 <!--
@@ -304,10 +303,10 @@ The update date is March 5, 2025.
 -->
 
 ### :bangbang: Download our pre-trained models from zenodo （Required）
-Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
+Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564 
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
-Please run the following command to download pre-trained models:
+Please run the following command to download pre-trained models and put them into the correct directory according to the Repo structure we provided below:
 
 ```bash
 wget https://zenodo.org/records/14715564/files/LM_Mol.zip?download=1
