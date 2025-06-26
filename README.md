@@ -67,8 +67,12 @@ conda install dglteam/label/th24_cu118::dgl
 
 We have developed an online jupyter-notebook that enables installation-free execution of SMRTnet in the web browser via Google Colab  (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing). This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
 
+
 **Step 1:** Please click the link above, then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
+
 <p align="center"><img src="figs/colab_share.png" width=100% /></p>
+
+<br>
 
 **Step 2:** Please follow the step-by-step instructions provided in the SMRTnet.ipynb notebook to run SMRTnet directly.
 
@@ -113,6 +117,10 @@ We have developed an online jupyter-notebook that enables installation-free exec
 
 <!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
 Please manually download the pre-trained models, including RNA language model (RNASwan-seq), chemical language model (MoLFormer), and SMRTnet model, from the following link below and place them into the SMRTnet folder (See Reop Structure section below for guidance): https://zenodo.org/records/14715564 
+
+Since the pre-trained models are large, we have uploaded them to Zenodo for users. Please download the pre-trained models — including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the pre-trained SMRTnet model — from the following link and place them in the SMRTnet folder (see the Repo Structure section below for details).
+
+:bangbang: Zenodo link for all pre-trained models in SMRTnet: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
 Alternatively, we also provided the command lines for users to download pre-trained models diirectly and put them into the SMRTnet directory:
