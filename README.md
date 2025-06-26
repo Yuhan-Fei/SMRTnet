@@ -28,14 +28,14 @@ Please contact us if you are interested in our work and look for academic collab
 - [:two: SMRTnet Architecture](#smrtnet-architecture)
   - Download our pre-trained models from zenodo
 - [:three: Repo Structure](#repo-structure)
-- [:three: Usage](#usage)
+- [:four: Usage](#usage)
   - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
-- [:four: Referenced Repos](#referenced-repos)
-- [:five: Copyright and License](#copyright-and-license)
-- [:six: Disclaimer](#disclaimer)
+- [:five: Referenced Repos](#referenced-repos)
+- [:six: Copyright and License](#copyright-and-license)
+- [:seven: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
 <!-- - [Example](#example)-->
@@ -307,7 +307,10 @@ The update date is March 5, 2025.
 Please download models, including RNA language model (LM_RNA), chemical language model (LM_Mol), and SMRTnet(SMRTnet_model) from link below, and place these files correctly into the SMRTnet folder: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
-
+Please run the following command to download pre-trained models:
+```bash
+wget xxx
+```
 
 
 ## Repo Structure:
