@@ -41,31 +41,6 @@ Please contact us if you are interested in our work and look for academic collab
 <!-- - [6. Web Server (Coming soon...)](#web-server) -->
 
 ## Getting started
-<!--
-### Requirements
-```bash
- - Python 3.8.10
- - PyTorch 1.10.1+cu111 
- - torchvision 0.11.2+cu111
- - torchaudio 0.10.1
- - pytorch-fast-transformers 0.3.0
- - pytorch-lightning 1.1.5
- - transformers 4.28.1
- - dgllife 0.3.2
- - dgl-cuda10.2 0.9.1post1
- - rdkit 2022.3.5
- - scipy 1.10.1
- - pandas 1.2.4
- - scikit-learn 0.24.2
- - numpy 1.20.3
- - prettytable 3.10.0
- - notebook 7.1.3
- - tebsnrboardX 2.6.2.2
- - prefetch-generator 1.0.3
- - matplotlib 3.7.5
- - seaborn 0.13.2
-```
--->
 
 Please run the following command to check your CUDA version before installing SMRTnet:
 ```bash
@@ -92,16 +67,15 @@ conda install dglteam/label/th24_cu118::dgl
 
 We have developed an online jupyter-notebook that enables installation-free execution of SMRTnet in the web browser via Google Colab  (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing). This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
 
-STEP 1: Please click the link above, then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
+**STEP 1:** Please click the link above, then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
 <p align="center"><img src="figs/colab_share.png" width=100% /></p>
 
-STEP 2: You can follow the step-by-step instructions provided in the SMRTnet.ipynb notebook on Google Colab to execute SMRTnet on the web browser directly.
+**STEP 2:** Please follow the step-by-step instructions provided in the SMRTnet.ipynb notebook to run SMRTnet directly.
 
 <p align="center"><img src="figs/colab_run.png" width=100% /></p>
 
-<br><br>
+<br>
 :heavy_exclamation_mark: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
-
 
 
 ## Download pre-trained models
