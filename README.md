@@ -138,6 +138,7 @@ wget https://zenodo.org/records/14715564/files/LM_RNA.zip?download=1
 unzip LM_RNA.zip
 
 # Step 4:  Download and unzip the SMRTnet model
+cd ${your_directory}/SMRTnet/results
 wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip?download=1
 unzip SMRTnet_model.zip
 
