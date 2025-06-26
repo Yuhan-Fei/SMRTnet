@@ -25,7 +25,7 @@ Please contact us if you are interested in our work and look for academic collab
 - [:one: Getting Started](#getting-started)
   - Install via PyPI
   - Run SMRTnet via Google Colab
-- [:two: Download pre-trained models](#download-pre-trained-models)
+- [:two: Download pre-trained models](#download-pre-trained-models-from-zenodo)
 - [:three: Repo Structure](#repo-structure)
 - [:four: Usage](#usage)
   - How to train your own model
@@ -78,7 +78,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 :heavy_exclamation_mark: If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
-## Download pre-trained models
+## Download pre-trained models from Zenodo
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
 <!--
