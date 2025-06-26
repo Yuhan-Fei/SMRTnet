@@ -324,13 +324,13 @@ python main.py --do_test \
 	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
 	       --lm_mol_model ./LM_Mol/N-Step-Checkpoint_3_30000.ckpt
 ```
-This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
-To obtain the results for other folds, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
+Note: This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
+SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
 
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
 ### :diamonds: Inference
-SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation (CV)  
+SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
 You can run the inference using:  
