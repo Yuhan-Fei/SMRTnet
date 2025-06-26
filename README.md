@@ -151,47 +151,8 @@ After downloading all our data, the repo has the following structure:
 
 ```bash
 ├── LM_Mol (download from zenodo)
-|  └── Pretrained
-|      └── hparams.yaml
-|      └── checkpoints
-|          └── N-Step-Checkpoint_3_30000.ckpt
-|  └── attention_layer.py
-|  └── bert_vocab.txt
-|  └── rotary.py
-|  └── rotate_builder.py
-|  └── tokenizer.py
 |
 ├── LM_RNA (download from zenodo)
-|   └── model_state_dict
-|      └── rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213
-|          └── epoch_0
-|              └── LMmodel.pt
-|   └── parameters.json
-|   └── pretrained
-|   └── activations.py
-|   └── bert.py
-|   └── doc.py
-|   └── modeling_utils.py
-|   └── transformers_output.py
-|
-├── data
-|   └── SMRTnet-data-demo.txt
-|   └── SMRTnet-benchmark-demo.txt
-|   └── MYC_RIBOTAC.txt
-|   └── MYC_IRES.txt
-|
-├── dataset_cv_best
-|
-├── env
-|   └── fast_transformers.zip
-|   └── modeling_esm.py
-|
-├── img_log
-|   └── 1.png
-|   └── 2.png
-|   └── 3.png
-|   └── acgu.npz
-|   └── dot_bracket.npz
 |
 ├── results
 |   └── SMRTNet_model (download from zenodo)
@@ -201,6 +162,17 @@ After downloading all our data, the repo has the following structure:
 |          └── SMRTnet_cv4.pth
 |          └── SMRTnet_cv5.pth
 |          └── config.pkl
+|
+├── data
+|   └── SMRTnet-data-demo.txt
+|   └── SMRTnet-benchmark-demo.txt
+|   └── MYC_RIBOTAC.txt
+|   └── MYC_IRES.txt
+|
+├── dataset_cv_best
+|
+├── img_log
+|
 ├── README.md
 ├── LISENCE
 ├── explain.py
