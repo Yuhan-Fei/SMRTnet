@@ -111,7 +111,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 </details>
 -->
 
-### :bangbang: Download our pre-trained models from zenodo （Required）
+<!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
 Please manually download the pre-trained models, including RNA language model (RNASwan-seq), chemical language model (MoLFormer), and SMRTnet model, from the following link below and place them into the SMRTnet folder (See Reop Structure section below for guidance): https://zenodo.org/records/14715564 
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
