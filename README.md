@@ -308,8 +308,14 @@ Please download models, including RNA language model (LM_RNA), chemical language
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
 Please run the following command to download pre-trained models:
+
 ```bash
-wget xxx
+wget https://zenodo.org/records/14715564/files/LM_Mol.zip?download=1
+
+wget https://zenodo.org/records/14715564/files/LM_RNA.zip?download=1
+
+wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip?download=1
+
 ```
 
 
