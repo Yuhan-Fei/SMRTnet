@@ -118,7 +118,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 
 <!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
 
-Since the pre-trained models used in SMRTnet are large, we have uploaded them to Zenodo for users to download directly. Please download the pre-trained models — including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the pre-trained SMRTnet model — from the following link and place them in the SMRTnet folder (see the Repo Structure section below for details).
+Since the pre-trained models used in SMRTnet are large, we have uploaded them to Zenodo for users to download directly. Users required to download the pre-trained models — including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the pre-trained SMRTnet model — from the link below and place them in the SMRTnet folder (see the Repo Structure section below for details).
 
 :bangbang: Downloadable pre-trained models used in SMRTnet: https://zenodo.org/records/14715564
 
