@@ -67,7 +67,17 @@ def main():
 
     if  not args.do_test and not args.do_infer and not args.do_explain and not args.do_ensemble:
         raise ValueError("At least one of `do_test`, `do_infer`, `do_explain`, or `do_ensemble` must be True.")
-
+    
+    filePathList = {'RNA Language model config':args.lm_rna_config+'/config.json', \
+        'RNA Language model parameters':args.lm_rna_model, \
+        'small molecule Language model config':args.lm_mol_config, \
+        'small molecule Language model parameters':args.lm_mol_model}
+    for key,filePath in filePathList.items():
+        if not os.path.exists(filePath):
+            raise ValueError(key + " file is not in the designated location. " + \
+                "Please refer to the contents of the README to download the specified model file and "+\
+                "extract it to the correct location or to the designated path to the corresponding location.")
+    
     dir = os.path.join(args.out_dir, '')
     if os.path.isdir(dir):
         print("Log file already existed! Please change the name of log file.")
