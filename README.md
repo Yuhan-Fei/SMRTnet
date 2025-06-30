@@ -290,7 +290,7 @@ python main.py --do_test \
                --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
                --batch_size 16 \
-               --out_dir=./results/benchmark\
+               --out_dir=./results/benchmark \
                --lm_rna_config ./LM_RNA/parameters.json \
 	       --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
 	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -329,7 +329,7 @@ python main.py --do_ensemble --cuda 0 \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./data/ensemble \
                --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-               --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt\
+               --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
                --lm_rna_config ./LM_RNA/parameters.json \
 	       --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
 	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -395,7 +395,7 @@ python main.py --do_explain --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3\
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3 \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
