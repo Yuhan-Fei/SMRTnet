@@ -75,7 +75,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 
 <br>
 
-- **Step 2:** Please follow the step-by-step instructions provided in the SMRTnet.ipynb notebook to run SMRTnet directly. <!--:heavy_exclamation_mark:-->
+- **Step 2:** Please follow the step-by-step instructions provided in the SMRTnet.ipynb notebook (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing) to run SMRTnet directly. <!--:heavy_exclamation_mark:-->
 
 <p align="center"><img src="figs/colab_run.png" width=100% /></p>
 
