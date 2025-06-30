@@ -386,7 +386,11 @@ class SmrtNet(nn.Module):
         if get_attention:
             v_Pe_embeddings.retain_grad()
 
-        v_Pe = v_Pe.last_hidden_state
+        try:
+            v_Pe = v_Pe.last_hidden_state
+        except:
+            exit('Invalid transformers packages, please install packages via "pip install smrtnet" or '+ \
+                '"cp ./env/modeling_esm.py $CONDA_PREFIX/lib/python3.8/site-packages/transformers/models/esm/modeling_esm.py". ')
         v_Pe = v_Pe[:, 1:, :]
 
         v_Pe = F.dropout(self.mlp_l1(v_Pe), 0.3, training=self.training)
