@@ -284,6 +284,8 @@ python main.py --do_test
 We provide the example scripts to test the model:
 
 ```python
+DIR=./results/SMRTnet_model
+
 python main.py --do_test \
                --data_dir=./data/SMRTnet-benchmark-demo.txt \
                --infer_config_dir ${DIR}/config.pkl \
