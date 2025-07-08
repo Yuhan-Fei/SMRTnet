@@ -71,7 +71,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 
 - **Step 1:** Please click the link (https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing), then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
 
-<p align="center"><img src="figs/colab_share.png" width=100% /></p>
+<p align="center"><img src="figs/colab_help.png" width=100% /></p>
 
 <br>
 
