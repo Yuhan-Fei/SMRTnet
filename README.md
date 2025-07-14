@@ -340,18 +340,8 @@ python main.py --do_ensemble --cuda 0 \
 
 ```python
 
+#1. Run 1-fold CV model on No.1 of GPU
 CV=1
-python main.py --do_infer --cuda 0 \
-    --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./data/CV_${CV} \
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
-    --lm_rna_config ./LM_RNA/parameters.json \
-    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
-CV=2
 python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
@@ -363,7 +353,8 @@ python main.py --do_infer --cuda 1 \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
     --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
-CV=3
+#2. Run 2-fold CV model on No.2 of GPU
+CV=2
 python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
@@ -374,7 +365,9 @@ python main.py --do_infer --cuda 2 \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
     --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
-CV=4
+
+#3. Run 3-fold CV model on No.3 of GPU
+CV=3
 python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
@@ -386,7 +379,8 @@ python main.py --do_infer --cuda 3 \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
     --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
-CV=5
+#4. Run 4-fold CV model on No.4 of GPU
+CV=4
 python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
@@ -398,7 +392,20 @@ python main.py --do_infer --cuda 4 \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
     --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
-#Finally, their outputs are combined by median to produce the final binding score
+#5. Run 5-fold CV model on No.5 of GPU
+CV=5
+python main.py --do_infer --cuda 5 \
+    --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./data/CV_${CV} \
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+
+#6. Their outputs are combined by median to produce the final binding score
 
 awk '{}' xxx.txt > 
 
