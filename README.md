@@ -309,11 +309,11 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 
 You can perform inference using two approaches. The difference between <b>do_ensemble</b> and <b>do_infer</b> lies in whether multiple GPUs are used:  
 ```
-python main.py --do_ensemble
+python main.py --do_ensemble #using a single GPU
 ```
 or
 ```
-python main.py --do_infer
+python main.py --do_infer   #using multiple GPUs
 ```
 
 
@@ -339,6 +339,9 @@ python main.py --do_ensemble --cuda 0 \
 - 2) <b>a parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs simultaneously:
 
 ```python
+DIR=./results/SMRTnet_model
+
+cd ${WorkDir}
 
 #1. Run 1-fold CV model on No.1 of GPU
 CV=1
