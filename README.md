@@ -317,7 +317,7 @@ python main.py --do_infer
 ```
 
 
-- 1)  <b>an ensemble scoring strategy </b> We provide the example scripts to perform inference with a single GPU:
+- 1)  <b>an ensemble scoring strategy</b>: We provide the example scripts to perform inference with a single GPU:
 ```python
 DIR=./results/SMRTnet_model
 
