@@ -347,6 +347,7 @@ cd ${WorkDir}
 
 #1. Run 1-fold CV model on No.1 of GPU
 CV=1
+mkdir -p ./results/MYC_with_RiboTac/CV_1
 python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
@@ -360,6 +361,7 @@ python main.py --do_infer --cuda 1 \
 
 #2. Run 2-fold CV model on No.2 of GPU
 CV=2
+mkdir -p ./results/MYC_with_RiboTac/CV_2
 python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv2.pth \
@@ -373,6 +375,7 @@ python main.py --do_infer --cuda 2 \
 
 #3. Run 3-fold CV model on No.3 of GPU
 CV=3
+mkdir -p ./results/MYC_with_RiboTac/CV_3
 python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv3.pth \
@@ -386,6 +389,7 @@ python main.py --do_infer --cuda 3 \
 
 #4. Run 4-fold CV model on No.4 of GPU
 CV=4
+mkdir -p ./results/MYC_with_RiboTac/CV_4
 python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv4.pth \
@@ -399,6 +403,7 @@ python main.py --do_infer --cuda 4 \
 
 #5. Run 5-fold CV model on No.5 of GPU
 CV=5
+mkdir -p ./results/MYC_with_RiboTac/CV_5
 python main.py --do_infer --cuda 5 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv5.pth \
@@ -413,8 +418,6 @@ python main.py --do_infer --cuda 5 \
 #6. Their outputs are combined by median to produce the final binding score
 
 python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
-
-paste - - - -
 
 
 ```
