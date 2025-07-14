@@ -349,8 +349,8 @@ cd ${WorkDir}
 CV=1
 python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./data/CV_${CV} \
+    --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
+    --infer_out_dir ./results/MYC_with_RiboTac/CV_1/results.txt \
     --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
@@ -362,8 +362,8 @@ python main.py --do_infer --cuda 1 \
 CV=2
 python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./data/CV_${CV} \
+    --infer_model_dir ${DIR}/SMRTnet_cv2.pth \
+    --infer_out_dir ./results/MYC_with_RiboTac/CV_2/results.txt \
     --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
@@ -375,8 +375,8 @@ python main.py --do_infer --cuda 2 \
 CV=3
 python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./data/CV_${CV} \
+    --infer_model_dir ${DIR}/SMRTnet_cv3.pth \
+    --infer_out_dir ./results/MYC_with_RiboTac/CV_3/results.txt \
     --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
@@ -388,8 +388,8 @@ python main.py --do_infer --cuda 3 \
 CV=4
 python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./data/CV_${CV} \
+    --infer_model_dir ${DIR}/SMRTnet_cv4.pth \
+    --infer_out_dir ./results/MYC_with_RiboTac/CV_4/results.txt \
     --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
@@ -401,8 +401,8 @@ python main.py --do_infer --cuda 4 \
 CV=5
 python main.py --do_infer --cuda 5 \
     --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./data/CV_${CV} \
+    --infer_model_dir ${DIR}/SMRTnet_cv5.pth \
+    --infer_out_dir ./results/MYC_with_RiboTac/CV_5/results.txt \
     --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
@@ -412,7 +412,7 @@ python main.py --do_infer --cuda 5 \
 
 #6. Their outputs are combined by median to produce the final binding score
 
-awk '{}' xxx.txt > 
+python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 
 paste - - - -
 
