@@ -319,7 +319,7 @@ python main.py --do_infer
 ```
 -->
 
-- 1)  <b>an ensemble scoring strategy</b>: We provide the example scripts to perform inference with a single GPU:
+- 1)  <b>The ensemble scoring strategy</b>: We provide the example scripts to perform inference with a single GPU:
 ```python
 DIR=./results/SMRTnet_model
 
@@ -338,7 +338,7 @@ python main.py --do_ensemble --cuda 0 \
 ```
 <p align="center"><img src="figs/demo3.png" width=60% /></p>  
 
-- 2) <b>a parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs simultaneously:
+- 2) <b>The parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs simultaneously:
 
 ```python
 DIR=./results/SMRTnet_model
