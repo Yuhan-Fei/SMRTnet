@@ -307,7 +307,8 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
-You can perform inference using two approaches. The difference between them lies in whether multiple GPUs are used:  
+You can perform inference using two approaches, including {do_ensemble} and {do_infer}. The difference between them lies in whether multiple GPUs are used.    
+<!--
 For a single GPU inference:
 ```
 python main.py --do_ensemble
@@ -316,7 +317,7 @@ For multiple GPUs inference:
 ```
 python main.py --do_infer   
 ```
-
+-->
 
 - 1)  <b>an ensemble scoring strategy</b>: We provide the example scripts to perform inference with a single GPU:
 ```python
