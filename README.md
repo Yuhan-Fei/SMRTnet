@@ -240,7 +240,7 @@ More details can be found in https://github.com/IBM/molformer
 ## Usage
 
 - The training of SMRTnet requires **~14G** of GPU memory (with batch_size = 32) and takes ~48 hours to complete training based on 5-fold corss-validation
-- The inference of SMRTnet requires **~4G** of GPU memory (with batch_size = 1).
+- The inference of SMRTnet requires **~4G** of GPU memory (with batch_size = 1) and takes ~25 seconds to complete inference using ensemble scoring strategy with a single GPU.
 
 <!--
 ### Check your input data format
