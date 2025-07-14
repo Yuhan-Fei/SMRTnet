@@ -1,4 +1,4 @@
-# :sparkles: SMRTnet :sparkles:
+<img width="432" height="14" alt="image" src="https://github.com/user-attachments/assets/04cac7f5-6a52-49e1-8928-d0c93d874692" /><img width="432" height="14" alt="image" src="https://github.com/user-attachments/assets/297a0e80-576d-4c79-b226-5a7652a989b0" /><img width="432" height="14" alt="image" src="https://github.com/user-attachments/assets/1d72a82e-3056-4733-afc7-6230e6cc9350" /># :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
@@ -307,20 +307,17 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
-You can run the inference using:  
+You can perform inference using two approaches. The difference between <b>do_ensemble</b> and <b>do_infer</b> lies in whether multiple GPUs are used:  
 ```
 python main.py --do_ensemble
 ```
-<!--
-we provide the script `infer.sh`. 
-or 
-
+or
 ```
 python main.py --do_infer
 ```
-The difference between do_ensemble and do_infer is whether multiple GPUs are used at the same time.
--->
-We provide the example scripts to perform inference of model:
+
+
+- 1)  <b>an ensemble scoring strategy </b> We provide the example scripts to perform inference with a single GPU:
 ```python
 DIR=./results/SMRTnet_model
 
@@ -339,47 +336,78 @@ python main.py --do_ensemble --cuda 0 \
 ```
 <p align="center"><img src="figs/demo3.png" width=60% /></p>  
 
-<!--
-or 
+- 2) <b>a parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs:
 
 ```python
-CV=1
-nohup python main.py --do_infer --cuda 0 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-    --infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
 
+CV=1
+python main.py --do_infer --cuda 0 \
+    --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./data/CV_${CV} \
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 CV=2
-nohup python main.py --do_infer --cuda 1 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-    --infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
+python main.py --do_infer --cuda 1 \
+    --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./data/CV_${CV} \
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 CV=3
-nohup python main.py --do_infer --cuda 2 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
-
+python main.py --do_infer --cuda 2 \
+    --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./data/CV_${CV} \
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 CV=4
-nohup python main.py --do_infer --cuda 3 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
+python main.py --do_infer --cuda 3 \
+    --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./data/CV_${CV} \
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 CV=5
-nohup python main.py --do_infer --cuda 4 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ${INPUTPATH}/results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/data/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/data/all_databaseI_drug_iso.txt &
+python main.py --do_infer --cuda 4 \
+    --infer_config_dir ${DIR}/config.pkl \
+    --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
+    --infer_out_dir ./data/CV_${CV} \
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --lm_rna_config ./LM_RNA/parameters.json \
+    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+
+#Finally, their outputs are combined by median to produce the final binding score
+
+awk '{}' xxx.txt > 
+
+paste - - - -
+
 
 ```
--->
+
+
 
 ### :clubs: Interpretability
 For computing high attention regions using the trained models, You can run it using the following scripts and visualize the results in jupyter-notebook
