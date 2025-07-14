@@ -336,7 +336,7 @@ python main.py --do_ensemble --cuda 0 \
 ```
 <p align="center"><img src="figs/demo3.png" width=60% /></p>  
 
-- 2) <b>a parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs:
+- 2) <b>a parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs simultaneously:
 
 ```python
 
