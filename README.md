@@ -71,7 +71,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 
 - **Step 1:** Please click the link (https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing), then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
 
-<p align="center"><img src="figs/colab_help.png" width=100% /></p>
+<p align="center"><img src="figs/colab_help.png" width=90% /></p>
 
 <br>
 
@@ -307,13 +307,14 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
-You can perform inference using two approaches. The difference between <b>do_ensemble</b> and <b>do_infer</b> lies in whether multiple GPUs are used:  
+You can perform inference using two approaches. The difference between them lies in whether multiple GPUs are used:  
+For a single GPU inference:
 ```
-python main.py --do_ensemble #using a single GPU
+python main.py --do_ensemble
 ```
-or
+For multiple GPUs inference:
 ```
-python main.py --do_infer   #using multiple GPUs
+python main.py --do_infer   
 ```
 
 
