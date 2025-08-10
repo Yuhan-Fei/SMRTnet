@@ -63,7 +63,7 @@ pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
 :heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version.  
-We have also uploaded the entire enviroment of SMRTnet to Zenodo (https://zenodo.org/records/14970392).
+Additionally, we have also uploaded the entire enviroment of SMRTnet to Zenodo (https://zenodo.org/records/14970392).
 
 ### :pushpin: Run SMRTnet via Google Colab
 
