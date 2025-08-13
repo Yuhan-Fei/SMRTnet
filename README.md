@@ -626,7 +626,7 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
 
 ## Patent
-Name：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
+Patent Name：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
 Inventors：张强锋 (Qiangfeng Cliff Zhang)、费宇涵 (Yuhan Fei)、张佳胜 (Jiasheng Zhang)  
 Publication Number：CN120199320A  
 Publication Date：2025-06-24  
