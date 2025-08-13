@@ -627,7 +627,7 @@ This project is free to use for non-commercial purposes - see the [LICENSE](LICE
 
 ## Patent
 发明名称：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
-发明人：张强锋;费宇涵;张佳胜  
+发明人：张强锋、费宇涵、张佳胜  
 公开（公告）号：CN120199320A  
 公开（公告）日：2025-06-24  
 相关网址：https://m.tianyancha.com/zhuanli/51f993cb151b132315faa8d150a6a981  
