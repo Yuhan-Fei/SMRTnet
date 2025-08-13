@@ -626,11 +626,11 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
 
 ## Patent
-发明名称：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
-发明人：张强锋、费宇涵、张佳胜  
-公开（公告）号：CN120199320A  
-公开（公告）日：2025-06-24  
-相关网址：https://m.tianyancha.com/zhuanli/51f993cb151b132315faa8d150a6a981  
+Name：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
+Inventors：张强锋 (Qiangfeng Cliff Zhang)、费宇涵 (Yuhan Fei)、张佳胜 (Jiasheng Zhang)  
+Publication Number：CN120199320A  
+Publication Date：2025-06-24  
+Related URL：https://m.tianyancha.com/zhuanli/51f993cb151b132315faa8d150a6a981  
 
 ## Disclaimer
 The prediction of SMRTnet should be inspected manually by experts before proceeding to the wet-lab validation, and our work is still in active developement with limitations, please do not directly use the drugs.
