@@ -1,10 +1,12 @@
-# :sparkles: SMRTnet :sparkles:
-
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
 ## :page_facing_up: Predicting small molecule and RNA target interactions using deep neural network
 
-Small molecules can bind RNAs to regulate their fate and functions, providing promising opportunities for treating human diseases. However, current tools for predicting small molecule-RNA interactions (SRIs) require prior knowledge of RNA tertiary structures, limiting their utility in drug discovery. Here, we present SMRTnet, a deep learning method to predict SRIs based on RNA secondary structure. By integrating **large language models**, **convolutional neural networks**, **graph attention networks**, and **multimodal data fusion**, SMRTnet achieves high performance across multiple experimental benchmarks, substantially outperforming existing state-of-the-art tools.
+Small molecules can bind RNAs to regulate their fate and functions, providing promising opportunities for treating human diseases. However, current tools for predicting small molecule-RNA interactions (SRIs) require prior knowledge of RNA tertiary structures, limiting their utility in drug discovery. Here, we present SMRTnet, a deep learning method to predict SRIs based on RNA secondary structure. By integrating **large language models**, **convolutional neural networks**, **graph attention networks**, and **multimodal data fusion**, SMRTnet achieves high performance across multiple experimental benchmarks, substantially outperforming existing state-of-the-art tools. 
+
+For wet-lab validation experiments, we conducted a large-scale experimental assessment on SMRTnet predictions for 10 disease-associated RNA targets, identifying 40 hits of RNA-targeting small molecules with nanomolar-to-micromolar dissociation constants. Focusing on the MYC internal ribosome entry site (IRES) as a target, SMRTnet-predicted small molecules showed binding scores correlated closely with observed validation rates. Notably, one predicted compound downregulated MYC expression, inhibited proliferation, and promoted apoptosis in three cancer cell lines. 
+
+Together, by eliminating the need for RNA tertiary structures, SMRTnet expands the scope of feasible RNA targets and accelerates the discovery and development of RNA-targeting therapeutics.
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
 
@@ -34,7 +36,8 @@ Please contact us if you are interested in our work and look for academic collab
   - How to perform model interpretibility
 - [:five: Referenced Repos](#referenced-repos)
 - [:six: Copyright and License](#copyright-and-license)
-- [:seven: Disclaimer](#disclaimer)
+- [:seven: Patent](#patent)
+- [:eight: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
 <!-- - [Example](#example)-->
@@ -618,7 +621,12 @@ We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:999
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
 
-
+## Patent
+发明名称：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
+发明人：张强锋;费宇涵;张佳胜  
+公开（公告）号：CN120199320A  
+公开（公告）日：2025-06-24  
+相关网址：https://m.tianyancha.com/zhuanli/51f993cb151b132315faa8d150a6a981  
 
 ## Disclaimer
 The prediction of SMRTnet should be inspected manually by experts before proceeding to the wet-lab validation, and our work is still in active developement with limitations, please do not directly use the drugs.
