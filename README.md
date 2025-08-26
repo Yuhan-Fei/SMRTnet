@@ -35,7 +35,7 @@ Please contact us if you are interested in our work and look for academic collab
   - Run SMRTnet via Google Colab
 - [:two: Download pre-trained models](#download-pre-trained-models-from-zenodo)
 - [:three: Repo Structure](#repo-structure)
-- [:four: Dataset](#dataset)
+- [:four: Datasets](#datasets)
 - [:five: Usage](#usage)
   - How to train your own model
   - How to test the performance of model
