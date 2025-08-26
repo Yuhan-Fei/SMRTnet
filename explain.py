@@ -297,7 +297,7 @@ def interpretability_P(testData, model, device, test_loader, resultsF, index=0, 
     df4 = df4.iloc[:,:31]
     #df2=pd.read_table('./dataset/ref_df.txt',sep=',',header=None)
     df2=pd.DataFrame(index=np.arange(2), columns=np.arange(31)).fillna(1)
-    merge = df4.append(df2, ignore_index=True)
+    merge = pd.concat([df4,df2],axis=0, ignore_index=True)
     df_final=df*merge
     
     if smooth_steps >= 3:
@@ -311,7 +311,7 @@ def interpretability_P(testData, model, device, test_loader, resultsF, index=0, 
     df3 = pd.Series(list(testData['Structure'][index]+'.()'))
     df5=(pd.get_dummies(df3)).T
     df5 = df5.iloc[:,:31]
-    merge = df4.append(df5, ignore_index=True)
+    merge = pd.concat([df4,df5],axis=0, ignore_index=True)
 
     _ = plot_saliency(merge.iloc[:7,:].values, df_final.iloc[:5,:].values, nt_width=100, norm_factor=3, str_null=np.zeros(31), outdir=resultsF + '/2_RNA_final_'+str(index)+'.pdf')
     
@@ -565,7 +565,7 @@ def merge_plot(inputPath,resultsF, index, smooth_steps=3):
     df4 = df4.iloc[:,:31]
     #df2=pd.read_table('./dataset/ref_df.txt',sep=',',header=None)
     df2=pd.DataFrame(index=np.arange(2), columns=np.arange(31)).fillna(1)
-    merge = df4.append(df2, ignore_index=True)
+    merge = pd.concat([df4,df2],axis=0, ignore_index=True)
     df_final=df_p*merge
 
     if smooth_steps >= 3:
@@ -607,7 +607,7 @@ def merge_plot(inputPath,resultsF, index, smooth_steps=3):
     df3 = pd.Series(list(testData['Structure'][index]+'.()'))
     df5=(pd.get_dummies(df3)).T
     df5 = df5.iloc[:,:31]
-    merge = df4.append(df5, ignore_index=True)
+    merge = pd.concat([df4,df5],axis=0, ignore_index=True)
 
     plt.scatter(x=[0,1],y=[0,1],c=[0,1], cmap='Spectral_r')
     plt.colorbar(label="saliency map signal", orientation="horizontal")
