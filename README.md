@@ -518,6 +518,10 @@ python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 
 
 ### :clubs: Benchmarking
+You can run the benchmarking using:  
+```
+python main.py --do_benchmark
+```
 
 SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-interaction based on the 5 models from 5-fold cross-validation
 
