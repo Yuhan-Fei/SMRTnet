@@ -208,14 +208,17 @@ After downloading all our data, the repo has the following structure:
 |
 ├── img_log
 |
-├── README.md
 ├── LISENCE
+├── README.md
+├── SMRTnet.ipynb
 ├── explain.py
 ├── infer.py
+├── inference.py
 ├── interpret.ipynb
 ├── loader.py
 ├── loop.py
 ├── main.py
+├── mergeCV.py
 ├── model.py
 ├── requirements.txt
 ├── utils.py
