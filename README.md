@@ -69,7 +69,7 @@ pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --ind
 pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
-**Note:**This installation methods will be maintained periodically
+**Note:** This installation methods will be maintained periodically
 
 **2) The Latest version for installation** 
 ```bash
