@@ -263,7 +263,7 @@ More details can be found in https://github.com/IBM/molformer
 
 ## Datasets
 
-### :pushpin: Datasets for training
+### :pushpin: Datasets for training and test:
 
 The training data for SMRTnet is available in the data folder: `SMRTnet_data.txt`
 
@@ -277,9 +277,9 @@ The format of data for training is show as follow, the length of RNA sequence an
 | CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) | 1 |
 | CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
 
-Users can use do_train or do_test to run the data.
+Users can use do_train or do_test to run the data. 
 
-### :pushpin: Datasets for benchmarking
+### :pushpin: Datasets for benchmarking:
 
 The benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark.txt`
 
@@ -299,18 +299,17 @@ The format of data for benchmarking is show as follow, the length of RNA sequenc
 | C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
 | c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
 
-Users can use do_benchmark or do_test to run the data.
+Users can use do_benchmark or do_test to run the data. 
 
-### :pushpin: Format of input RNA target for inference:
+### :pushpin: Datasets for inference:
 
 The length of RNA should ≥31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
-
 
 | RNA  | Sequence | Structure |
 |-----------------|-------------|-------------|
 | MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
 
-Users can use do_ensemble or do_infer to run the data.
+Users can use do_ensemble or do_infer to run the data. 
 
 ## Usage
 
