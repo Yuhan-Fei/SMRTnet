@@ -287,7 +287,6 @@ Users can use do_train or do_test to run the data.
 ### :pushpin: Datasets for inference:
 The demo data for SMRTnet inference is available in the data folder: `MYC_IRES.txt` and `MYC_RIBOTAC.txt`
 
-we also provided a curated library consisting of 7,350 compounds of natural products and metabolites for drug screening. Specifically, we integrated five natural product libraries from the in-house chemical library of the Center of Pharmaceutical Technology, Tsinghua University (http://cpt.tsinghua.edu.cn/hts/), including the Natural Product Library for HTS , the BBP Natural Product Library , the TargetMol Natural Compound Library , the MCE Natural Product Library , and the Pharmacodia Natural Product Library. `natural_compounds.txt`
 
 The length of RNA should ≥31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
 
@@ -306,6 +305,8 @@ The SMILES of small molecule should meet the requirement of RDkit.Data are split
 | ... | ... | 
 
 Users can use do_ensemble or do_infer to run the data. 
+
+Additionally, we also provided a curated library consisting of 7,350 compounds of natural products and metabolites for drug screening. Specifically, we integrated five natural product libraries from the in-house chemical library of the Center of Pharmaceutical Technology, Tsinghua University (http://cpt.tsinghua.edu.cn/hts/), including the Natural Product Library for HTS , the BBP Natural Product Library , the TargetMol Natural Compound Library , the MCE Natural Product Library , and the Pharmacodia Natural Product Library. `natural_compounds.txt`
 
 
 ### :pushpin: Datasets for benchmarking:
