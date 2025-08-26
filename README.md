@@ -533,8 +533,8 @@ cd ${WorkDir}
 python main.py --do_benchmark --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
-               --infer_out_dir ./data/benchmark \
-               --infer__dir ${INPUTPATH}/data/SMRTnet_benchmark_all.txt \
+               --infer_out_dir ./results/RBIND \
+               --infer__dir ./data/SMRTnet_benchmark_RBIND.txt \
                --lm_rna_config ./LM_RNA/parameters.json \
 	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
 	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
