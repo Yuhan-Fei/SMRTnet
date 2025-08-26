@@ -278,6 +278,7 @@ The format of data for training is show as follow, the length of RNA sequence an
 |-----------------|-------------|-------------|-------------|
 | CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) | 1 |
 | CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
+| ... | ... | ... | ... | 
 
 Users can use do_train or do_test to run the data. 
 
@@ -300,6 +301,7 @@ The format of data for benchmarking is show as follow, the length of RNA sequenc
 |-----------------|-------------|-------------|-------------|
 | C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
 | c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
+| ... | ... | ... | ... | 
 
 Users can use do_benchmark or do_test to run the data. 
 
