@@ -40,6 +40,7 @@ Please contact us if you are interested in our work and look for academic collab
   - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
+  - How to benchmark based on known interactions
   - How to perform model interpretibility
 - [:six: Referenced Repos](#referenced-repos)
 - [:seven: Copyright and License](#copyright-and-license)
