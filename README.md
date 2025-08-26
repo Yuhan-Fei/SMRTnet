@@ -354,7 +354,7 @@ We provide the example scripts to train the model from scratch:
 
 ```python
 python main.py --do_train \
-               --data_dir=./data/SMRTnet-data-demo.txt \
+               --data_dir=./data/SMRTnet_data.txt \
                --cuda 0 \
                --batch_size 32 \
                --out_dir=./results/demo \
@@ -376,7 +376,7 @@ We provide the example scripts to test the model:
 DIR=./results/SMRTnet_model
 
 python main.py --do_test \
-               --data_dir=./data/SMRTnet-benchmark-demo.txt \
+               --data_dir=./data/SMRTnet_data_test.txt \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
@@ -393,6 +393,24 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
 ### :diamonds: Benchmarking
+
+SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-interaction based on the 5 models from 5-fold cross-validation
+
+```python
+DIR=./results/SMRTnet_model
+
+cd ${WorkDir}
+
+python main.py --do_benchmark --cuda 0 \
+               --infer_config_dir ${DIR}/config.pkl \
+               --infer_model_dir ${DIR} \
+               --infer_out_dir ./data/benchmark \
+               --infer__dir ${INPUTPATH}/data/SMRTnet_benchmark.txt \
+               --lm_rna_config ./LM_RNA/parameters.json \
+	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	       --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+```
 
 
 ### :clubs: Inference
