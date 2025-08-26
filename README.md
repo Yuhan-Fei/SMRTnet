@@ -400,7 +400,7 @@ python main.py --do_test \
 Note: This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
 
-For example:
+For example, the performance of the SMRTnet_cv2 model was evaluated on a test set of 2-fold CV:
 ```python
 DIR=./results/SMRTnet_model
 
