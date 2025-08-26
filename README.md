@@ -282,28 +282,6 @@ The format of data for training is show as follow, the length of RNA sequence an
 
 Users can use do_train or do_test to run the data. 
 
-### :pushpin: Datasets for benchmarking:
-
-The benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark.txt`
-
-The SMRTnet-benchmark is sourced from 5 experimental validated external datasets:
-1) R-BIND (https://rbind.chem.duke.edu/)
-2) R-SIM (https://web.iitm.ac.in/bioinfo2/R_SIM/)
-3) SMMRNA (http://www.smmrna.org/)
-4) NALDB (http://bsbe.iiti.ac.in/bsbe/naldb/HOME.php)
-5) NewPub (https://pubmed.ncbi.nlm.nih.gov/)
-
-<!--The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116-->
-
-The format of data for benchmarking is show as follow, the length of RNA sequence and its structure should ≥31-nt :
-
-| SMILES | Sequence | Structure | label |
-|-----------------|-------------|-------------|-------------|
-| C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
-| c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
-| ... | ... | ... | ... | 
-
-Users can use do_benchmark or do_test to run the data. 
 
 ### :pushpin: Datasets for inference:
 The benchmark datasets for SMRTnet is available in the data folder: `MYC_IRES.txt` and `MYC_RIBOTAC.txt`
@@ -327,7 +305,28 @@ The SMILES of small molecule should meet the requirement of RDkit.Data are split
 Users can use do_ensemble or do_infer to run the data. 
 
 
+### :pushpin: Datasets for benchmarking:
 
+The benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark.txt`
+
+The SMRTnet-benchmark is sourced from 5 experimental validated external datasets:
+1) R-BIND (https://rbind.chem.duke.edu/)
+2) R-SIM (https://web.iitm.ac.in/bioinfo2/R_SIM/)
+3) SMMRNA (http://www.smmrna.org/)
+4) NALDB (http://bsbe.iiti.ac.in/bsbe/naldb/HOME.php)
+5) NewPub (https://pubmed.ncbi.nlm.nih.gov/)
+
+<!--The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116-->
+
+The format of data for benchmarking is show as follow, the length of RNA sequence and its structure should ≥31-nt :
+
+| SMILES | Sequence | Structure | label |
+|-----------------|-------------|-------------|-------------|
+| C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
+| c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
+| ... | ... | ... | ... | 
+
+Users can use do_benchmark or do_test to run the data. 
 
 
 ## Usage
@@ -396,28 +395,8 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
-### :diamonds: Benchmarking
 
-SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-interaction based on the 5 models from 5-fold cross-validation
-
-```python
-DIR=./results/SMRTnet_model
-
-cd ${WorkDir}
-
-python main.py --do_benchmark --cuda 0 \
-               --infer_config_dir ${DIR}/config.pkl \
-               --infer_model_dir ${DIR} \
-               --infer_out_dir ./data/benchmark \
-               --infer__dir ${INPUTPATH}/data/SMRTnet_benchmark.txt \
-               --lm_rna_config ./LM_RNA/parameters.json \
-	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-	       --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
-```
-
-
-### :clubs: Inference
+### :diamonds: Inference
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
@@ -535,6 +514,28 @@ python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 
 
 ```
+
+
+### :clubs: Benchmarking
+
+SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-interaction based on the 5 models from 5-fold cross-validation
+
+```python
+DIR=./results/SMRTnet_model
+
+cd ${WorkDir}
+
+python main.py --do_benchmark --cuda 0 \
+               --infer_config_dir ${DIR}/config.pkl \
+               --infer_model_dir ${DIR} \
+               --infer_out_dir ./data/benchmark \
+               --infer__dir ${INPUTPATH}/data/SMRTnet_benchmark.txt \
+               --lm_rna_config ./LM_RNA/parameters.json \
+	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	       --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+```
+
 
 
 ### :gem: Interpretability
