@@ -155,7 +155,7 @@ Alternatively, we also provided the command lines for users to download pre-trai
 ```bash
 # Step 1: Navigate to the SMRTnet directory:
 
-git clone https://github.com/Yuhan-Fei/SMRTnet/edit/main
+git clone https://github.com/Yuhan-Fei/SMRTnet.git
 cd ${your_directory}/SMRTnet
 
 # Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
