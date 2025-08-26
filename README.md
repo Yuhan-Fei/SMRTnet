@@ -150,7 +150,7 @@ Since the pre-trained models used in SMRTnet are large, we have uploaded them to
 :bangbang: Downloadable pre-trained models used in SMRTnet: https://zenodo.org/records/14715564
 
 <p align="center"><img src="figs/zenodo.png" width=100% /></p>
-Alternatively, we also provided the command lines for users to download pre-trained models diirectly and put them into the SMRTnet directory:
+Alternatively, we also provided the command lines for users to download pre-trained models directly and put them into the SMRTnet directory:
 
 ```bash
 # Step 1: Navigate to the SMRTnet directory:
