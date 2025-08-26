@@ -78,8 +78,8 @@ conda install dglteam/label/th24_cu118::dgl
 **2) The Latest version for installation** 
 ```bash
 ## pip install our packages online
-conda create -n smrtnet_latest_test python=3.8.10
-conda activate smrtnet_latest_test
+conda create -n smrtnet_latest python=3.8.10
+conda activate smrtnet_latest
 pip install torch torchvision
 pip install smrtnet-latest
 conda install dglteam/label/th24_cu121::dgl
