@@ -193,10 +193,16 @@ After downloading all our data, the repo has the following structure:
 |          └── config.pkl
 |
 ├── data
-|   └── SMRTnet-data-demo.txt
-|   └── SMRTnet-benchmark-demo.txt
+|   └── SMRTnet_data.txt
+|   └── SMRTnet_benchmark_all.txt
+|   └── SMRTnet_benchmark_NALDB.txt
+|   └── SMRTnet_benchmark_SMMRNA.txt
+|   └── SMRTnet_benchmark_RSIM.txt
+|   └── SMRTnet_benchmark_RBIND.txt
+|   └── SMRTnet_benchmark_NewPub.txt
 |   └── MYC_RIBOTAC.txt
 |   └── MYC_IRES.txt
+|   └── natural_compounds.txt
 |
 ├── dataset_cv_best
 |
