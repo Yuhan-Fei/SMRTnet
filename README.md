@@ -302,6 +302,7 @@ The format of data for benchmarking is show as follow, the length of RNA sequenc
 Users can use do_benchmark or do_test to run the data. 
 
 ### :pushpin: Datasets for inference:
+The benchmark datasets for SMRTnet is available in the data folder: `MYC_IRES.txt` and `MYC_RIBOTAC.txt`
 
 The length of RNA should ≥31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
 
@@ -309,7 +310,21 @@ The length of RNA should ≥31nt, and the sequence length should equal to the st
 |-----------------|-------------|-------------|
 | MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
 
+
+The SMILES of small molecule should meet the requirement of RDkit.Data are split by tab and ignore the first header row.  
+
+| CAS | SMILES |
+|-----------------|-------------|
+| 3902-71-4 | CC1=CC(=O)OC2=C1C=C3C=C(OC3=C2C)C |
+| 149-91-7 | C1=C(C=C(C(=C1O)O)O)C(=O)O |
+| 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
+| ... | ... | 
+
 Users can use do_ensemble or do_infer to run the data. 
+
+
+
+
 
 ## Usage
 
