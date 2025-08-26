@@ -62,7 +62,7 @@ nvcc --version
 ### :pushpin: Install via PyPI
 **1) The Stable version**
 ```bash
-## pip install our packages online
+## pip install our packages online (This installation methods will be maintained periodically.)
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu118
@@ -70,7 +70,7 @@ pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
 
-**2) The Latest version**
+**2) The Latest version** (This installation methods will undergo frequent iterations.)
 ```bash
 ## pip install our packages online
 conda create -n smrtnet python=x.x.x
