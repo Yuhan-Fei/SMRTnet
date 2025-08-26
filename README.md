@@ -392,7 +392,10 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
-### :diamonds: Inference
+### :diamonds: Benchmarking
+
+
+### :clubs: Inference
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
@@ -512,8 +515,7 @@ python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 ```
 
 
-
-### :clubs: Interpretability
+### :gem: Interpretability
 For computing high attention regions using the trained models, You can run it using the following scripts and visualize the results in jupyter-notebook
 ```
 python main.py --do_explain
