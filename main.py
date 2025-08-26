@@ -31,7 +31,7 @@ def main():
     # Data options
     parser.add_argument("--do_train", action='store_true', help="Whether to run training with cross validation.")
     parser.add_argument("--do_test", action='store_true', help="Whether to run testing.")
-    parser.add_argument('--data_dir', type=str, default="./data/SMRTnet-data-demo.txt", help='data path')
+    parser.add_argument('--data_dir', type=str, default="./data/SMRTnet_data.txt", help='data path')
     parser.add_argument('--out_dir', type=str, default="./results/model_output", help='output directory')
     parser.add_argument("--do_infer", action='store_true', help="Whether to run infer on the dev set")
     parser.add_argument('--infer_rna_dir', type=str, default="./data/MYC_IRES.txt", help='infer rna directory')
