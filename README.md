@@ -159,16 +159,16 @@ git clone https://github.com/Yuhan-Fei/SMRTnet.git
 cd ${your_directory}/SMRTnet
 
 # Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
-wget https://zenodo.org/records/14715564/files/LM_Mol.zip?download=1
+wget https://zenodo.org/records/14715564/files/LM_Mol.zip
 unzip LM_Mol.zip
 
 # Step 3: Download and unzip the pre-trained RNA language model (RNASwan-seq)
-wget https://zenodo.org/records/14715564/files/LM_RNA.zip?download=1
+wget https://zenodo.org/records/14715564/files/LM_RNA.zip
 unzip LM_RNA.zip
 
 # Step 4:  Navigate to the results folder of SMRTnet directory, download and unzip the SMRTnet model
 cd ${your_directory}/SMRTnet/results
-wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip?download=1
+wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
 unzip SMRTnet_model.zip
 
 ```
