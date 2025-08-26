@@ -60,7 +60,7 @@ nvcc --version
 <!-- Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  -->
 
 ### :pushpin: Install via PyPI
-
+1. The Stable version
 ```bash
 ## pip install our packages online
 conda create -n smrtnet python=3.8.10
@@ -69,8 +69,22 @@ pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --ind
 pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
+
+2. The Latest version
+```bash
+## pip install our packages online
+conda create -n smrtnet python=x.x.x
+conda activate smrtnet-latest
+pip install torch==xxx torchvision==xxx torchaudio==xxx --index-url xxx
+pip install smrtnet-latest
+conda install dglteam/label/xxx
+```
+
+
 :heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version.  
 Additionally, we have uploaded the entire SMRTnet environment to Zenodo (https://zenodo.org/records/14970392) as an alternative option.
+
+
 
 ### :pushpin: Run SMRTnet via Google Colab
 
