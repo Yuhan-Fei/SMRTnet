@@ -1,4 +1,3 @@
-SMILES	Sequence	Structure	Label
 CC(=O)C(=O)NC1C=C(C)C=CC(O)CC=C(C)C=CC(O)CC2OC(=O)C1(C)C(=O)C2C	AAGCGGCACGCGAGCUGGGUUCAGAACGUCG	..)))))..)...))).).....(((((((.	1
 CC(=O)C(=O)NC1C=C(C)C=CC(O)CC=C(C)C=CC(O)CC2OC(=O)C1(C)C(=O)C2C	CACGCGAGCUGGGUUCAGAACGUCGUGAGAC	)..)...))).......((.((((....)))	1
 CC(=O)C(=O)NC1C=C(C)C=CC(O)CC=C(C)C=CC(O)CC2OC(=O)C1(C)C(=O)C2C	CAUUAAAGCGGCACGCGAGCUGGGUUCAGAA	)).....)))))..)...))).......((.	1
