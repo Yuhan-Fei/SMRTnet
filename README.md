@@ -1,3 +1,7 @@
+# :sparkles: SMRTnet :sparkles:
+
+This is a [PyTorch](https://pytorch.org/) implementation of our paper:
+
 ## :page_facing_up: Predicting small molecule and RNA target interactions using deep neural network
 
 <p align="justify" >
