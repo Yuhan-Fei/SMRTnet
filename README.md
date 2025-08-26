@@ -308,24 +308,24 @@ Users can use do_ensemble or do_infer to run the data.
 
 ### :pushpin: Datasets for benchmarking:
 
-The benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark.txt`
+All benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark_all.txt`
 
 The SMRTnet-benchmark is sourced from 5 experimental validated external datasets:
-1) R-BIND (https://rbind.chem.duke.edu/)
-2) R-SIM (https://web.iitm.ac.in/bioinfo2/R_SIM/)
-3) SMMRNA (http://www.smmrna.org/)
-4) NALDB (http://bsbe.iiti.ac.in/bsbe/naldb/HOME.php)
-5) NewPub (https://pubmed.ncbi.nlm.nih.gov/)
+1) R-BIND (https://rbind.chem.duke.edu/), `SMRTnet_benchmark_RBIND.txt`
+2) R-SIM (https://web.iitm.ac.in/bioinfo2/R_SIM/), `SMRTnet_benchmark_RSIM.txt`
+3) SMMRNA (http://www.smmrna.org/), `SMRTnet_benchmark_SMMRNA.txt`
+4) NALDB (http://bsbe.iiti.ac.in/bsbe/naldb/HOME.php), `SMRTnet_benchmark_NALDB.txt`
+5) NewPub (https://pubmed.ncbi.nlm.nih.gov/), `SMRTnet_benchmark_NewPub.txt`
 
 <!--The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116-->
 
 The format of data for benchmarking is show as follow, the length of RNA sequence and its structure should ≥31-nt :
 
-| SMILES | Sequence | Structure | label |
-|-----------------|-------------|-------------|-------------|
-| C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
-| c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
-| ... | ... | ... | ... | 
+|Index | SMILES | Sequence | Structure | label |
+|----------|-----------------|-------------|-------------|-------------|
+| 1 | C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
+| 2 | c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
+| ... | ... | ... | ... | ... | 
 
 Users can use do_benchmark to run the data. 
 
@@ -534,7 +534,7 @@ python main.py --do_benchmark --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./data/benchmark \
-               --infer__dir ${INPUTPATH}/data/SMRTnet_benchmark.txt \
+               --infer__dir ${INPUTPATH}/data/SMRTnet_benchmark_all.txt \
                --lm_rna_config ./LM_RNA/parameters.json \
 	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
 	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
