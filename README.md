@@ -306,7 +306,7 @@ The SMILES of small molecule should meet the requirement of RDkit.Data are split
 
 Users can use do_ensemble or do_infer to run the data. 
 
-Additionally, we also provided a curated library consisting of 7,350 compounds of natural products and metabolites for drug screening. Specifically, we integrated five natural product libraries from the in-house chemical library of the Center of Pharmaceutical Technology, Tsinghua University (http://cpt.tsinghua.edu.cn/hts/), including the Natural Product Library for HTS , the BBP Natural Product Library , the TargetMol Natural Compound Library , the MCE Natural Product Library , and the Pharmacodia Natural Product Library. This library is available in the data folder: `natural_compounds.txt`
+Additionally, we released a curated library consisting of 7,350 compounds of natural products and metabolites for drug screening. Specifically, we integrated five natural product libraries from the in-house chemical library of the Center of Pharmaceutical Technology, Tsinghua University (http://cpt.tsinghua.edu.cn/hts/), including the Natural Product Library for HTS , the BBP Natural Product Library , the TargetMol Natural Compound Library , the MCE Natural Product Library , and the Pharmacodia Natural Product Library. This library is available in the data folder: `natural_compounds.txt`
 
 
 ### :pushpin: Datasets for benchmarking:
