@@ -691,7 +691,7 @@ def matrix(infer_out_dir, minWinSize, minSeqLen):
             min_row = rests['median'].idxmin()
             restsMaxConMax = pd.concat([restsMaxConMax, rests.iloc[min_row:min_row+1]], axis=0)
             restsAllInfo = pd.concat([restsAllInfo, rests], axis=0)
-            restsAllInfo = restsAllInfo.append(pd.Series(),ignore_index=True)
+            restsAllInfo = restsAllInfo = pd.concat([restsAllInfo, pd.Series()], axis=0)
             continue
         lengthf = len(nums_sort)
         max_bound = rests.shape[0]
@@ -705,7 +705,7 @@ def matrix(infer_out_dir, minWinSize, minSeqLen):
         max_row = df_filter['median'].idxmax()
         restsMaxConMax = pd.concat([restsMaxConMax, rests.iloc[max_row:max_row+1]], axis=0)
         restsAllInfo = pd.concat([restsAllInfo, rests], axis=0)
-        restsAllInfo = restsAllInfo.append(pd.Series(),ignore_index=True)
+        restsAllInfo = restsAllInfo = pd.concat([restsAllInfo, pd.Series()], axis=0)
 
     restsAllInfo.to_csv(outPath, sep='\t', index=None)
     restsMaxConMax.to_csv(finalPath, sep='\t', index=None)
