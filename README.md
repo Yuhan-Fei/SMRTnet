@@ -383,11 +383,11 @@ We provide the example scripts to test the model:
 DIR=./results/SMRTnet_model
 
 python main.py --do_test \
-               --data_dir=./data/SMRTnet_data_test.txt \
+               --data_dir=./dataset_cv_best/test_CV1.txt \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
-               --batch_size 16 \
+               --batch_size 1 \
                --out_dir=./results/benchmark \
                --lm_rna_config ./LM_RNA/parameters.json \
 	       --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
