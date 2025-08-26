@@ -1,5 +1,3 @@
-<img width="786" height="17" alt="image" src="https://github.com/user-attachments/assets/c844855f-f8e9-4e6a-a57c-3a2ea3a1267e" />This is a [PyTorch](https://pytorch.org/) implementation of our paper:
-
 ## :page_facing_up: Predicting small molecule and RNA target interactions using deep neural network
 
 <p align="justify" >
