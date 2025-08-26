@@ -327,7 +327,7 @@ The format of data for benchmarking is show as follow, the length of RNA sequenc
 | c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
 | ... | ... | ... | ... | 
 
-Users can use do_benchmark or do_test to run the data. 
+Users can use do_benchmark to run the data. 
 
 
 ## Usage
