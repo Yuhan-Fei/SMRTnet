@@ -44,7 +44,7 @@ for rds in rdsList:
         min_row = rests['median'].idxmin()
         restsMaxConMax = pd.concat([restsMaxConMax, rests.iloc[min_row:min_row+1]], axis=0)
         restsAllInfo = pd.concat([restsAllInfo, rests], axis=0)
-        restsAllInfo = restsAllInfo.append(pd.Series(),ignore_index=True)
+        restsAllInfo = pd.concat([restsAllInfo, pd.Series()], axis=0)
         continue
     maxStart,maxEnd = 0,0
     start,end = 0,0
@@ -63,7 +63,7 @@ for rds in rdsList:
     max_row = df_filter['median'].idxmax()
     restsMaxConMax = pd.concat([restsMaxConMax, rests.iloc[max_row:max_row+1]], axis=0)
     restsAllInfo = pd.concat([restsAllInfo, rests], axis=0)
-    restsAllInfo = restsAllInfo.append(pd.Series(),ignore_index=True)
+    restsAllInfo = pd.concat([restsAllInfo, pd.Series()], axis=0)
 
 restsAllInfo.to_csv(args.data_dir + '/'+args.results_name+'.txt', sep='\t', index=None)
 restsMaxConMax.to_csv(args.data_dir + '/'+args.results_name+'_final.txt', sep='\t', index=None)
