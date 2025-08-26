@@ -60,7 +60,7 @@ nvcc --version
 <!-- Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  -->
 
 ### :pushpin: Install via PyPI
-1. The Stable version
+**1) The Stable version**
 ```bash
 ## pip install our packages online
 conda create -n smrtnet python=3.8.10
@@ -70,7 +70,7 @@ pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
 
-2. The Latest version
+**2) The Latest version**
 ```bash
 ## pip install our packages online
 conda create -n smrtnet python=x.x.x
