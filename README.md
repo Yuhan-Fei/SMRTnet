@@ -78,11 +78,11 @@ conda install dglteam/label/th24_cu118::dgl
 **2) The Latest version for installation** 
 ```bash
 ## pip install our packages online
-conda create -n smrtnet python=x.x.x
-conda activate smrtnet-latest
-pip install torch==xxx torchvision==xxx torchaudio==xxx --index-url xxx
+conda create -n smrtnet_latest_test python=3.8.10
+conda activate smrtnet_latest_test
+pip install torch torchvision
 pip install smrtnet-latest
-conda install dglteam/label/xxx
+conda install dglteam/label/th24_cu121::dgl
 ```
 **Note:** This installation method will undergo frequent iterations.
 
