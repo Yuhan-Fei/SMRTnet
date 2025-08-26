@@ -1,4 +1,4 @@
-This is a [PyTorch](https://pytorch.org/) implementation of our paper:
+<img width="786" height="17" alt="image" src="https://github.com/user-attachments/assets/c844855f-f8e9-4e6a-a57c-3a2ea3a1267e" />This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
 ## :page_facing_up: Predicting small molecule and RNA target interactions using deep neural network
 
@@ -33,15 +33,16 @@ Please contact us if you are interested in our work and look for academic collab
   - Run SMRTnet via Google Colab
 - [:two: Download pre-trained models](#download-pre-trained-models-from-zenodo)
 - [:three: Repo Structure](#repo-structure)
-- [:four: Usage](#usage)
+- [:four: Dataset](#dataset)
+- [:five: Usage](#usage)
   - How to train your own model
   - How to test the performance of model
   - How to inference based on the SMRTnet model
   - How to perform model interpretibility
-- [:five: Referenced Repos](#referenced-repos)
-- [:six: Copyright and License](#copyright-and-license)
-- [:seven: Patent](#patent)
-- [:eight: Disclaimer](#disclaimer)
+- [:six: Referenced Repos](#referenced-repos)
+- [:seven: Copyright and License](#copyright-and-license)
+- [:eight: Patent](#patent)
+- [:nine: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
 <!-- - [Example](#example)-->
@@ -69,7 +70,7 @@ pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --ind
 pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
-**Note:** This installation method will be maintained periodically。
+**Note:** This installation method will be maintained periodically.
 
 **2) The Latest version for installation** 
 ```bash
@@ -80,7 +81,7 @@ pip install torch==xxx torchvision==xxx torchaudio==xxx --index-url xxx
 pip install smrtnet-latest
 conda install dglteam/label/xxx
 ```
-**Note:** This installation method will undergo frequent iterations。
+**Note:** This installation method will undergo frequent iterations.
 
 :heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version.  
 Additionally, we have uploaded the entire SMRTnet environment to Zenodo (https://zenodo.org/records/14970392) as an alternative option.
@@ -215,12 +216,12 @@ After downloading all our data, the repo has the following structure:
 
 ### :pushpin: Datasets for training
 
-Demo of the training data for SMRTnet is available in the data folder: `SMRTnet-data-demo.txt`
+The training data for SMRTnet is available in the data folder: `SMRTnet-data.txt`
 
 The data of SMRTnet is sourced from https://www.rcsb.org/  
 The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116
 
-The format of data for training is show as follow:
+The processed format of SMRTnet-data for training is show as follow:
 
 | SMILES | Sequence | Structure | label |
 |-----------------|-------------|-------------|-------------|
@@ -259,6 +260,57 @@ Datasets are available at https://ibm.box.com/v/MoLFormer-data
 
 More details can be found in https://github.com/IBM/molformer
 -->
+
+## Datasets
+
+### :pushpin: Datasets for training
+
+The training data for SMRTnet is available in the data folder: `SMRTnet_data.txt`
+
+The data of SMRTnet is sourced from https://www.rcsb.org/  
+The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116
+
+The format of data for training is show as follow, the length of RNA sequence and its structure is 31-nt:
+
+| SMILES | Sequence | Structure | label |
+|-----------------|-------------|-------------|-------------|
+| CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) | 1 |
+| CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
+
+Users can use do_train or do_test to run the data.
+
+### :pushpin: Datasets for benchmarking
+
+The benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark.txt`
+
+The SMRTnet-benchmark is sourced from 5 experimental validated external datasets:
+1) R-BIND (https://rbind.chem.duke.edu/)
+2) R-SIM (https://web.iitm.ac.in/bioinfo2/R_SIM/)
+3) SMMRNA (http://www.smmrna.org/)
+4) NALDB (http://bsbe.iiti.ac.in/bsbe/naldb/HOME.php)
+5) NewPub (https://pubmed.ncbi.nlm.nih.gov/)
+
+<!--The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116-->
+
+The format of data for benchmarking is show as follow, the length of RNA sequence and its structure should ≥31-nt :
+
+| SMILES | Sequence | Structure | label |
+|-----------------|-------------|-------------|-------------|
+| C1=NC2=NC(=NC(=C2N1)N)N | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (((((((((..(((...)))..))))))))) | 1 |
+| c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
+
+Users can use do_benchmark or do_test to run the data.
+
+### :pushpin: Format of input RNA target for inference:
+
+The length of RNA should ≥31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
+
+
+| RNA  | Sequence | Structure |
+|-----------------|-------------|-------------|
+| MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
+
+Users can use do_ensemble or do_infer to run the data.
 
 ## Usage
 
