@@ -366,9 +366,9 @@ python main.py --do_train \
                --batch_size 32 \
                --out_dir=./results/demo \
                --lm_rna_config ./LM_RNA/parameters.json \
-	       --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-	       --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	           --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
@@ -388,14 +388,37 @@ python main.py --do_test \
                --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
                --cuda 0 \
                --batch_size 1 \
-               --out_dir=./results/benchmark \
+               --out_dir=./results/test \
                --lm_rna_config ./LM_RNA/parameters.json \
-	       --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-	       --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	           --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+
+
+
 ```
 Note: This case represents the results of the model from the 1-fold CV (SMRTnet_cv1.pth).  
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation, the infer_model_dir parameter needs to be modified to SMRTnet_cv2.pth, SMRTnet_cv3.pth, SMRTnet_cv4.pth, and SMRTnet_cv5.pth, respectively.
+
+For example:
+```python
+DIR=./results/SMRTnet_model
+
+python main.py --do_test \
+               --data_dir=./dataset_cv_best/test_CV2.txt \
+               --infer_config_dir ${DIR}/config.pkl \
+               --infer_model_dir ${DIR}/SMRTnet_cv2.pth \
+               --cuda 0 \
+               --batch_size 1 \
+               --out_dir=./results/test \
+               --lm_rna_config ./LM_RNA/parameters.json \
+	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	           --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+
+
+
+```
 
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
@@ -429,9 +452,9 @@ python main.py --do_ensemble --cuda 0 \
                --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
                --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
                --lm_rna_config ./LM_RNA/parameters.json \
-	       --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-	       --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-	       --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+	           --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 ```
 <p align="center"><img src="figs/demo3.png" width=60% /></p>  
 
