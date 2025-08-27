@@ -602,8 +602,7 @@ You can run the benchmarking using:
 python main.py --do_benchmark
 ```
 
-SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-interaction based on the 5 models from 5-fold cross-validation.  
-We used the `SMRTnet_benchmark_RBIND.txt` dataset as an example; users can replace it with other benchmark datasets we provided in data folder.
+SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-interaction based on the 5 models from 5-fold cross-validation. We used the `SMRTnet_benchmark_RBIND.txt` dataset as an example; users can replace it with other benchmark datasets we provided in data folder.
 
 ```python
 DIR=./results/SMRTnet_model
