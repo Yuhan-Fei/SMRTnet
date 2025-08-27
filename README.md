@@ -244,7 +244,13 @@ After downloading all our data, the repo has the following structure:
 |   └── natural_compounds.txt
 |
 ├── dataset_cv_best
-|
+|   └── test_CV1.txt
+|   └── test_CV2.txt
+|   └── test_CV3.txt
+|   └── test_CV4.txt
+|   └── test_CV5.txt
+|   └── ...
+| 
 ├── img_log
 |
 ├── LISENCE
@@ -318,8 +324,8 @@ More details can be found in https://github.com/IBM/molformer
 
 ### :pushpin: Datasets for training and test:
 
-The training data for SMRTnet is available in the data folder: `SMRTnet_data.txt`
-The test data for SMRTnet based on ligand-based splitting strategy is available in the dataset_cv_best folder: `test_CV1.txt`, `test_CV2.txt`...
+The training data for SMRTnet is available in the data folder: `SMRTnet_data.txt`  
+The test data for SMRTnet based on ligand-based splitting strategy is available in the dataset_cv_best folder: `test_CV1.txt`, `test_CV2.txt`, `test_CV3.txt`, `test_CV4.txt`, and `test_CV5.txt`
 
 The data of SMRTnet is sourced from https://www.rcsb.org/  
 The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116
