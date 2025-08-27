@@ -153,10 +153,11 @@ Since the pre-trained models used in SMRTnet are large, we have uploaded them to
 Alternatively, we also provided the command lines for users to download pre-trained models directly and put them into the SMRTnet directory:
 
 ```bash
-# Step 1: Navigate to the SMRTnet directory:
+<!-- # Step 1: Navigate to the SMRTnet directory:-->
 
+#Step 1: Download SMRTnet on your device:
 git clone https://github.com/Yuhan-Fei/SMRTnet.git
-cd ${your_directory}/SMRTnet
+<!-- cd ${your_directory}/SMRTnet-->
 
 # Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
 wget https://zenodo.org/records/14715564/files/LM_Mol.zip
@@ -166,10 +167,10 @@ unzip LM_Mol.zip
 wget https://zenodo.org/records/14715564/files/LM_RNA.zip
 unzip LM_RNA.zip
 
-# Step 4:  Navigate to the results folder of SMRTnet directory, download and unzip the SMRTnet model
-cd ${your_directory}/SMRTnet/results
+# Step 4:  Download and unzip the SMRTnet model to the results folder of SMRTnet directory <!--, download and unzip the SMRTnet model-->
+<!-- cd ${your_directory}/SMRTnet/results-->
 wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
-unzip SMRTnet_model.zip
+unzip SMRTnet_model.zip -d ./results
 
 ```
 
@@ -595,7 +596,8 @@ cd ${WorkDir}
 python main.py --do_explain --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
-    --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
+    --infer_out_dir ./results/MYC
+    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
     --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3 \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
