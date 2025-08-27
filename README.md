@@ -120,7 +120,7 @@ conda install dglteam/label/th24_cu121::dgl
 :heavy_exclamation_mark: **Note:** We conducted usability tests on both install methods with a diverse group of users to validate the setup process. All user were able to independently install and run SMRTnet.
 
 |     GPU     | Driver version | CUDA version| Stable version |  Latest version  |
-|-------------|----------------|----------------|---------------|--------------|
+|-------------|----------------|---------------|--------------|-------------|
 |     H20 (96G)    |   570.158.01   |     12.8     | Succussed  | Succussed |
 |  RTX 4090 (24G)  |   570.124.06   |     12.8     | Succussed  | Succussed |
 |  RTX 4090 (24G)  |     550.135    |     12.4     | Succussed  | Succussed |
@@ -319,6 +319,7 @@ More details can be found in https://github.com/IBM/molformer
 ### :pushpin: Datasets for training and test:
 
 The training data for SMRTnet is available in the data folder: `SMRTnet_data.txt`
+The test data for SMRTnet based on ligand-based splitting strategy is available in the dataset_cv_best folder: `test_CV1.txt`, `test_CV2.txt`...
 
 The data of SMRTnet is sourced from https://www.rcsb.org/  
 The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116
