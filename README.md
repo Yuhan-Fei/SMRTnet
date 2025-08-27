@@ -461,8 +461,8 @@ python main.py --do_ensemble --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./data/ensemble \
-               --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-               --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+               --infer_rna_dir ./data/MYC_IRES.txt \
+               --infer_drug_dir ./data/MYC_RIBOTAC.txt \
                --lm_rna_config ./LM_RNA/parameters.json \
 	           --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
 	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -484,8 +484,8 @@ python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
     --infer_out_dir ./results/MYC_with_RiboTac/CV_1/results.txt \
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --infer_rna_dir ./data/MYC_IRES.txt \
+    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -498,8 +498,8 @@ python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv2.pth \
     --infer_out_dir ./results/MYC_with_RiboTac/CV_2/results.txt \
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --infer_rna_dir ./data/MYC_IRES.txt \
+    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -512,8 +512,8 @@ python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv3.pth \
     --infer_out_dir ./results/MYC_with_RiboTac/CV_3/results.txt \
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --infer_rna_dir ./data/MYC_IRES.txt \
+    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -526,8 +526,8 @@ python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv4.pth \
     --infer_out_dir ./results/MYC_with_RiboTac/CV_4/results.txt \
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --infer_rna_dir ./data/MYC_IRES.txt \
+    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -540,8 +540,8 @@ python main.py --do_infer --cuda 5 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR}/SMRTnet_cv5.pth \
     --infer_out_dir ./results/MYC_with_RiboTac/CV_5/results.txt \
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt \
+    --infer_rna_dir ./data/MYC_IRES.txt \
+    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -597,8 +597,8 @@ python main.py --do_explain --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC
-    --infer_rna_dir ${INPUTPATH}/data/MYC_IRES.txt \
-    --infer_drug_dir ${INPUTPATH}/data/MYC_RIBOTAC.txt --smooth_steps 3 \
+    --infer_rna_dir ./data/MYC_IRES.txt \
+    --infer_drug_dir ./data/MYC_RIBOTAC.txt --smooth_steps 3 \
     --lm_rna_config ./LM_RNA/parameters.json \
     --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
     --lm_mol_config ./LM_Mol/bert_vocab.txt  \
@@ -633,36 +633,36 @@ CV=1
 nohup python main.py --do_infer --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
+	--infer_rna_dir ./dataset/experiment_6_target.txt \
+    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
 
 CV=2
 nohup python main.py --do_infer --cuda 1 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
+	--infer_rna_dir ./dataset/experiment_6_target.txt \
+    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
 
 CV=3
 nohup python main.py --do_infer --cuda 2 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
+	--infer_rna_dir ./dataset/experiment_6_target.txt \
+    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
 
 CV=4
 nohup python main.py --do_infer --cuda 3 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
+	--infer_rna_dir ./dataset/experiment_6_target.txt \
+    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
 
 CV=5
 nohup python main.py --do_infer --cuda 4 \
     --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
     --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ${INPUTPATH}/dataset/experiment_6_target.txt \
-    --infer_drug_dir ${INPUTPATH}/dataset/all_databaseI_drug_iso.txt &
+	--infer_rna_dir ./dataset/experiment_6_target.txt \
+    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
 
 ```
 
@@ -679,7 +679,7 @@ DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_c
 
 cd ${WorkDir}
 
-python main.py --do_benchmark --cuda 0 --data_dir ${INPUTPATH}/demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/benchmark
+python main.py --do_benchmark --cuda 0 --data_dir ./demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/benchmark
 
 ```
 </details>
@@ -708,8 +708,8 @@ DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_c
 cd ${WorkDir}
 
 python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
-    --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
+    --infer_out_dir ./results/MYC --infer_rna_dir ./data/rna.txt \
+    --infer_drug_dir ./data/drug.txt --smooth_steps 3
 
 ```
 </details>
@@ -724,8 +724,8 @@ DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_c
 
 cd ${WorkDir}
 python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir ./results/MYC --infer_rna_dir ${INPUTPATH}/data/rna.txt \
-    --infer_drug_dir ${INPUTPATH}/data/drug.txt --smooth_steps 3
+    --infer_out_dir ./results/MYC --infer_rna_dir ./data/rna.txt \
+    --infer_drug_dir ./data/drug.txt --smooth_steps 3
 
 ```
 </details>
