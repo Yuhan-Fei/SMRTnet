@@ -488,7 +488,7 @@ def main():
             rna, seq, struct = load_rna(os.path.splitext(args.infer_rna_dir)[0]+"_slice"+".txt", args.maxRNA)
             drug, smiles = load_drug(args.infer_drug_dir, args.maxDrug)
             predict = ensemble(i, smiles=smiles, sequence=seq, structure=struct, model=model, args=args, result_folder=args.infer_out_dir, output_num_max=99999)
-            df_predict = pd.concat([df_predict,pd.DataFrame([predict])],axis=1) #5-fold tmp
+            df_predict = pd.concat([df_predict,pd.DataFrame([predict])],axis=0) #5-fold tmp
         df_predict.T.to_csv(os.path.splitext(args.infer_out_dir)[0]+"_tmp"+".txt", sep='\t', index=True,header=['CV1','CV2','CV3','CV4','CV5'] )
 
 
