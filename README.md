@@ -455,8 +455,6 @@ python main.py --do_infer
 ```python
 DIR=./results/SMRTnet_model
 
-cd ${WorkDir}
-
 python main.py --do_ensemble --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
@@ -474,8 +472,6 @@ python main.py --do_ensemble --cuda 0 \
 
 ```python
 DIR=./results/SMRTnet_model
-
-cd ${WorkDir}
 
 #1. Run 1-fold CV model on No.1 of GPU
 CV=1
@@ -566,8 +562,6 @@ SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-int
 ```python
 DIR=./results/SMRTnet_model
 
-cd ${WorkDir}
-
 python main.py --do_benchmark --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
@@ -590,8 +584,6 @@ We provide the example scripts to perform interpretability of model:
 
 ```python
 DIR=./results/SMRTnet_model
-
-cd ${WorkDir}
 
 python main.py --do_explain --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl \
@@ -677,8 +669,6 @@ nohup python main.py --do_infer --cuda 4 \
 ```python
 DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-cd ${WorkDir}
-
 python main.py --do_benchmark --cuda 0 --data_dir ./demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/benchmark
 
 ```
@@ -705,8 +695,6 @@ python main.py --do_benchmark --cuda 0 --data_dir ./demo/ours_v3.txt --infer_con
 ```python
 DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-cd ${WorkDir}
-
 python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ./data/rna.txt \
     --infer_drug_dir ./data/drug.txt --smooth_steps 3
@@ -722,7 +710,6 @@ python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infe
 ```python
 DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
 
-cd ${WorkDir}
 python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC --infer_rna_dir ./data/rna.txt \
     --infer_drug_dir ./data/drug.txt --smooth_steps 3
