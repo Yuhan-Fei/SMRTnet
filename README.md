@@ -153,11 +153,9 @@ Since the pre-trained models used in SMRTnet are large, we have uploaded them to
 Alternatively, we also provided the command lines for users to download pre-trained models directly and put them into the SMRTnet directory:
 
 ```bash
-<!-- # Step 1: Navigate to the SMRTnet directory:-->
 
 #Step 1: Download SMRTnet on your device:
 git clone https://github.com/Yuhan-Fei/SMRTnet.git
-<!-- cd ${your_directory}/SMRTnet-->
 
 # Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
 wget https://zenodo.org/records/14715564/files/LM_Mol.zip
@@ -167,13 +165,15 @@ unzip LM_Mol.zip
 wget https://zenodo.org/records/14715564/files/LM_RNA.zip
 unzip LM_RNA.zip
 
-# Step 4:  Download and unzip the SMRTnet model to the results folder of SMRTnet directory <!--, download and unzip the SMRTnet model-->
-<!-- cd ${your_directory}/SMRTnet/results-->
+# Step 4:  Download and unzip the SMRTnet model to the results folder of SMRTnet directory 
 wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
 unzip SMRTnet_model.zip -d ./results
 
 ```
-
+<!-- cd ${your_directory}/SMRTnet-->
+<!-- # Step 1: Navigate to the SMRTnet directory:-->
+<!--, download and unzip the SMRTnet model-->
+<!-- cd ${your_directory}/SMRTnet/results-->
 
 ## Repo Structure:
 After downloading all our data, the repo has the following structure:
