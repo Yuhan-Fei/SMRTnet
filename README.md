@@ -1,4 +1,4 @@
-<img width="432" height="13" alt="image" src="https://github.com/user-attachments/assets/0e86000c-3b22-42c1-bdb0-fc7ce910eb4a" /><img width="432" height="13" alt="image" src="https://github.com/user-attachments/assets/4529c0a5-0fd8-4dd3-a9af-ee8108368ffb" /># :sparkles: SMRTnet :sparkles:
+# :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
@@ -117,6 +117,16 @@ conda install dglteam/label/th24_cu121::dgl
 |xsmiles|  0.2.2  |  0.2.2  | Up to date  |
 
 
+:heavy_exclamation_mark: **Note:** We conducted usability tests on both install methods with a diverse group of users to validate the setup process. All user were able to independently install and run SMRTnet.
+
+|   GPU   | Driver version | CUDA version| Stable version |Latest version |
+|---------|----------------|----------------|---------|---------|
+|     H20 (96G)    |   570.158.01   |     12.8     | Succussed  | Succussed |
+|  RTX 4090 (24G)  |   570.124.06   |     12.8     | Succussed  | Succussed |
+|  RTX 4090 (24G)  |     550.135    |     12.4     | Succussed  | Succussed |
+|  RTX 2080 (11G)  |    535.216.03  |     12.2     | Succussed  | Succussed |
+|  A100 40G (11G)  |    560.35.03   |     12.6     | Succussed  | Succussed |
+|  A800 80G (11G)  |   450.248.02   |     11.0     | Succussed  | Succussed |
 
 
 ### :pushpin: Run SMRTnet via Google Colab
