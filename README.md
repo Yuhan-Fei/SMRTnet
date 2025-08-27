@@ -1,4 +1,4 @@
-# :sparkles: SMRTnet :sparkles:
+<img width="432" height="13" alt="image" src="https://github.com/user-attachments/assets/0e86000c-3b22-42c1-bdb0-fc7ce910eb4a" /><img width="432" height="13" alt="image" src="https://github.com/user-attachments/assets/4529c0a5-0fd8-4dd3-a9af-ee8108368ffb" /># :sparkles: SMRTnet :sparkles:
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
@@ -86,8 +86,36 @@ conda install dglteam/label/th24_cu121::dgl
 ```
 **Note:** This installation method will undergo frequent iterations.
 
-:heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version.  
-Additionally, we have uploaded the entire SMRTnet environment to Zenodo (https://zenodo.org/records/14970392) as an alternative option.
+:heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version. We have also uploaded the entire SMRTnet environment to Zenodo (https://zenodo.org/records/14970392) as an alternative option.
+
+
+| Package | Stable version | Latest version | Remarks |
+|---------|----------------|----------------|---------|
+|  babel  |     2.17.0     |     2.17.0     | Up to date  |
+|charset-normalizer|     3.3.2     |     3.3.2     |  Required  |
+|dgllife|     0.3.2    |     0.3.2     |  Up to date  |
+|dgl|   2.4.0.th24.cu118  |   2.4.0.th24.cu121    |  Up to date  |
+|matplotlib|   3.7.5   |   3.7.5   |  Constrained by dependencies  |
+|networkx|    2.8.8    |   3.1    | Constrained by dependencies  |
+|huggingface-hub|   0.29.1   |   0.34.4    |  Up to date  |
+|notebook|  7.3.2   |  7.3.3  | Constrained by dependencies  |
+|numpy|  1.20.3   |  1.24.4  | Constrained by dependencies  |
+|pandas|  1.2.4  |  2.0.3    | Constrained by dependencies  |
+|prefetch_generator| 1.0.3   |  1.0.3  | Up to date  |
+|prettytable|  3.11.0  | 3.11.0  | Required  |
+|pytorch-lightning|  1.1.5   | 2.4.0 | Constrained by dependencies  |
+|python|  3.8.10  |  3.8.10 | Required  |
+|rdkit|  2022.3.5  | 2022.3.5 | Required |
+|scikit-learn|  0.24.2  | 1.3.2 | Constrained by dependencies  |
+|scipy|  1.10.1 | 1.10.1  | Constrained by dependencies  |
+|seaborn| 0.13.2  |  0.13.2  | Up to date  |
+|tensorboard|  2.14.0  |  2.14.0  | Required |
+|tensorboardX|  2.6.2.2   | 2.6.2.2  | Required |
+|torch| 2.4.1+cu118  |  2.4.1  | Constrained by dependencies |
+|tqdm|  4.67.1  |  4.67.1 | Up to date |
+|transformers|  4.28.1  |  4.28.1  | Required |
+|xsmiles|  0.2.2  |  0.2.2  | Up to date  |
+
 
 
 
