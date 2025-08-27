@@ -119,8 +119,8 @@ conda install dglteam/label/th24_cu121::dgl
 
 :heavy_exclamation_mark: **Note:** We conducted usability tests on both install methods with a diverse group of users to validate the setup process. All user were able to independently install and run SMRTnet.
 
-|   GPU   | Driver version | CUDA version| Stable version |Latest version |
-|---------|----------------|----------------|---------|---------|
+|     GPU     | Driver version | CUDA version| Stable version |  Latest version  |
+|-------------|----------------|----------------|---------------|--------------|
 |     H20 (96G)    |   570.158.01   |     12.8     | Succussed  | Succussed |
 |  RTX 4090 (24G)  |   570.124.06   |     12.8     | Succussed  | Succussed |
 |  RTX 4090 (24G)  |     550.135    |     12.4     | Succussed  | Succussed |
