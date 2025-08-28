@@ -102,15 +102,15 @@ conda install dglteam/label/th24_cu121::dgl
 |numpy|  1.20.3   |  1.24.4  | Constrained by dependencies  |
 |pandas|  1.2.4  |  2.0.3    | Constrained by dependencies  |
 |prefetch_generator| 1.0.3   |  1.0.3  | Up to date  |
-|prettytable|  3.11.0  | 3.11.0  | Required  |
+|prettytable|  3.11.0  | 3.11.0  | Constrained by dependencies  |
 |pytorch-lightning|  1.1.5   | 2.4.0 | Constrained by dependencies  |
 |python|  3.8.10  |  3.8.10 | Required  |
 |rdkit|  2022.3.5  | 2022.3.5 | Required |
 |scikit-learn|  0.24.2  | 1.3.2 | Constrained by dependencies  |
 |scipy|  1.10.1 | 1.10.1  | Constrained by dependencies  |
 |seaborn| 0.13.2  |  0.13.2  | Up to date  |
-|tensorboard|  2.14.0  |  2.14.0  | Required |
-|tensorboardX|  2.6.2.2   | 2.6.2.2  | Required |
+|tensorboard|  2.14.0  |  2.14.0  | Constrained by dependencies |
+|tensorboardX|  2.6.2.2   | 2.6.2.2  | Constrained by dependencies |
 |torch| 2.4.1+cu118  |  2.4.1  | Constrained by dependencies |
 |tqdm|  4.67.1  |  4.67.1 | Up to date |
 |transformers|  4.28.1  |  4.28.1  | Required |
@@ -125,8 +125,8 @@ conda install dglteam/label/th24_cu121::dgl
 |  RTX 4090 (24G)  |   570.124.06   |     12.8     | Succussed  | Succussed |
 |  RTX 4090 (24G)  |     550.135    |     12.4     | Succussed  | Succussed |
 |  RTX 2080 (11G)  |    535.216.03  |     12.2     | Succussed  | Succussed |
-|  A100 40G (11G)  |    560.35.03   |     12.6     | Succussed  | Succussed |
-|  A800 80G (11G)  |   450.248.02   |     11.0     | Succussed  | Succussed |
+|  A100 40G (40G)  |    560.35.03   |     12.6     | Succussed  | Succussed |
+|  A800 80G (80G)  |   450.248.02   |     11.0     | Succussed  | Succussed |
 
 
 ### :pushpin: Run SMRTnet via Google Colab
