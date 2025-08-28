@@ -624,7 +624,7 @@ python main.py --do_benchmark --cuda 0 \
 	           --lm_mol_config ./LM_Mol/bert_vocab.txt  \
 	           --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 ```
-
+<p align="center"><img src="figs/demo5.png" width=40% /></p>  
 
 
 ### :gem: Interpretability
