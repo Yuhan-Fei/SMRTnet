@@ -18,7 +18,7 @@ Taken together, SMRTnet expands the scope of feasible RNA targets and accelerate
 
 ## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
-If you found this package useful, please cite our paper (under revision):
+If you found this tools useful, please cite our paper (under revision):
 ```
 Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang,
 
