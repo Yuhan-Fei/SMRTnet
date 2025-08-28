@@ -117,7 +117,7 @@ conda install dglteam/label/th24_cu121::dgl
 |xsmiles|  0.2.2  |  0.2.2  | Up to date  |
 
 
-:heavy_exclamation_mark: **Note:** We conducted usability tests on both install methods with a diverse group of users to validate the setup process. All user were able to independently install and run SMRTnet.
+:heavy_exclamation_mark: **Note:** We conducted usability tests on both install methods with a diverse group of users to validate the setup process. All participants were able to independently install and run SMRTnet.
 
 |     GPU     | Driver version | CUDA version| Stable version |  Latest version  |
 |-------------|----------------|---------------|--------------|-------------|
