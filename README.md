@@ -145,7 +145,7 @@ We have developed an online jupyter-notebook that enables installation-free exec
 <p align="center"><img src="figs/colab_run.png" width=100% /></p>
 
 <br>
-:bangbang:  If you encounter any issues during the installation process, please feel free to report the problem in the **Issues module** or contact us directly via **email** at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
+:bangbang:  If you encounter any issues during the installation process, please feel free to report the problem in the 'Issues module' or contact us directly via E-mail at yuhan_fei@outlook.com or zjs21@mails.tsinghua.edu.cn.
 
 
 ## Download pre-trained models from Zenodo
