@@ -233,7 +233,7 @@ After downloading all our data, the repo has the following structure:
 |
 ├── data
 |   └── SMRTnet_data.txt
-|   └── SMRTnet_benchmark_all.txt
+|   └── SMRTnet_benchmark.txt
 |   └── SMRTnet_benchmark_NALDB.txt
 |   └── SMRTnet_benchmark_SMMRNA.txt
 |   └── SMRTnet_benchmark_RSIM.txt
@@ -368,9 +368,9 @@ Additionally, we released a curated library consisting of 7,350 compounds of nat
 
 ### :pushpin: Datasets for benchmarking:
 
-All benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark_all.txt`
+All benchmark datasets for SMRTnet is available in the data folder: `SMRTnet_benchmark.txt`
 
-The SMRTnet-benchmark is sourced from 5 experimental validated external datasets:
+We also divided the SMRTnet-benchmark dataset to 5 subsets corresponding their source databases:
 1) R-BIND (https://rbind.chem.duke.edu/), `SMRTnet_benchmark_RBIND.txt`
 2) R-SIM (https://web.iitm.ac.in/bioinfo2/R_SIM/), `SMRTnet_benchmark_RSIM.txt`
 3) SMMRNA (http://www.smmrna.org/), `SMRTnet_benchmark_SMMRNA.txt`
