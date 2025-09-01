@@ -208,10 +208,7 @@ wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
 unzip SMRTnet_model.zip -d ./results
 
 ```
-<!-- cd ${your_directory}/SMRTnet-->
-<!-- # Step 1: Navigate to the SMRTnet directory:-->
-<!--, download and unzip the SMRTnet model-->
-<!-- cd ${your_directory}/SMRTnet/results-->
+
 
 ## Repo Structure:
 After downloading all our data, the repo has the following structure:
@@ -270,55 +267,6 @@ After downloading all our data, the repo has the following structure:
 └── visual.py
 ```
 
-<!--
-## Datasets
-
-### :pushpin: Datasets for training
-
-The training data for SMRTnet is available in the data folder: `SMRTnet-data.txt`
-
-The data of SMRTnet is sourced from https://www.rcsb.org/  
-The raw PDB structural data used in SMRTnet can be downloaded from https://zenodo.org/records/14986116
-
-The processed format of SMRTnet-data for training is show as follow:
-
-| SMILES | Sequence | Structure | label |
-|-----------------|-------------|-------------|-------------|
-| CC1=CC2=C(CC1)C(=CC3=C2C(=CO3)C)C | GGGGGGGCUUCGCCUCUGGCCCAGCCCUCCC | (((((((((..(((...)))..))))))))) | 1 |
-| CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
-
-
-### :pushpin: Format of input RNA target for inference:
-
-The length of RNA should >=31nt, and the sequence length should equal to the structure length. Data are split by tab and ignore the first header row.  
-
-
-| RNA  | Sequence | Structure |
-|-----------------|-------------|-------------|
-| MYC_IRES | GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC | (((((((((..(((...)))..))))))))) |
-
-
-### :pushpin: Format of input small molecule  for inference:
-The SMILES of small molecule should meet the requirement of RDkit. Data are split by tab and ignore the first header row.
-
-| CAS | SMILES |
-|-----------------|-------------|
-| 3902-71-4 | CC1=CC(=O)OC2=C1C=C3C=C(OC3=C2C)C |
-| 149-91-7 | C1=C(C=C(C(=C1O)O)O)C(=O)O |
-| 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
-| ... | ... | 
-
-### :pushpin: RNA sequence datasets for RNA language model (RNASwan-seq)
-
-The dataset used for RNA language model was compiled from 7 sources: the European Nucleotide Archive, NCBI's nucleotide database, GenBank, Ensembl, RNAcentral, CSCD2, and GreeNC 2.0, encompassing a total of **470 million** RNA sequences. We de-duplicated with 100% sequence similarity using MMSeqs2, resulting in about **214 million** unique RNA sequences
-
-
-### :pushpin: SMILES datasets for chemical language model (MoLFormer)
-
-Datasets are available at https://ibm.box.com/v/MoLFormer-data
-
-More details can be found in https://github.com/IBM/molformer
--->
 
 ## Datasets
 
@@ -492,16 +440,7 @@ or
 
 python main.py --do_infer
 ```
-<!--
-For a single GPU inference:
-```
-python main.py --do_ensemble
-```
-For multiple GPUs inference:
-```
-python main.py --do_infer   
-```
--->
+
 
 - 1)  <b>The ensemble scoring strategy</b>: We provide the example scripts to perform inference with a single GPU:
 ```python
@@ -653,154 +592,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
 
-<!--
-## Example
 
-### Case Study 1: Inference: N small molecules vs N RNA target:
-
-<details>
-   <summary>Click here for the code!</summary>
-
-```python
-DIR=./results/SMRTnet_model
-
-cd ${WorkDir}
-
-python main.py --do_ensemble --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/ensemble --infer_rna_dir ${INPUTPATH}/data/rna.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
-
-```
-
-or 
-
-```python
-CV=1
-nohup python main.py --do_infer --cuda 0 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ./dataset/experiment_6_target.txt \
-    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
-
-CV=2
-nohup python main.py --do_infer --cuda 1 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ./dataset/experiment_6_target.txt \
-    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
-
-CV=3
-nohup python main.py --do_infer --cuda 2 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ./dataset/experiment_6_target.txt \
-    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
-
-CV=4
-nohup python main.py --do_infer --cuda 3 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ./dataset/experiment_6_target.txt \
-    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
-
-CV=5
-nohup python main.py --do_infer --cuda 4 \
-    --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR}/model_CV_${CV}_best.pth \
-    --infer_out_dir ./results/screenDrug/results_all_screen_${CV}_DL.txt \
-	--infer_rna_dir ./dataset/experiment_6_target.txt \
-    --infer_drug_dir ./dataset/all_databaseI_drug_iso.txt &
-
-```
-
-</details>
-
-
-### Case Study 2: Benchmarking: benchmark evalutation:
-
-<details>
-   <summary>Click here for the code!</summary>
-
-```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-
-python main.py --do_benchmark --cuda 0 --data_dir ./demo/ours_v3.txt --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/benchmark
-
-```
-</details>
-
-### Case Study 3: transcript-wide analysis (RNA targets more than 31nt)
-
-<details>
-   <summary>Click here for the code!</summary>
-
-```python
-
-  python main.py --do_ensemble
-
-```
-</details>
-
-
-### Case Study 4: Binding site prediction:
-
-<details>
-   <summary>Click here for the code!</summary>
-
-```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-
-python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir ./results/MYC --infer_rna_dir ./data/rna.txt \
-    --infer_drug_dir ./data/drug.txt --smooth_steps 3
-
-```
-</details>
-
-### Case Study 5: Key functional group prediction
-
-<details>
-   <summary>Click here for the code!</summary>
-
-```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-
-python main.py --do_explain --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} \
-    --infer_out_dir ./results/MYC --infer_rna_dir ./data/rna.txt \
-    --infer_drug_dir ./data/drug.txt --smooth_steps 3
-
-```
-</details>
-
-
-### Case Study 6: Fragment-based design
-
-<details>
-   <summary>Click here for the code!</summary>
-
-```python
-DIR=./results/20231229_lbncab4_v3_allrna_ep100_bs32_lr00001_linear_simple_drug_cls_1024_1024_1024_512_CV5_4_fix
-
-cd ${WorkDir}
-python main.py --do_delta --cuda 0 --infer_config_dir ${DIR}/config.pkl --infer_model_dir ${DIR} --infer_out_dir ./results/delta --infer_rna_dir ${INPUTPATH}/data/rna2.txt --infer_drug_dir ${INPUTPATH}/data/drug.txt
-
-Draw linkers for small molecule using [OPENBABEL](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
-```
-</details>
--->
-
-<!--
-## Web Server
-We also provide a website [http://smrtnet.zhanglab.net/](http://101.6.120.41:9990/drug/) to predict and visualize the interactions between small molecule and RNA.
-<p align="center"><img src="figs/webserver.png" width=100% /></p>
--->
-<!--
-## Referenced Repos
-1. [MoLFormer](https://github.com/IBM/molformer)
-2. CNN: [LeNet](https://doi.org/10.1109/5.726791) and [AlexNet](https://doi.org/10.1145/3065386)
-3. [ResNet](https://doi.org/10.48550/arXiv.1512.03385)
-4. [GAT](https://doi.org/10.48550/arXiv.1710.10903)
-5. [Transformer](https://doi.org/10.48550/arXiv.1706.03762)
-6. [OPENBABEL](https://github.com/openbabel/openbabel) and [its web](https://www.cheminfo.org/Chemistry/Cheminformatics/FormatConverter/index.html)
-7. [DSSR](http://home.x3dna.org/)
--->
 ## Referenced Repos
 1. MoLFormer: [https://github.com/IBM/molformer](https://github.com/IBM/molformer)
 2. Convolutional neural networks: [LeNet](https://doi.org/10.1109/5.726791) and [AlexNet](https://doi.org/10.1145/3065386)
