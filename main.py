@@ -218,7 +218,7 @@ def main():
             with open(file_results, 'a') as f:
                 f.write(str(data_num) + '\n')
 
-            # 11.创建Dataloader
+
             params_train = {'batch_size': args.batch_size, 'shuffle': True, 'num_workers': 0, 'drop_last': False}
             params_valid = {'batch_size': args.batch_size, 'shuffle': True, 'num_workers': 0, 'drop_last': False}
             params_test = {'batch_size': args.batch_size, 'shuffle': False, 'num_workers': 0, 'drop_last': False,
@@ -270,12 +270,10 @@ def main():
                     print("Early stop at %d, %s " % (best_epoch, "and generate best model!"))
                     break
 
-                ## 14. 显示terminal日志文件
+
                 epoch_len = len(str(args.epoch))
                 if (epoch == best_epoch):
                     print_valid_msg = (f'Valid at Epoch:{epoch:>{epoch_len}}, ' +
-                                    f'train_loss: {t_met.other[0]:.3f} ' +
-                                    f'valid_loss: {v_met.other[0]:.3f} ' +
                                     f'valid_acc: {v_met.acc:.3f} ' +
                                     f'valid_pre: {v_met.pre:.3f} ' +
                                     f'valid_rec: {v_met.rec:.3f} ' +
@@ -284,8 +282,6 @@ def main():
                                     f'***')
                 else:
                     print_valid_msg = (f'Valid at Epoch:{epoch:>{epoch_len}}, ' +
-                                    f'train_loss: {t_met.other[0]:.3f} ' +
-                                    f'valid_loss: {v_met.other[0]:.3f} ' +
                                     f'valid_acc: {v_met.acc:.3f} ' +
                                     f'valid_pre: {v_met.pre:.3f} ' +
                                     f'valid_rec: {v_met.rec:.3f} ' +
@@ -298,14 +294,12 @@ def main():
                 print(print_valid_msg)
 
                 if args.tfboard and writer is not None:
-                    writer.add_scalar('loss/train',      t_met.other[0], epoch)
                     writer.add_scalar('accuracy/train',  t_met.acc, epoch)
                     writer.add_scalar('precision/train', t_met.pre, epoch)
                     writer.add_scalar('recall/train',    t_met.rec, epoch)
                     writer.add_scalar('f1/train',        t_met.f1, epoch)
                     writer.add_scalar('AUC/train',       t_met.auc, epoch)
                     writer.add_scalar('PRC/train',       t_met.prc, epoch)
-                    writer.add_scalar('loss/valid',      v_met.other[0], epoch)
                     writer.add_scalar('accuracy/valid',  v_met.acc, epoch)
                     writer.add_scalar('precision/valid', v_met.pre, epoch)
                     writer.add_scalar('recall/valid',    v_met.rec, epoch)
@@ -320,7 +314,6 @@ def main():
 
 
             best_train_msg = (f'Best_train at Epoch: {best_epoch:d} ' +
-                            f'train_loss: {t_met.other[0]:.3f} ' +
                             f'train_accuracy: {t_met.acc:.3f} ' +
                             f'train_precision: {t_met.pre:.3f} ' +
                             f'train_recall: {t_met.rec:.3f} ' +
@@ -329,7 +322,6 @@ def main():
                             f'train_PRC: {t_met.prc:.3f} ')
 
             best_valid_msg = (f'Best_valid at Epoch: {best_epoch:d} ' +
-                            f'valid_loss: {v_met.other[0]:.3f} ' +
                             f'valid_accuracy: {v_met.acc:.3f} ' +
                             f'valid_precision: {v_met.pre:.3f} ' +
                             f'valid_recall: {v_met.rec:.3f} ' +
@@ -338,7 +330,6 @@ def main():
                             f'valid_PRC: {v_met.prc:.3f} ')
 
             best_test_msg = (f'Best__test at Epoch: {best_epoch:d} ' +
-                            f'test__loss: {met.other[0]:.3f} ' +
                             f'test__accuracy: {met.acc:.3f} ' +
                             f'test__precision: {met.pre:.3f} ' +
                             f'test__recall: {met.rec:.3f} ' +
@@ -434,7 +425,6 @@ def main():
         met, loss, Y, P = test(args, best_model, device, test_loader, criterion)
         #print(Y,P)
         best_test_msg = (#f'Best__test at Epoch: {best_epoch:d} ' +
-                         f'test__loss: {met.other[0]:.3f} ' +
                          f'test__accuracy: {met.acc:.3f} ' +
                          f'test__precision: {met.pre:.3f} ' +
                          f'test__recall: {met.rec:.3f} ' +
