@@ -274,6 +274,7 @@ def main():
                 epoch_len = len(str(args.epoch))
                 if (epoch == best_epoch):
                     print_valid_msg = (f'Valid at Epoch:{epoch:>{epoch_len}}, ' +
+                                    f'train_loss: {t_met.other[0]:.3f} ' +
                                     f'valid_acc: {v_met.acc:.3f} ' +
                                     f'valid_pre: {v_met.pre:.3f} ' +
                                     f'valid_rec: {v_met.rec:.3f} ' +
@@ -282,6 +283,7 @@ def main():
                                     f'***')
                 else:
                     print_valid_msg = (f'Valid at Epoch:{epoch:>{epoch_len}}, ' +
+                                    f'train_loss: {t_met.other[0]:.3f} ' +
                                     f'valid_acc: {v_met.acc:.3f} ' +
                                     f'valid_pre: {v_met.pre:.3f} ' +
                                     f'valid_rec: {v_met.rec:.3f} ' +
