@@ -534,7 +534,7 @@ python main.py --do_infer \
     		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
     		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
-#6. Their outputs are combined by median to produce the final binding score
+#6. Final binding scores were obtained by taking the median of model outputs.
 
 python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 
