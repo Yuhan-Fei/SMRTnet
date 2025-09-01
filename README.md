@@ -440,7 +440,8 @@ python main.py --do_infer
 ```python
 DIR=./results/SMRTnet_model
 
-python main.py --do_ensemble --cuda 0 \
+python main.py --do_ensemble \
+               --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./data/ensemble \
@@ -461,72 +462,77 @@ DIR=./results/SMRTnet_model
 #1. Run 1-fold CV model on No.1 of GPU
 CV=1
 mkdir -p ./results/MYC_with_RiboTac/CV_1
-python main.py --do_infer --cuda 1 \
-    --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
-    --infer_out_dir ./results/MYC_with_RiboTac/CV_1/results.txt \
-    --infer_rna_dir ./data/MYC_IRES.txt \
-    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
-    --lm_rna_config ./LM_RNA/parameters.json \
-    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+python main.py --do_infer \
+               --cuda 1 \
+               --infer_config_dir ${DIR}/config.pkl \
+			   --infer_model_dir ${DIR}/SMRTnet_cv1.pth \
+    		   --infer_out_dir ./results/MYC_with_RiboTac/CV_1/results.txt \
+    	       --infer_rna_dir ./data/MYC_IRES.txt \
+    		   --infer_drug_dir ./data/MYC_RIBOTAC.txt \
+    		   --lm_rna_config ./LM_RNA/parameters.json \
+    		   --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 #2. Run 2-fold CV model on No.2 of GPU
 CV=2
 mkdir -p ./results/MYC_with_RiboTac/CV_2
-python main.py --do_infer --cuda 2 \
-    --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/SMRTnet_cv2.pth \
-    --infer_out_dir ./results/MYC_with_RiboTac/CV_2/results.txt \
-    --infer_rna_dir ./data/MYC_IRES.txt \
-    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
-    --lm_rna_config ./LM_RNA/parameters.json \
-    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+python main.py --do_infer \
+               --cuda 2 \
+    		   --infer_config_dir ${DIR}/config.pkl \
+    		   --infer_model_dir ${DIR}/SMRTnet_cv2.pth \
+    		   --infer_out_dir ./results/MYC_with_RiboTac/CV_2/results.txt \
+    		   --infer_rna_dir ./data/MYC_IRES.txt \
+    		   --infer_drug_dir ./data/MYC_RIBOTAC.txt \
+    		   --lm_rna_config ./LM_RNA/parameters.json \
+    		   --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 #3. Run 3-fold CV model on No.3 of GPU
 CV=3
 mkdir -p ./results/MYC_with_RiboTac/CV_3
-python main.py --do_infer --cuda 3 \
-    --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/SMRTnet_cv3.pth \
-    --infer_out_dir ./results/MYC_with_RiboTac/CV_3/results.txt \
-    --infer_rna_dir ./data/MYC_IRES.txt \
-    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
-    --lm_rna_config ./LM_RNA/parameters.json \
-    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+python main.py --do_infer \
+			   --cuda 3 \
+    		   --infer_config_dir ${DIR}/config.pkl \
+    		   --infer_model_dir ${DIR}/SMRTnet_cv3.pth \
+    		   --infer_out_dir ./results/MYC_with_RiboTac/CV_3/results.txt \
+    		   --infer_rna_dir ./data/MYC_IRES.txt \
+    		   --infer_drug_dir ./data/MYC_RIBOTAC.txt \
+    		   --lm_rna_config ./LM_RNA/parameters.json \
+    		   --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 #4. Run 4-fold CV model on No.4 of GPU
 CV=4
 mkdir -p ./results/MYC_with_RiboTac/CV_4
-python main.py --do_infer --cuda 4 \
-    --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/SMRTnet_cv4.pth \
-    --infer_out_dir ./results/MYC_with_RiboTac/CV_4/results.txt \
-    --infer_rna_dir ./data/MYC_IRES.txt \
-    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
-    --lm_rna_config ./LM_RNA/parameters.json \
-    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+python main.py --do_infer \
+               --cuda 4 \
+               --infer_config_dir ${DIR}/config.pkl \
+    		   --infer_model_dir ${DIR}/SMRTnet_cv4.pth \
+    		   --infer_out_dir ./results/MYC_with_RiboTac/CV_4/results.txt \
+    		   --infer_rna_dir ./data/MYC_IRES.txt \
+    		   --infer_drug_dir ./data/MYC_RIBOTAC.txt \
+    		   --lm_rna_config ./LM_RNA/parameters.json \
+    		   --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 #5. Run 5-fold CV model on No.5 of GPU
 CV=5
 mkdir -p ./results/MYC_with_RiboTac/CV_5
-python main.py --do_infer --cuda 5 \
-    --infer_config_dir ${DIR}/config.pkl \
-    --infer_model_dir ${DIR}/SMRTnet_cv5.pth \
-    --infer_out_dir ./results/MYC_with_RiboTac/CV_5/results.txt \
-    --infer_rna_dir ./data/MYC_IRES.txt \
-    --infer_drug_dir ./data/MYC_RIBOTAC.txt \
-    --lm_rna_config ./LM_RNA/parameters.json \
-    --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
-    --lm_mol_config ./LM_Mol/bert_vocab.txt  \
-    --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
+python main.py --do_infer \
+		       --cuda 5 \
+    		   --infer_config_dir ${DIR}/config.pkl \
+    		   --infer_model_dir ${DIR}/SMRTnet_cv5.pth \
+		       --infer_out_dir ./results/MYC_with_RiboTac/CV_5/results.txt \
+    		   --infer_rna_dir ./data/MYC_IRES.txt \
+    		   --infer_drug_dir ./data/MYC_RIBOTAC.txt \
+    		   --lm_rna_config ./LM_RNA/parameters.json \
+    		   --lm_rna_model ./LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt \
+    		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
+    		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 
 #6. Their outputs are combined by median to produce the final binding score
 
@@ -545,7 +551,8 @@ SMRTnet uses an ensemble scoring strategy to benchmark known interaction/non-int
 ```python
 DIR=./results/SMRTnet_model
 
-python main.py --do_benchmark --cuda 0 \
+python main.py --do_benchmark \
+			   --cuda 0 \
                --infer_config_dir ${DIR}/config.pkl \
                --infer_model_dir ${DIR} \
                --infer_out_dir ./results/RBIND \
@@ -568,7 +575,8 @@ We provide the example scripts to perform interpretability of model:
 ```python
 DIR=./results/SMRTnet_model
 
-python main.py --do_explain --cuda 0 \
+python main.py --do_explain \
+    --cuda 0 \
     --infer_config_dir ${DIR}/config.pkl \
     --infer_model_dir ${DIR} \
     --infer_out_dir ./results/MYC
