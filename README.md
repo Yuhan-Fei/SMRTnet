@@ -133,7 +133,7 @@ conda install dglteam/label/th24_cu121::dgl
 
 ### :pushpin: Run SMRTnet via Google Colab
 
-We have developed an online jupyter-notebook that allows installation-free execution of SMRTnet directly in a web browser via Google Colab  (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing). This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
+We have developed an online jupyter-notebook that allows installation-free execution of SMRTnet directly in a web browser via Google Colab. This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
 
 
 - **Step 1:** Please click the link (https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing), then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
