@@ -73,7 +73,7 @@ pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --ind
 pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
-**Note:** This installation method will be maintained periodically.
+<!-- **Note:** This installation method will be maintained periodically. -->
 
 **2) The Latest version for installation** 
 ```bash
@@ -84,7 +84,7 @@ pip install torch torchvision
 pip install smrtnet-latest
 conda install dglteam/label/th24_cu121::dgl
 ```
-**Note:** This installation method will undergo frequent iterations.
+<!-- **Note:** This installation method will undergo frequent iterations. -->
 
 :heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version. We have also uploaded the entire SMRTnet environment to Zenodo (https://zenodo.org/records/14970392) as an alternative option.
 
