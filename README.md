@@ -40,7 +40,7 @@ Please contact us if you are interested in our work or potential academic collab
 - [:five: Usage](#usage)
   - How to train your own model
   - How to test model performance
-  - How to make prediction for novel interactions
+  - How to perform interence for novel interactions
   - How to benchmark on known interactions
   - How to identify potential binding sites
 - [:six: Referenced Repos](#referenced-repos)
