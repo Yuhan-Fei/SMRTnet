@@ -286,7 +286,7 @@ The format of data for training is show as follow, the length of RNA sequence an
 | CC1=CC(=O)OC2=C1C=CC(=C2)O | GAUGUUGACUGUUGAAUCUCAUGGCAACACC | (.(((((.((((.(.....)))))))))).) | 0 | 
 | ... | ... | ... | ... | 
 
-Users can use do_train or do_test to run the data. 
+Users can use `do_train` or `do_test` to run the data. 
 
 
 ### :pushpin: Datasets for inference:
@@ -309,7 +309,7 @@ The SMILES of small molecule should meet the requirement of RDkit.Data are split
 | 132201-33-3 | C1=CC=C(C=C1)C(C(C(=O)O)O)NC(=O)C2=CC=CC=C2 | 
 | ... | ... | 
 
-Users can use do_ensemble or do_infer to run the data. 
+Users can use `do_ensemble` or `do_infer` to run the data. 
 
 Additionally, we released a curated library consisting of 7,350 compounds of natural products and metabolites for drug screening. Specifically, we integrated five natural product libraries from the in-house chemical library of the Center of Pharmaceutical Technology, Tsinghua University (http://cpt.tsinghua.edu.cn/hts/), including the Natural Product Library for HTS , the BBP Natural Product Library , the TargetMol Natural Compound Library , the MCE Natural Product Library , and the Pharmacodia Natural Product Library. This library is available in the data folder: `natural_compounds.txt`
 
@@ -335,7 +335,7 @@ The format of data for benchmarking is show as follow, the length of RNA sequenc
 | 2 | c12c(ncnc1N)[nH]cn2 | GGACAUAUAAUCGCGUGGAUAUGGCACGCAAGUUUCUACCGGGCACCGUAAAUGUCCGAUUAUGUCC | (.(((((.((((.(.....)))))))))).) | 0 | 
 | ... | ... | ... | ... | ... | 
 
-Users can use do_benchmark to run the data. 
+Users can use `do_benchmark` to run the data. 
 
 
 ## Usage
