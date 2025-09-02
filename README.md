@@ -1,6 +1,6 @@
 # :sparkles: SMRTnet :sparkles:
 
-This is a [PyTorch](https://pytorch.org/) implementation of our paper:
+This is a [PyTorch](https://pytorch.org/) implementation of our study:
 
 ## :dart: Predicting <ins>s</ins>mall <ins>m</ins>olecule and <ins>R</ins>NA <ins>t</ins>arget interactions using deep neural <ins>net</ins>work
 
