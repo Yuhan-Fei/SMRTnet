@@ -587,7 +587,7 @@ python main.py --do_explain \
     		   --lm_mol_config ./LM_Mol/bert_vocab.txt  \
     		   --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 ```
-You can run [interpret.ipynb](./interpret.ipynb) after executing the command above to plot the binding site results as below:
+You can run [interpret.ipynb](./interpret.ipynb) after executing the command above to visualize the potential binding sites on RNA as below:
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
