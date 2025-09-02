@@ -18,14 +18,14 @@ Taken together, SMRTnet expands the scope of feasible RNA targets and accelerate
 
 ## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
-If you found this tools useful, please cite our paper (under revision):
+If you use this tool in your research, we kindly ask that you cite our paper (currently under revision): 
 ```
 Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang,
 
 Predicting small molecule and RNA target interactions using deep neural network, 2025.
 ```
 ## :telephone: Contact us
-Please contact us if you are interested in our work and look for academic collaboration:  
+Please contact us if you are interested in our work or potential academic collaborations.
 - Dr. Yuhan Fei, School of Life Sciences, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
@@ -63,10 +63,13 @@ nvcc --version
 ```
 <!-- Note: All tests were conducted on a **Linux Ubuntu 13.x** operating system with CUDA versions **11.x and 12.x**.  -->
 
+:heavy_exclamation_mark: Note: To install **Torch** and **DGL** versions compatible with your CUDA setup, please refer to the following URLs:  
+- Torch: https://pytorch.org/get-started/previous-versions/  
+- DGL: https://www.dgl.ai/pages/start.html
+
 ### :pushpin: Install via PyPI
 **1) The Stable version for installation** (Recommend)
 ```bash
-## pip install our packages online 
 conda create -n smrtnet python=3.8.10
 conda activate smrtnet
 pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --index-url https://download.pytorch.org/whl/cu118
@@ -77,7 +80,6 @@ conda install dglteam/label/th24_cu118::dgl
 
 **2) The Latest version for installation** 
 ```bash
-## pip install our packages online
 conda create -n smrtnet_latest python=3.8.10
 conda activate smrtnet_latest
 pip install torch torchvision
@@ -86,7 +88,7 @@ conda install dglteam/label/th24_cu121::dgl
 ```
 <!-- **Note:** This installation method will undergo frequent iterations. -->
 
-:heavy_exclamation_mark: **Note:** Please visit https://pytorch.org/get-started/previous-versions/ to install the correct torch and the correponding [dgl-cuda](https://anaconda.org/dglteam/repo) according to your own CUDA version. We have also uploaded the entire SMRTnet environment to Zenodo (https://zenodo.org/records/14970392) as an alternative option.
+:heavy_exclamation_mark: **Note:** The stable version of SMRTnet environment is also available on Zenodo (https://zenodo.org/records/14970392) for alternative access.
 
 
 | Package | Stable version | Latest version | Remarks |
@@ -117,7 +119,7 @@ conda install dglteam/label/th24_cu121::dgl
 |xsmiles|  0.2.2  |  0.2.2  | Up to date  |
 
 
-:heavy_exclamation_mark: **Note:** We conducted usability tests on both install methods with a diverse group of users to validate the setup process. All participants were able to independently install and run SMRTnet.
+:heavy_exclamation_mark: **Note:** We conducted usability tests of both installation methods with a diverse group of users to validate the setup process. All participants were able to successfully install and run SMRTnet independently.
 
 |     GPUs     | Driver version | CUDA version| Stable version |  Latest version  |
 |-------------|----------------|---------------|--------------|-------------|
@@ -131,7 +133,7 @@ conda install dglteam/label/th24_cu121::dgl
 
 ### :pushpin: Run SMRTnet via Google Colab
 
-We have developed an online jupyter-notebook that enables installation-free execution of SMRTnet in the web browser via Google Colab  (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing). This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
+We have developed an online jupyter-notebook that allows installation-free execution of SMRTnet directly in a web browser via Google Colab  (https://colab.research.google.com/drive/1pm5ZCD8cFRvPA9RPvtEaCHoU1p5X5v4Y?usp=sharing). This solution supports both inference and interpretability functionalities while eliminating system-specific installation issues with limited GPU resources. 
 
 
 - **Step 1:** Please click the link (https://drive.google.com/drive/folders/1HQo3o2saY5U9vPqebz4ZdpCVVQXqw0q_?usp=sharing), then copy the shared folder to your own Google Drive by dragging it into your Drive interface:
