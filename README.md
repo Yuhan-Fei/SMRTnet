@@ -551,7 +551,7 @@ You can run the benchmarking with the following command:
 python main.py --do_benchmark
 ```
 
-SMRTnet uses an ensemble scoring strategy, combining outputs from the five models of 5-fold cross-validation to benchmark known small molecule and RNA pairs. In the example, we use the `SMRTnet_benchmark_RBIND.txt dataset`, but you can replace it with any of the other benchmark datasets available in the data folder.
+SMRTnet uses an ensemble scoring strategy, combining outputs from the five models of 5-fold cross-validation to benchmark known small molecule-RNA pairs. In the example, we use the `SMRTnet_benchmark_RBIND.txt dataset`, but you can replace it with any of the other benchmark datasets available in the data folder.
 
 ```python
 DIR=./results/SMRTnet_model
