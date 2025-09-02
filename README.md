@@ -153,7 +153,37 @@ We have developed an online jupyter-notebook that allows installation-free execu
 ## Download pre-trained models from Zenodo
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
-<!--
+
+<!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
+
+Since the pre-trained models used in SMRTnet are large, we have uploaded them to Zenodo for users to download directly. Users required to download the pre-trained models — including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the pre-trained SMRTnet model — from the link below and place them in the SMRTnet folder (see the Repo Structure section below for details).
+
+- Pre-trained models used in SMRTnet can be downloaded from Zenodo: https://zenodo.org/records/14715564, and place them into the SMRTnet directory.
+
+<p align="center"><img src="figs/zenodo.png" width=100% /></p>  
+
+- Alternatively, we provided the command lines for users to download the pre-trained models:
+
+```bash
+
+#Step 1: Download SMRTnet to your device and ensure that your current working directory is the `SMRTnet` folder:
+git clone https://github.com/Yuhan-Fei/SMRTnet.git
+
+# Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
+wget https://zenodo.org/records/14715564/files/LM_Mol.zip
+unzip LM_Mol.zip
+
+# Step 3: Download and unzip the pre-trained RNA language model (RNASwan-seq)
+wget https://zenodo.org/records/14715564/files/LM_RNA.zip
+unzip LM_RNA.zip
+
+# Step 4: Download and unzip the SMRTnet model into the `results` folder within the SMRTnet directory
+wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
+unzip SMRTnet_model.zip -d ./results
+
+```
+
+
 ### :postbox: The details of each module
 
 <details>
@@ -181,36 +211,7 @@ We have developed an online jupyter-notebook that allows installation-free execu
    <summary> Click here for architecture of multimodal data fusion module </summary>
    <p align="center"><img src="figs/MDF.png" width=100% /></p>
 </details>
--->
 
-<!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
-
-Since the pre-trained models used in SMRTnet are large, we have uploaded them to Zenodo for users to download directly. Users required to download the pre-trained models — including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the pre-trained SMRTnet model — from the link below and place them in the SMRTnet folder (see the Repo Structure section below for details).
-
-- Pre-trained models used in SMRTnet can be downloaded from Zenodo: https://zenodo.org/records/14715564, and place them into the SMRTnet directory.
-
-<p align="center"><img src="figs/zenodo.png" width=100% /></p>  
-
-- Alternatively, we provided the command lines for users to download the pre-trained models:
-
-```bash
-
-#Step 1: Download SMRTnet to your device and ensure that your current working directory is the `SMRTnet` folder:
-git clone https://github.com/Yuhan-Fei/SMRTnet.git
-
-# Step 2: Download and unzip the pre-trained chemical language model (MoLFormer)
-wget https://zenodo.org/records/14715564/files/LM_Mol.zip
-unzip LM_Mol.zip
-
-# Step 3: Download and unzip the pre-trained RNA language model (RNASwan-seq)
-wget https://zenodo.org/records/14715564/files/LM_RNA.zip
-unzip LM_RNA.zip
-
-# Step 4:  Download and unzip the SMRTnet model to the `results folder` in SMRTnet
-wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
-unzip SMRTnet_model.zip -d ./results
-
-```
 
 
 ## Repo Structure:
