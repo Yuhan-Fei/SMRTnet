@@ -2,7 +2,7 @@
 
 This is a [PyTorch](https://pytorch.org/) implementation of our paper:
 
-## :page_facing_up: Predicting small molecule and RNA target interactions using deep neural network
+## :dart: Predicting small molecule and RNA target interactions using deep neural network
 
 <p align="justify" >
 Small molecules can bind RNAs to regulate their fate and functions, providing promising opportunities for treating human diseases. However, current tools for predicting small molecule-RNA interactions (SRIs) require prior knowledge of RNA tertiary structures, limiting their utility in drug discovery. Here, we present SMRTnet, a deep learning method to predict SRIs based on RNA secondary structure. By integrating <b>two large language models</b>, <b>convolutional neural networks</b>, <b>graph attention networks</b>, and <b>multimodal data fusion</b>, SMRTnet achieves high performance across multiple experimental benchmarks, substantially outperforming existing state-of-the-art tools. 
@@ -30,7 +30,7 @@ Please contact us if you are interested in our work or potential academic collab
 - Dr. Yuhan Fei, School of Life Sciences, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
 - Jiasheng Zhang, School of Life Sciences, Tsinghua University, PhD student, zjs21@mails.tsinghua.edu.cn
 
-## :speech_balloon: Table of contents
+## :book: Table of contents
 - [:one: Getting Started](#getting-started)
   - Install via PyPI
   - Run SMRTnet via Google Colab
@@ -185,31 +185,31 @@ unzip SMRTnet_model.zip -d ./results
 
 ```
 
-### :postbox: The details of each module in SMRTnet
+### :speech_balloon: The details of each module in SMRTnet
 
 <details>
-   <summary> Click here for architecture of RNA language model  </summary>
+   <summary> Click here to view the architecture of the RNA language model </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of Two-layer convolution block  </summary>
+   <summary> Click here to view the architecture of the two-layer convolution block  </summary>
    <p align="center"><img src="figs/CNN.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of Chemical language model  </summary>
+   <summary> Click here to view the architecture of the chemical language model  </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
    Figure adapted from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
 
 <details>
-   <summary> Click here for architecture of Three-layer graph attention block </summary>
+   <summary> Click here to view the architecture of the three-layer graph attention block </summary>
    <p align="center"><img src="figs/GAT.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of multimodal data fusion block </summary>
+   <summary> Click here to view the architecture of the multimodal data fusion block </summary>
    <p align="center"><img src="figs/MDF.png" width=100% /></p>
 </details>
 
