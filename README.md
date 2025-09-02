@@ -45,7 +45,7 @@ Please contact us if you are interested in our work or potential academic collab
   - How to perform model interpretibility
 - [:six: Referenced Repos](#referenced-repos)
 - [:seven: Copyright and License](#copyright-and-license)
-- [:eight: Patent](#patent)
+- [:eight: Patent Declaration](#patent-declaration)
 - [:nine: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
@@ -611,7 +611,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 ## Copyright and License
 This project is free to use for non-commercial purposes - see the [LICENSE](LICENSE) file for details.
 
-## Patent
+## Patent Declaration
 Patent Name：小分子和RNA互作关系的预测方法、系统、存储介质和设备  
 Inventors：张强锋 (Qiangfeng Cliff Zhang)、费宇涵 (Yuhan Fei)、张佳胜 (Jiasheng Zhang)  
 Publication Number：CN120199320A  
