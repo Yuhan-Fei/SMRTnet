@@ -15,6 +15,7 @@ Taken together, SMRTnet expands the scope of feasible RNA targets and accelerate
 </p>
 
 <p align="center"><img src="figs/workflow.png" width=100% /></p>
+<p align="center" > <b>Overview of SMRTnet</b> </p>
 
 ## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
@@ -153,6 +154,7 @@ We have developed an online jupyter-notebook that allows installation-free execu
 ## Download pre-trained models from Zenodo
 
 <p align="center"><img src="figs/architecture.png" width=100% /></p>
+<p align="center" > <b>The architecture of SMRTnet</b> </p>
 
 <!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
 
@@ -183,32 +185,31 @@ unzip SMRTnet_model.zip -d ./results
 
 ```
 
-
-### :postbox: The details of each module
+### :postbox: The details of each module in SMRTnet
 
 <details>
-   <summary> Click here for architecture of RNA sequence encoder (RNA language model) </summary>
+   <summary> Click here for architecture of RNA language model  </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of RNA structure encoder (convolution block) </summary>
+   <summary> Click here for architecture of Two-layer convolution block  </summary>
    <p align="center"><img src="figs/CNN.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule SMILES encoder (Chemical language model) </summary>
+   <summary> Click here for architecture of Chemical language model  </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
-   Figure from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
+   Figure adapted from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
 
 <details>
-   <summary> Click here for architecture of small molecule structure encoder (Graph attention block)</summary>
+   <summary> Click here for architecture of Three-layer graph attention block </summary>
    <p align="center"><img src="figs/GAT.png" width=100% /></p>
 </details>
 
 <details>
-   <summary> Click here for architecture of multimodal data fusion module </summary>
+   <summary> Click here for architecture of multimodal data fusion block </summary>
    <p align="center"><img src="figs/MDF.png" width=100% /></p>
 </details>
 
