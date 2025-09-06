@@ -77,6 +77,7 @@ pip install torch==2.4.1+cu118 torchvision==0.19.1+cu118 torchaudio==2.4.1 --ind
 pip install smrtnet
 conda install dglteam/label/th24_cu118::dgl
 ```
+The stable version of SMRTnet environment is also available on Zenodo (https://zenodo.org/records/14970392) for offline installation.  
 <!-- **Note:** This installation method will be maintained periodically. -->
 
 **2) The Latest version for installation** 
@@ -89,8 +90,7 @@ conda install dglteam/label/th24_cu121::dgl
 ```
 <!-- **Note:** This installation method will undergo frequent iterations. -->
 
-:heavy_exclamation_mark: **Note:** The stable version of SMRTnet environment is also available on Zenodo (https://zenodo.org/records/14970392) for alternative access.
-
+:heavy_exclamation_mark: **Note:** The documentation now explicitly details these two installation pathways and provides complete, version-specific dependency lists for reference:
 
 | Package | Stable version | Latest version | Remarks |
 |---------|----------------|----------------|---------|
@@ -118,9 +118,13 @@ conda install dglteam/label/th24_cu121::dgl
 |tqdm|  4.67.1  |  4.67.1 | Up to date |
 |transformers|  4.28.1  |  4.28.1  | Required |
 |xsmiles|  0.2.2  |  0.2.2  | Up to date  |
+- ‘Required’ denotes that SMRTnet requires this specific version of the indicated package for proper operation;   
+- ‘Up to date’ indicates that the dependency is at the latest version of the indicated package;   
+- ‘Constrained by dependencies’ explains that, although a newer version is available, compatibility with other dependencies limits the update. 
 
 
-:heavy_exclamation_mark: **Note:** We conducted usability tests of both installation methods with a diverse group of users to validate the setup process. All participants were able to successfully install and run SMRTnet independently.
+:heavy_exclamation_mark: **Note:** We conducted usability tests of both installation methods with a diverse group of users to validate the setup process, and all participants were able to successfully install and run SMRTnet independently. The hardware and software details are listed below:
+
 
 |     GPUs     | Driver version | CUDA version| Stable version |  Latest version  |
 |-------------|----------------|---------------|--------------|-------------|
