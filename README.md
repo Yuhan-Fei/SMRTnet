@@ -23,7 +23,7 @@ If you use this tool in your research, we kindly ask that you cite our paper (cu
 ```
 Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C,
 
-Predicting small molecule and RNA target interactions using deep neural network, 2025.
+Predicting small molecule and RNA target interactions using deep neural networks, 2025.
 ```
 <!-- Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang, -->
 ## :telephone: Contact us
