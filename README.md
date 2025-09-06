@@ -90,7 +90,7 @@ conda install dglteam/label/th24_cu121::dgl
 ```
 <!-- **Note:** This installation method will undergo frequent iterations. -->
 
-:heavy_exclamation_mark: **Note:** The documentation now explicitly details these two installation pathways and provides complete, version-specific dependency lists for reference:
+:heavy_exclamation_mark: **Note:** The table now explicitly details these two installation pathways and provides complete, version-specific dependency lists for reference:
 
 | Package | Stable version | Latest version | Remarks |
 |---------|----------------|----------------|---------|
