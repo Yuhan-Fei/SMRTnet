@@ -370,6 +370,8 @@ python main.py --do_train
 We provide the example scripts to train the model from scratch:
 
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 python main.py --do_train \
                --data_dir=./data/SMRTnet_data.txt \
                --cuda 0 \
@@ -390,6 +392,8 @@ python main.py --do_test
 We provide the example scripts to test the model:
 
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 DIR=./results/SMRTnet_model
 
 python main.py --do_test \
@@ -409,6 +413,8 @@ SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 mode
 
 For example, the performance of the SMRTnet_cv2 model was evaluated on a test set of 2-fold CV:
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 DIR=./results/SMRTnet_model
 
 python main.py --do_test \
@@ -443,6 +449,8 @@ python main.py --do_infer
 
 - 1)  <b>The ensemble scoring strategy</b>: We provide the example scripts to perform inference with a single GPU:
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 DIR=./results/SMRTnet_model
 
 python main.py --do_ensemble \
@@ -462,6 +470,8 @@ python main.py --do_ensemble \
 - 2) <b>The parallel ensemble scoring strategy</b>: We also provide the example scripts to accelerate inference with multipe GPUs simultaneously:
 
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 DIR=./results/SMRTnet_model
 
 #1. To run the 1-fold cross-validation model on GPU No. 1, use the following command:
@@ -554,6 +564,8 @@ python main.py --do_benchmark
 SMRTnet uses an ensemble scoring strategy, combining outputs from the five models of 5-fold cross-validation to benchmark known small molecule-RNA pairs. In the example, we use the `SMRTnet_benchmark_RBIND.txt dataset`, but you can replace it with any of the other benchmark datasets available in the data folder.
 
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 DIR=./results/SMRTnet_model
 
 python main.py --do_benchmark \
@@ -578,6 +590,8 @@ python main.py --do_explain
 We provide example scripts to perform model interpretability analyses:
 
 ```python
+#Please ensure that your current working directory is set to the `SMRTnet` folder.
+
 DIR=./results/SMRTnet_model
 
 python main.py --do_explain \
