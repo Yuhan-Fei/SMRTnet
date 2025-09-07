@@ -1,6 +1,6 @@
 ### Download SMRTnet model
 ```bash
-# Note: Please DO NOT remove the `config.pkl` file in the `results` folder.
+# Note: Please DO NOT remove the `config.pkl` file in the `SMRTnet_mode` folder.
 
 wget https://zenodo.org/records/14715564/files/SMRTnet_model.zip
 
