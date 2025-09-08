@@ -124,7 +124,7 @@ conda install dglteam/label/th24_cu121::dgl
 - ‘Constrained by dependencies’ explains that, although a newer version is available, compatibility with other dependencies limits the update. 
 
 
-:heavy_exclamation_mark: **Note:** We conducted usability tests of both installation methods with a diverse group of users to validate the setup process, and all participants were able to successfully install and run SMRTnet independently. The hardware and software details are listed below:
+:heavy_exclamation_mark: **Note:** We conducted usability tests of both installation methods with a diverse group of users to validate the setup process. The hardware and software details are listed below:
 
 
 |     GPUs     | Driver version | CUDA version| Stable version |  Latest version  |
