@@ -195,6 +195,9 @@ unzip SMRTnet_model.zip -d ./results
 <details>
    <summary> Click here to view the architecture of the RNA language model </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
+	```bash
+		How to get embedding from RNASwan-seq
+	```
 </details>
 
 <details>
