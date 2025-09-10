@@ -197,7 +197,7 @@ unzip SMRTnet_model.zip -d ./results
 <details>
    <summary> Click here to view the architecture of the RNA language model (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
-   We provide example scripts below to directly extract embeddings of given RNA sequences using RNASwan-seq.
+   :bangbang: We provide example scripts below to directly extract embeddings of given RNA sequences using RNASwan-seq.
 </details>
 
 <details>
