@@ -392,7 +392,7 @@ python main.py --do_train \
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
-### :spades: Evaluate model performance
+### :spades: Evaluate performance on the test set
 You can run the evaluation using: 
 ```
 python main.py --do_test
@@ -441,7 +441,7 @@ python main.py --do_test \
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
 
-### :diamonds: Perform interence for novel interactions
+### :diamonds: Make predictions for novel interactions
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
@@ -564,7 +564,7 @@ python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 ```
 
 
-### :clubs: Benchmark on known interactions
+### :clubs: Perform benchmarking on known interactions
 You can run the benchmarking with the following command:
 ```
 python main.py --do_benchmark
@@ -590,7 +590,7 @@ python main.py --do_benchmark \
 ```
 <p align="center"><img src="figs/demo5.png" width=40% /></p>  
 
-### :gem: Identify potential binding sites
+### :gem: Identify potential binding sites on RNA
 To compute high-attention regions using the trained models, you can run the following command and visualize the results in a Jupyter Notebook.
 ```
 python main.py --do_explain
@@ -619,9 +619,9 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
 
-### :bell: Extract RNA sequence embeddings from the RNA language model
+### :bell: Extract RNA sequence embeddings with our RNA language model (RNASwan-seq)
 
-<p align="justify" >We developed an RNA language model, RNASwan-seq, for learning RNA sequence representations. RNASwan-seq consisted of 30 transformer encoder blocks with Rotary Positional Embeddings. Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss</p>
+<p align="justify" >We developed an RNA language model, RNASwan-seq, for learning RNA sequence representations. RNASwan-seq consisted of 30 transformer encoder blocks with Rotary Positional Embeddings. Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss.</p>
 
 <details>
    <summary> Click here to view the architecture of the RNA language model (RNASwan-seq) </summary>
