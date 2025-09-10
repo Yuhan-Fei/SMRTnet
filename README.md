@@ -193,7 +193,7 @@ unzip SMRTnet_model.zip -d ./results
 ### :speech_balloon: The details of each module in SMRTnet
 
 <details>
-   <summary> Click here to view the architecture of the RNA language model </summary>
+   <summary> Click here to view the architecture of the RNA language model (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
 </details>
 
@@ -203,7 +203,7 @@ unzip SMRTnet_model.zip -d ./results
 </details>
 
 <details>
-   <summary> Click here to view the architecture of the chemical language model  </summary>
+   <summary> Click here to view the architecture of the chemical language model (MoLFormer)  </summary>
    <p align="center"><img src="figs/Mol_LM.png" width=100% /></p>
    Figure adapted from the MoLFormer publication (https://www.nature.com/articles/s42256-022-00580-7). 
 </details>
