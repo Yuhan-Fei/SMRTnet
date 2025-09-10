@@ -44,7 +44,7 @@ Please contact us if you are interested in our work or potential academic collab
   - How to perform interence for novel interactions
   - How to benchmark on known interactions
   - How to identify potential binding sites
-  - How to extract RNA sequence embeddings
+  <!-- - How to extract RNA sequence embeddings -->
 - [:six: Referenced Repos](#referenced-repos)
 - [:seven: Copyright and License](#copyright-and-license)
 - [:eight: Patent Declaration](#patent-declaration)
@@ -620,7 +620,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
-
+<!--
 ### :bell: Extract RNA sequence embeddings with our RNA language model
 <p align="justify" >We developed an RNA language model, <b>RNASwan-seq</b>, for learning RNA sequence representations. The model consisted of 30 transformer encoder blocks with Rotary Positional Embeddings. Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss.</p>
 
@@ -684,7 +684,7 @@ print(token_embeddings[0]) #Print embeddings for `Seq1`
 print(token_embeddings[1]) #Print embeddings for `Seq2`
 
 ```
-
+-->
 
 ## Referenced Repos
 1. MoLFormer: [https://github.com/IBM/molformer](https://github.com/IBM/molformer)
