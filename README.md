@@ -644,7 +644,7 @@ cuda=0
 device = torch.device("cuda:"+str(cuda) if torch.cuda.is_available() else "cpu")
 
 
-## Load RNA sequences
+## Prepare RNA sequences
 data = [
     ("Seq1", "CUCAUAUAAUCGCGUGGAUAUGGCACGCGAGUUUCUACCGGGCACCGUAAAUGUCCGACUAUGGG"),
     ("Seq2", "GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC"),
