@@ -619,8 +619,9 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
 
-### :bell: Extract RNA sequence embeddings
-We provide example scripts to extract embeddings of given RNA sequences based on the RNASwan-seq model:
+### :bell: Extract RNA sequence embeddings from the RNA language model
+
+We provide example scripts to extract embeddings of given RNA sequences from the RNASwan-seq:
 
 ```python
 # Note: Please ensure that your current working directory is set to the `SMRTnet` folder.
