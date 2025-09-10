@@ -44,6 +44,7 @@ Please contact us if you are interested in our work or potential academic collab
   - How to perform interence for novel interactions
   - How to benchmark on known interactions
   - How to identify potential binding sites
+  - How to extract RNA sequence embeddings
 - [:six: Referenced Repos](#referenced-repos)
 - [:seven: Copyright and License](#copyright-and-license)
 - [:eight: Patent Declaration](#patent-declaration)
@@ -364,7 +365,7 @@ python main.py --do_check
 ```
 -->
 
-### :hearts: Training 
+### :hearts: Train your model from scratch
 
 
 <!-- where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard -->
@@ -391,7 +392,7 @@ python main.py --do_train \
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
 
-### :spades: Evaluation
+### :spades: Evaluate model performance
 You can run the evaluation using: 
 ```
 python main.py --do_test
@@ -440,7 +441,7 @@ python main.py --do_test \
 <p align="center"><img src="figs/demo2.png" width=100% /></p>  
 
 
-### :diamonds: Inference
+### :diamonds: Perform interence for novel interactions
 SMRTnet uses an ensemble scoring strategy to make prediction based on the 5 models from 5-fold cross-validation
 <p align="center"><img src="figs/scoring.png" width=100% /></p>  
 
@@ -562,7 +563,8 @@ python mergeCV.py --data_dir ./results/MYC_with_RiboTac --results_name results
 
 ```
 
-### :clubs: Benchmarking
+
+### :clubs: Benchmark on known interactions
 You can run the benchmarking with the following command:
 ```
 python main.py --do_benchmark
@@ -588,8 +590,7 @@ python main.py --do_benchmark \
 ```
 <p align="center"><img src="figs/demo5.png" width=40% /></p>  
 
-
-### :gem: Interpretability
+### :gem: Identify potential binding sites
 To compute high-attention regions using the trained models, you can run the following command and visualize the results in a Jupyter Notebook.
 ```
 python main.py --do_explain
@@ -617,6 +618,59 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
+
+### :bell: Extract RNA sequence embeddings
+We provide example scripts toextract embeddings of given RNA sequences based on the RNASwan-seq model:
+
+```python
+# Note: Please ensure that your current working directory is set to the `SMRTnet` folder.
+
+from smrtnet.utils import tailor_batch
+from transformers import EsmModel as pretrain_bert
+from transformers import EsmConfig
+import torch
+cuda=5
+lm_rna_config = './LM_RNA/parameters.json'
+lm_rna_model = './LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt'
+lm_ft = True
+device = torch.device("cuda:"+str(cuda) if torch.cuda.is_available() else "cpu")
+
+## Load data
+data = [
+    ("Seq1", "AUGGGGUGCGAUCAUACCAGCACUAAUGCCCUCCUGGGAAGUCCUCGUGUUGCACCCCUA"),
+    ("Seq2", "AUGCGAUUCNCGUUCCC--CCGCCUCC"),
+]
+batch_data = tailor_batch([x for (_,x) in data])
+
+## Load model and parameters
+configuration_pretrain = EsmConfig.from_pretrained(lm_rna_config)
+RNASwan_seq = pretrain_bert(configuration_pretrain).to(device)
+dict_para_pretrain = torch.load(lm_rna_model, map_location=torch.device('cuda:'+str(cuda)))
+
+for name_, para_ in RNASwan_seq.state_dict().items():
+    if 'esm.' + name_ in dict_para_pretrain.keys():
+        RNASwan_seq.state_dict()[name_].copy_(dict_para_pretrain['esm.' + name_])
+for para in RNASwan_seq.parameters():
+    if lm_ft:
+        para.requires_grad = True
+    else:
+        para.requires_grad = False
+
+## Use model
+RNASwan_seq.eval()
+with torch.no_grad():
+    re_input_ids = torch.tensor(batch_data['input_ids']).to(device)
+    re_atten_mask = torch.tensor(batch_data['attention_mask']).to(device)
+    v_Pe, _ = RNASwan_seq(**{'input_ids': re_input_ids.long(), 'attention_mask':re_atten_mask})
+
+
+## Output embedding
+v_Pe = v_Pe.last_hidden_state
+token_embeddings = v_Pe[:, 1:, :]
+print(token_embeddings.shape)
+print(token_embeddings)
+
+```
 
 
 ## Referenced Repos
