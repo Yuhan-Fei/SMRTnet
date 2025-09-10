@@ -195,6 +195,7 @@ unzip SMRTnet_model.zip -d ./results
 <details>
    <summary> Click here to view the architecture of the RNA language model (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
+	Our RNASwan-seq model consisted of 30 transformer encoder blocks with Rotary Positional Embeddings (RoPE). Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. During training, a random cropping strategy was applied to extract 1024-nt segments from the full-length RNA sequences in each iteration, and 15% of nucleotide tokens were randomly selected for potential replacement. The model was trained using masked language modeling (MLM) to recover the original masked tokens using cross-entropy loss
 </details>
 
 <details>
