@@ -197,7 +197,7 @@ unzip SMRTnet_model.zip -d ./results
 <details>
    <summary> Click here to view the architecture of the RNA language model (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
-   <p align="justify" >We developed an RNA language model, RNASwan-seq, for learning RNA sequence representations. RNASwan-seq consisted of 30 transformer encoder blocks with Rotary Positional Embeddings (RoPE). Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss. Additionally, we provide example scripts to extract embeddings of given RNA sequences from the RNASwan-seq below.</p>
+   We provide example scripts to extract embeddings of given RNA sequences from the RNASwan-seq below.
 </details>
 
 <details>
