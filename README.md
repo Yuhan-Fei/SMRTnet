@@ -676,8 +676,6 @@ with torch.no_grad():
     re_atten_mask = torch.tensor(batch_data['attention_mask']).to(device)
     v_Pe, _ = RNASwan_seq(**{'input_ids': re_input_ids.long(), 'attention_mask':re_atten_mask})
 
-
-## Output embedding
 v_Pe = v_Pe.last_hidden_state
 token_embeddings = v_Pe[:, 1:, :]
 print(token_embeddings.shape)
