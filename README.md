@@ -642,9 +642,6 @@ import torch
 ## Set device
 cuda=0
 device = torch.device("cuda:"+str(cuda) if torch.cuda.is_available() else "cpu")
-lm_rna_config = './LM_RNA/parameters.json'
-lm_rna_model = './LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt'
-lm_ft = True
 
 
 ## Load RNA sequences
@@ -656,6 +653,10 @@ batch_data = tailor_batch([x for (_,x) in data])
 
 
 ## Load RNASwan-seq model
+lm_rna_config = './LM_RNA/parameters.json'
+lm_rna_model = './LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt'
+lm_ft = True
+
 configuration_pretrain = EsmConfig.from_pretrained(lm_rna_config)
 RNASwan_seq = pretrain_bert(configuration_pretrain).to(device)
 dict_para_pretrain = torch.load(lm_rna_model, map_location=torch.device('cuda:'+str(cuda)))
