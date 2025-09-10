@@ -671,7 +671,7 @@ for para in RNASwan_seq.parameters():
         para.requires_grad = False
 
 
-## Extract embedding
+## Extract embeddings
 RNASwan_seq.eval()
 with torch.no_grad():
     re_input_ids = torch.tensor(batch_data['input_ids']).to(device)
