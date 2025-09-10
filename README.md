@@ -621,7 +621,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
 
-### :bell: Extract RNA sequence embeddings with our RNA language model (RNASwan-seq)
+### :bell: Extract RNA sequence embeddings with our RNA language model
 <p align="justify" >We developed an RNA language model, RNASwan-seq, for learning RNA sequence representations. RNASwan-seq consisted of 30 transformer encoder blocks with Rotary Positional Embeddings. Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss.</p>
 
 <details>
