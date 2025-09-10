@@ -365,8 +365,8 @@ python main.py --do_check
 ```
 -->
 
-### :hearts: Train your model from scratch
 
+### :hearts: Train your model from scratch
 
 <!-- where you replace `in_dir` with the directory of the data file you want to use, you will load your own data for the training. Hyper-parameters could be tuned in xxx. For available training options, please take a look at `main.py --help`. To monitor the training process, add option `--tfboard` in `main.py`, and view page at http://localhost:6006 using tensorboard -->
 
@@ -391,6 +391,7 @@ python main.py --do_train \
 	           --lm_mol_model ./LM_Mol/pretrained/checkpoints/N-Step-Checkpoint_3_30000.ckpt
 ```
 <p align="center"><img src="figs/demo1.png" width=100% /></p>  
+
 
 ### :spades: Evaluate performance on the test set
 You can run the evaluation using: 
@@ -590,6 +591,7 @@ python main.py --do_benchmark \
 ```
 <p align="center"><img src="figs/demo5.png" width=40% /></p>  
 
+
 ### :gem: Identify potential binding sites on RNA
 To compute high-attention regions using the trained models, you can run the following command and visualize the results in a Jupyter Notebook.
 ```
@@ -620,7 +622,6 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 
 
 ### :bell: Extract RNA sequence embeddings with our RNA language model (RNASwan-seq)
-
 <p align="justify" >We developed an RNA language model, RNASwan-seq, for learning RNA sequence representations. RNASwan-seq consisted of 30 transformer encoder blocks with Rotary Positional Embeddings. Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss.</p>
 
 <details>
