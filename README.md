@@ -629,7 +629,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>  
 </details>
    
-We provide example scripts to extract embeddings of given RNA sequences from the RNASwan-seq:
+We provide example scripts to extract embeddings of given RNA sequences from the RNASwan-seq for use in other downstream applications:
 
 ```python
 # Note: Please ensure that your current working directory is set to the `SMRTnet` folder.
