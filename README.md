@@ -680,7 +680,7 @@ with torch.no_grad():
 v_Pe = v_Pe.last_hidden_state
 token_embeddings = v_Pe[:, 1:, :]
 print(token_embeddings[0]) #Print embeddings for `Seq1`
-print(token_embeddings[1]) #Print embeddings for `Seq2
+print(token_embeddings[1]) #Print embeddings for `Seq2`
 
 ```
 
