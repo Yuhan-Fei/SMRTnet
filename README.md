@@ -638,7 +638,7 @@ lm_rna_model = './LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_713629
 lm_ft = True
 device = torch.device("cuda:"+str(cuda) if torch.cuda.is_available() else "cpu")
 
-## Load data
+## Load data: 'A', 'U', 'C', 'G', 'N', '-'
 data = [
     ("Seq1", "CUCAUAUAAUCGCGUGGAUAUGGCACGCGAGUUUCUACCGGGCACCGUAAAUGUCCGACUAUGGG"),
     ("Seq2", "GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC"),
