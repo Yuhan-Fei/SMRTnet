@@ -162,8 +162,9 @@ We have developed an online jupyter-notebook that allows installation-free execu
 <p align="center" > <b>The architecture of SMRTnet</b> </p>
 
 <!--### :bangbang: Download our pre-trained models from zenodo （Required）-->
-
-Since the pre-trained models used in SMRTnet are large, we have uploaded them to Zenodo for users to download directly. Users required to download the pre-trained models — including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the pre-trained SMRTnet model — from the link below and place them in the SMRTnet folder (see the Repo Structure section below for details).
+<p align="justify" >
+Since the pre-trained models used in SMRTnet are large, we have uploaded them to Zenodo for direct download. Users are required to download the pre-trained models, including the RNA language model (RNASwan-seq), the chemical language model (MoLFormer), and the SMRTnet model, from the link below and place them in the SMRTnet folder (see the “Repo Structure” section below for details).
+</p>
 
 - Pre-trained models used in SMRTnet can be downloaded from Zenodo: https://zenodo.org/records/14715564, and place them into the SMRTnet directory.
 
@@ -195,7 +196,7 @@ unzip SMRTnet_model.zip -d ./results
 <details>
    <summary> Click here to view the architecture of the RNA language model (RNASwan-seq) </summary>
    <p align="center"><img src="figs/RNA_LM.png" width=100% /></p>
-	Our RNASwan-seq model consisted of 30 transformer encoder blocks with Rotary Positional Embeddings (RoPE). Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. During training, a random cropping strategy was applied to extract 1024-nt segments from the full-length RNA sequences in each iteration, and 15% of nucleotide tokens were randomly selected for potential replacement. The model was trained using masked language modeling (MLM) to recover the original masked tokens using cross-entropy loss
+   <p align="justify" >We developed an RNA language model, RNASwan-seq, for learning RNA sequence representations. RNASwan-seq consisted of 30 transformer encoder blocks with Rotary Positional Embeddings (RoPE). Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. During training, a random cropping strategy was applied to extract 1024-nt segments from the full-length RNA sequences in each iteration, and 15% of nucleotide tokens were randomly selected for potential replacement. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss</p>
 </details>
 
 <details>
