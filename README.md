@@ -618,7 +618,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
-<!--
+
 ### :bell: Extract RNA sequence embeddings
 We provide example scripts to extract embeddings of given RNA sequences based on the RNASwan-seq model:
 
@@ -671,7 +671,7 @@ print(token_embeddings.shape)
 print(token_embeddings)
 
 ```
--->
+
 
 ## Referenced Repos
 1. MoLFormer: [https://github.com/IBM/molformer](https://github.com/IBM/molformer)
