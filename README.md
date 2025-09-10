@@ -638,21 +638,23 @@ from transformers import EsmModel as pretrain_bert
 from transformers import EsmConfig
 import torch
 
-## Settings
+## Set device and directory
 cuda=0
 lm_rna_config = './LM_RNA/parameters.json'
 lm_rna_model = './LM_RNA/model_state_dict/rnaall_img0_min30_lr5e5_bs30_2w_7136294_norm1_05_1025_150M_16_rope_fa2_noropeflash_eps1e6_aucgave_1213/epoch_0/LMmodel.pt'
 lm_ft = True
 device = torch.device("cuda:"+str(cuda) if torch.cuda.is_available() else "cpu")
 
-## Load data: 'A', 'U', 'C', 'G', 'N', '-'
+
+## Load RNA sequences
 data = [
     ("Seq1", "CUCAUAUAAUCGCGUGGAUAUGGCACGCGAGUUUCUACCGGGCACCGUAAAUGUCCGACUAUGGG"),
     ("Seq2", "GUGGGGGCUUCGCCUCUGGCCCAGCCCUCAC"),
 ]
 batch_data = tailor_batch([x for (_,x) in data])
 
-## Load model and parameters
+
+## Load RNASwan-seq model
 configuration_pretrain = EsmConfig.from_pretrained(lm_rna_config)
 RNASwan_seq = pretrain_bert(configuration_pretrain).to(device)
 dict_para_pretrain = torch.load(lm_rna_model, map_location=torch.device('cuda:'+str(cuda)))
@@ -666,7 +668,8 @@ for para in RNASwan_seq.parameters():
     else:
         para.requires_grad = False
 
-## Use model
+
+## Extract embedding
 RNASwan_seq.eval()
 with torch.no_grad():
     re_input_ids = torch.tensor(batch_data['input_ids']).to(device)
