@@ -54,8 +54,7 @@ Please contact us if you are interested in our work or potential academic collab
 - [:nine: Disclaimer](#disclaimer)
 
 <!--  - How to check your input format -->
-<!-- - [Example](#example)-->
-<!-- - [6. Web Server (Coming soon...)](#web-server) -->
+<!--  - Web Server (Coming soon...) (#web-server) -->
 
 ## Getting started
 
