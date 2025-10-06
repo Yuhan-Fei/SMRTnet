@@ -26,7 +26,6 @@ Title: Predicting small molecule and RNA target interactions using deep neural n
 Author: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C
 
 Journal: Nature Biotechnology, 2025 (Accept in principle)
-
 ```
 
 ## :telephone: Contact us
