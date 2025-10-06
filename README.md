@@ -19,11 +19,13 @@ Taken together, SMRTnet expands the scope of feasible RNA targets and accelerate
 
 ## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
-If you use this tool in your research, we kindly ask that you cite our paper (currently under revision): 
+If you use this tool in your research, we kindly ask that you cite our paper: 
 ```
-Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C,
+Authors: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C
 
-Predicting small molecule and RNA target interactions using deep neural networks, 2025.
+Title: Predicting small molecule and RNA target interactions using deep neural networks
+
+Journal: Nature Biotechnology, 2025. (Accept in principle)
 ```
 <!-- Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang, -->
 ## :telephone: Contact us
@@ -620,7 +622,7 @@ You can run [interpret.ipynb](./interpret.ipynb) after executing the command abo
 
 <p align="center"><img src="figs/demo4.png" width=60% /></p>  
 
-<!--
+
 ### :bell: Extract RNA sequence embeddings with our RNA language model
 <p align="justify" >We developed an RNA language model, <b>RNASwan-seq</b>, for learning RNA sequence representations. The model consisted of 30 transformer encoder blocks with Rotary Positional Embeddings. Each block includes a feed-forward layer with a hidden size of 640 and 20 attention heads. The model was trained using masked language modeling to recover the original masked tokens using cross-entropy loss.</p>
 
@@ -684,7 +686,7 @@ print(token_embeddings[0]) #Print embeddings for `Seq1`
 print(token_embeddings[1]) #Print embeddings for `Seq2`
 
 ```
--->
+
 
 ## Referenced Repos
 1. MoLFormer: [https://github.com/IBM/molformer](https://github.com/IBM/molformer)
