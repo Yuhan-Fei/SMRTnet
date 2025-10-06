@@ -28,7 +28,7 @@ Title: Predicting small molecule and RNA target interactions using deep neural n
 Journal: Nature Biotechnology, 2025 (Accept in principle)
 
 ```
-<!-- Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang, -->
+
 ## :telephone: Contact us
 Please contact us if you are interested in our work or potential academic collaborations.
 - Dr. Yuhan Fei, School of Life Sciences, Tsinghua University, Posdoc, yuhan_fei@outlook.com  
