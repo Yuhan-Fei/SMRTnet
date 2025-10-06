@@ -21,11 +21,13 @@ Taken together, SMRTnet expands the scope of feasible RNA targets and accelerate
 <!--If you found this package useful, please cite [our paper](xxx)-->
 If you use this tool in your research, we kindly ask that you cite our paper: 
 ```
-Authors: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C
+Author: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C
 
 Title: Predicting small molecule and RNA target interactions using deep neural networks
 
-Journal: Nature Biotechnology, 2025. (Accept in principle)
+Journal: Nature Biotechnology 
+
+Year: 2025.10.6 (Accept in principle)
 ```
 <!-- Yuhan Fei, Pengfei Wang, Jiasheng Zhang, Xinyue Shan, Zilin Cai, Jianbo Ma, Yangming Wang, Qiangfeng Cliff Zhang, -->
 ## :telephone: Contact us
