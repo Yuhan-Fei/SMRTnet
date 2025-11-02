@@ -25,7 +25,7 @@ Title: Predicting small molecule–RNA interactions without RNA tertiary structu
 
 Author: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C
 
-Journal: Nature Biotechnology, 2025, accept in principle. (5-year Journal Impact Factor: 59.5)
+Journal: Nature Biotechnology, 2025 (5-year Journal Impact Factor: 59.5)
 ```
 
 ## :telephone: Contact us
