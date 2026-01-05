@@ -19,13 +19,15 @@ Taken together, SMRTnet expands the scope of feasible RNA targets and accelerate
 
 ## :round_pushpin: Cite us
 <!--If you found this package useful, please cite [our paper](xxx)-->
-If you use this tool in your research, we kindly ask that you cite our paper: 
+If you use this tool in your research, we kindly ask that you cite [our paper](https://www.nature.com/articles/s41587-025-02942-z): 
 ```
 Title: Predicting small molecule–RNA interactions without RNA tertiary structures
 
-Author: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang Q C
+Author: Fei Y, Wang P, Zhang J, Shan X, Cai Z, Ma J, Wang Y, and Zhang QC
 
-Journal: Nature Biotechnology, 2025 (5-year Journal Impact Factor: 59.5)
+Journal: Nature Biotechnology, 2026 (5-year Journal Impact Factor: 59.5)
+
+Paper ink: https://www.nature.com/articles/s41587-025-02942-z
 ```
 
 ## :telephone: Contact us
